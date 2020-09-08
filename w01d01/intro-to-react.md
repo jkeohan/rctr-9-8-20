@@ -146,7 +146,7 @@ React then isolates the changes between old and new instances of the Virtual
 
 So now it's time to get started with React.  Let's open the following starter code and install the required libraries:
 
-[CodeSandbox Starter code](https://codesandbox.io/s/rctrr-9-8-20-getting-started-yryf6)
+[CodeSandbox Starter](https://codesandbox.io/s/rctrr-9-8-20-getting-starter-yryf6)
 
 **NOTE:** In order to easily share code, submit homeowrk and work through errors we will be using `CodeSandbox` for this remote course.
 

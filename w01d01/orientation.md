@@ -21,6 +21,7 @@ Throughout this course, you will:
 
 * [https://git.generalassemb.ly/jkeohan/rct-9-8-20](https://git.generalassemb.ly/jkeohan/rctr-9-8-20)
 * [Trello board](https://trello.com/b/33yEx6P8/lectures)
+* [Zoom Link](https://generalassembly.zoom.us/j/97732183904?pwd=Y0tRVmpiYVh1OFI1SVhvQndBSCsvdz09)
 * **Bookmark it!**
 
 

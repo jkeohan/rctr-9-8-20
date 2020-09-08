@@ -32,5 +32,5 @@
 | Class | Date | Class Topic | Homework | Recording |
 | :---: | :---: | :--- | :--- | :---: |
 ||| **Part 1: Fundamentals** |
-| 1  | Tues 09/08 | <li>[Class Orientation](https://docs.google.com/presentation/d/1wHaz6F9rRCqsfljrKwG05Skep2oR26y4E-1Czjq-zx4/edit?usp=sharing)</li><li>[Tools](w01d01/tools)</li><li>[Intro To React](w01d01/intro-to-react)</li> | <li>[Why Reactjs For The Front End](https://www.cloudways.com/blog/why-reactjs-for-front-end/)</li> | |
+| 1  | Tues 09/08 | <li>[Class Orientation](w01d1/orientation)</li><li>[Tools](w01d01/tools)</li><li>[Intro To React](w01d01/intro-to-react)</li> | <li>[Why Reactjs For The Front End](https://www.cloudways.com/blog/why-reactjs-for-front-end/)</li> | |
 | 2  | Thur 09/13 | <li>Components and JSX</li><li>Nested Components</li><li>Passing Props</li> |  |  |
