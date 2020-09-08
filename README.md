@@ -3,7 +3,7 @@
 ## Dates and Times
 
 * Prework Due: **Sep 6, 2020**
-* Course Duration: **Sep 8, 2020** to **Nov 1, 2020**
+* Course Duration: **Sep 8, 2020** to **Nov 17, 2020**
 * **Tuesdays** and **Thursdays**
 * **8:00pm - 10:00pm** (Eastern/New York Time)
 
