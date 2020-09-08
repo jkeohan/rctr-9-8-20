@@ -36,7 +36,7 @@
 | 2  | Thur 09/10 | <li>Components and JSX</li><li>Nested Components</li><li>Passing Props</li> |  |  |
 | 3  | Tues 09/15 |  State - useState |  |  |
 | 4  | Thur 09/17 | Events |  |  |
-| 5  | Tues 09/22 | Events Cont... |  |  |
+| 5  | Tues 09/22 | Events Cont. |  |  |
 | 6  | Thur 09/24 | Lifting State  |  |  |
 | 7  | Tues 09/29 | APIs |  |  |
 | 8  | Thur 10/01 | Lifecycle Hooks - useEffect |  |  |
