@@ -13,6 +13,7 @@
 | | | GA Profile | Preferred Contact Method | Backup Contact Method |
 | :--- | :--- | :--- | :--- | :--- |
 | **Lead Instructor (LI)** | <img src="https://i.imgur.com/QYb5xoN.png" height="50"> | [Joe Keohan](https://generalassemb.ly/instructors/joe-keohan/7866) | Slack | jkeohan@@gmail.com|
+| **Instructor Assistant** | <img src="https://i.imgur.com/FmcnxV4.png" height="50"> |[Nathaniel Stack](https://generalassemb.ly/instructors/nathaniel-stack/22752) | Slack | nathaniel.stack@generalassemb.ly|
 
 
 ## Important Links
@@ -32,7 +33,7 @@
 | Class | Date | Class Topic | Homework | Recording |
 | :---: | :---: | :--- | :--- | :---: |
 ||| **Part 1: Fundamentals** |
-| 1  | Tues 09/08 | <li>[Class Orientation](w01d1/orientation)</li><li>[Tools](w01d01/tools)</li><li>[Intro To React](w01d01/intro-to-react)</li> | <li>[Why Reactjs For The Front End](https://www.cloudways.com/blog/why-reactjs-for-front-end/)</li> | |
+| 1  | Tues 09/08 | <li>[Class Orientation](w01d1/orientation)</li><li>[Tools](w01d01/tools)</li><li>[Intro To React](w01d01/intro-to-react)</li> | <li>[Why Reactjs For The Front End](https://www.cloudways.com/blog/why-reactjs-for-front-end/)</li><li>[React Folder Structure](https://www.robinwieruch.de/react-folder-structure?utm_campaign=Robin%20Wieruch%20-%20A%20Developer%27s%20Newsletter&utm_medium=email&utm_source=Revue%20newsletter)</li>| |
 | 2  | Thur 09/10 | <li>Components and JSX</li><li>Nested Components</li><li>Passing Props</li> |  |  |
 | 3  | Tues 09/15 |  State - useState |  |  |
 | 4  | Thur 09/17 | Events |  |  |
