@@ -15,32 +15,44 @@ Throughout this course, you will:
 * Work with API calls within React
 * Deploy a React app
 * Implement client-side routing via React Router
-* Build several other applications as Applied Practice
+* Build several other applications during the course
 
 ## Course "Home Room"
 
-* [https://git.generalassemb.ly/jkeohan/RCTR-908](https://git.generalassemb.ly/jkeohan/RCTR-908)
+* [https://git.generalassemb.ly/jkeohan/rct-9-8-20](https://git.generalassemb.ly/jkeohan/rctr-9-8-20)
+* [Trello board](https://trello.com/b/33yEx6P8/lectures)
 * **Bookmark it!**
-* Source of all information about the course
+
 
 ## Introductions!
 
-Please write into Slack: 
+We will go around the room and have everyone speak to the following:
 
 * Your Name
-* Where in the World are You?
-* One sentence on why you're taking this course
-* ... and your favourite childhood cereal!
+* Where are you in the world.
+* One thing your hoping to get out of this course.
+* Have you taken any other GA course, either in person or online
+* A favorite book you've read or Movie/TV show if you don't read often
 
-## And me!
+
+### And Now Me...
 
 <img src="https://i.imgur.com/TEEz7t0.jpg" width="500" />
 
-I’ve been in tech for over 20 years, worked at companies both big and small and discovered the development side of things about 10years ago while teaching and then supporting a Microsoft Sharepoint environment. I also love working with D3.js to build interactive Data Visualizations and have been a dedicated full time Software Engineering Immersive instructor at GA since 2016. 
+My name is Joe Keohan and I live in NYC, Staten Island specifically. 
 
-I am the father of a 13yr old son, Sevan and the newest edition to my family a 2month old baby girl, Jiliana. I also love to jog, surf, talk tech. I am looking forward to sharing my experiences with you and guiding you on a fantastic journey into learning React development!
+I’ve been in tech for over 20 years, worked at companies both big and small and discovered the development side of things about 10years ago while teaching and then supporting a Microsoft Sharepoint environment. 
 
-You can find me on LinkedIn at https://www.linkedin.com/in/jkeohan/.
+I also love working with D3.js to build interactive Data Visualizations and have been a dedicated full time Software Engineering Immersive instructor at GA since 2016, along with teaching their  FEWD, JS and React part time course.
+
+I am married, the father of a 13yr old son, Sevan and just recently my wife Kia and I welcomed the newest edition to our family on, our 2 month old baby girl, Jiliana. 
+
+On personal note I also love to jog, surf, play chess/backgammon talk tech. I am looking forward to sharing my experiences with you and guiding you on a fantastic journey into learning React development!
+
+- LinkedIn: https://www.linkedin.com/in/jkeohan/
+- Portfolio: http://jkeohan.com/
+- Medium Articles: https://medium.com/@jkeohan
+- Most Recent Project: https://02nz9.csb.app/
 
 
 ---
@@ -50,14 +62,26 @@ You can find me on LinkedIn at https://www.linkedin.com/in/jkeohan/.
 ## "Live Online"
 
 * Welcome to the "Live Online" classroom! (Old name: "Remote" classroom)
-* Different from a plain "Online" classroom, where there may not even be a live instructor!
+* Different from a plain "Online" classroom, where there may not even be a live instructor!  
 * [GA Live Online Classroom Culture Slides](https://docs.google.com/presentation/d/1cKg7TlOTizWl-IoVMx699gPHKXb4bo6U_v2sIFnnO6M/edit?usp=sharing)
+
+## Classroom Norms
+
+Think about the last time you were in a classroom environment - remember the classroom rules that were on the wall? Some rules that you were told to follow may have been, “Do not talk until called on.” “Raise your hand if you have a question.” “Respect everyone.”
+
+Instead of making rules for the classroom environment, we have norms that we expect everyone to respect and adhere to. We call them norms as we have identified these practices as most effective for ensuring that learning happens in our remote classrooms, and they emphasize the collaborative nature of our courses. 
 
 ## Communication
 
 ### Zoom
 
 Smile! You are expected to **be on camera**! This is just like being in a real classroom. :smile:
+
+#### Breakout Rooms
+
+At GA, we use collaborative work to create a community of learners in our remote environment. Unlike group work, which has a “divide and conquer” mentality and less direct interaction, focusing solely on the end goal, collaborative work requires learners to work together directly, and focuses both on the process and the end goal. 
+
+<img src="https://i.imgur.com/7SQwyKe.png" width=600/>
 
 ### Slack
 
@@ -68,6 +92,7 @@ We encourage you to ask questions on the Slack channel (instead of asking privat
 We typically respond fastest via Slack, and we typically respond slowest via email.
 
 Please keep in mind that outside of class/office hours we are at our day jobs/with family or otherwise not at our computers, so may take longer to reply.
+
 
 ## Expectations
 
@@ -117,14 +142,14 @@ Please keep in mind that outside of class/office hours we are at our day jobs/wi
 ## During Class
 
 * Work through today's topics
-* Preview homework
+* Take a 10min break on the hour
+* Lots of lecture and small mini labs
 * End of class: **Fill out exit tickets**
 
 ## Between Classes
 
-* Review class notes
-* **Do homework**
-* Visit office hours for help on homework!
+* Review class notes and recordings 
+* **Do homework** 
 * Ask questions on Slack!
 
 ---
@@ -133,7 +158,7 @@ Please keep in mind that outside of class/office hours we are at our day jobs/wi
 
 <img src="https://i.imgur.com/Lf9vPOp.png" width="250" />
 
-* A short survey to help us better understand your learning growth
+* A [short survey](https://docs.google.com/forms/u/3/d/e/1FAIpQLSfdanZ3uCV2h14tpFx9FcM8BRFDkiABIHlSIZ5dqCYiODWx6Q/viewform?usp=send_form) to help us better understand your learning growth
 * Reviewed by the instructional team after every class
 * Will be distributed by Slackbot at 8:55pm every class
 
@@ -149,6 +174,8 @@ The following are just highlights -- for specifics, please download and review t
 
 ## Attendance
 
+Attendance will be captured using slack and you will be asked to click on a :heavy_check_mark: posted by myself or our IA
+
 If you miss more than 3 days *regardless of reason*, you will not successfully complete the course.
 
 You may have up to 3 **excused absences**. If you will have to miss a class due to an emergency, **notify the IA via Slack ahead of time**. Unexcused absences are **not allowed**.
@@ -162,12 +189,16 @@ You may have a 48-hour grace period for notifying the Instructor and IA(if one h
 
 ## Tardiness
 
-If you arrive after class starts, you are late and will accrue one late arrival. If you leave before class ends, you will accrue one early departure. Three late arrivals or early departures = 1 absence.
+If you arrive after class starts, you are late and will accrue one late arrival. If you leave before class ends, you will accrue one early departure.
+
+ Three late arrivals or early departures = 1 absence.
+
+Any training missed is your responsibility to make up.
 
 ## Complete Homework Assignments on Time
 
 
-Assignments are due on the date/time indicated on the assignment. They will be graded by the IA/TAs about a week after submission. If the IA/TA extends to you a chance to re-submit the assignment after feedback, you will have 3 business days to do so.
+HW assignments are due the following Tuesday after they have been assigned.  They will be graded by the IA/TAs about a week after submission. If the IA/TA extends to you a chance to re-submit the assignment after feedback, you will have 3 business days to do so.
 
 You may have up to a three-day grace period period for extenuating circumstances (see above) if you get approval before the due date.
 
@@ -184,6 +215,14 @@ You will have about two weeks to work on your final project. At the end of the c
 As the project is two weeks in duration, no grace periods apply. You are expected to start your project on time, work steadily towards completion, and meet expectations for the final project. Please communicate with us if any extenuating circumstances develop so that we can help you manage your time accordingly.
 
 To qualify for a Letter of Completion, you must satisfactorily complete the final project and present it to your classmates.
+
+Here are some previous student Final Projects:
+ - [Covid Tracker](https://novel-covid19.netlify.app/)
+ - [Dungeon and Dragons](http://dnd-monsters.surge.sh/)
+ - [Bible Trip](https://raboriel.github.io/BibleTrip/)
+ - [MasterMind](https://pd9ht.csb.app/)
+
+
 
 ---
 

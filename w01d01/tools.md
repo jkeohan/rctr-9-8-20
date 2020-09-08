@@ -19,7 +19,7 @@ You'll need the following software:
       * Raising Hands
       * Screen Sharing (Just locate the **Green Button**)
 * Slack
-   * App highly recommended, instead of using the browser
+   * Desktop pp highly recommended, instead of using the browser
    * Download App for [Desktop or Mobile](https://slack.com/intl/en-us/downloads)
    * For the duration of this course, do not disable Notifications on Slack!
       * We need to be able to reach you!
@@ -32,7 +32,7 @@ You'll need the following software:
 * Terminal
    * Comes preinstalled on MacOS and Linux
    * On Windows: Available via Ubuntu on WSL
-* Code Editor - We will be usinng CodeSandbox
+* Code Editor - We will be using [CodeSandbox](https://codesandbox.io/)
 
 ## Hardware
 
@@ -48,5 +48,3 @@ You'll need the following software:
 * A second screen is **strongly** recommended!
    * Allows you to emulate a real classroom setting, where the instructor's projector is basically a second screen
    * Most modern TVs can work in a pinch
-
-
