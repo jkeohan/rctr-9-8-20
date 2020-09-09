@@ -23,8 +23,8 @@
 | **Slack Channel** | [#rctr-908](https://app.slack.com/client/T012XUE92MS/C018MSYQXNW) | Primary method of communication for the course |
 | **Zoom Class Room** | Link is Posted in the Slack Channel | Same link every class! |
 | **Exit Ticket** | [https://forms.gle/GrwfDBrQ5TJF5BaC7](https://forms.gle/GrwfDBrQ5TJF5BaC7) | Use the same link at the end of every class! |
-| **Homework** | [link](https://docs.google.com/spreadsheets/d/1eSarapMxitSh8sQtaKJ3sVB8BtsPjVVyrd155zANSyo/edit#gid=566709901) | Use the same link at the end of every class! |
-| **Office Hours** | [link](https://docs.google.com/spreadsheets/d/1eSarapMxitSh8sQtaKJ3sVB8BtsPjVVyrd155zANSyo/edit#gid=1977257351) | Use the same link at the end of every class! |
+| **Homework** | [link](https://docs.google.com/spreadsheets/d/1eSarapMxitSh8sQtaKJ3sVB8BtsPjVVyrd155zANSyo/edit#gid=566709901) | Add CodeSandbox link to HW |
+| **Office Hours** | [link](https://docs.google.com/spreadsheets/d/1eSarapMxitSh8sQtaKJ3sVB8BtsPjVVyrd155zANSyo/edit#gid=1977257351) | Schedule 1on1's |
 
 
 ## Course Schedule
