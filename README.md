@@ -4,7 +4,7 @@
 
 * Prework Due: **Sep 6, 2020**
 * Course Duration: **Sep 8, 2020** to **Nov 17, 2020**
-* NO CLASS: **Nov 3 - Electionn Day**
+* NO CLASS: **Nov 3 - Election Day**
 * **Tuesdays** and **Thursdays**
 * **8:00pm - 10:00pm** (Eastern/New York Time)
 
@@ -56,4 +56,4 @@
 | 18  | Thur 11/5 | Custom Hooks |  |  |
 | 19  | Tues 11/10 | React & D3 |  |  |
 | 20  | Thur 11/12 | Final Project 1on1's |  |  |
-| 21  | Tues 11/17 | Project Presentationns |  |  |
+| 21  | Tues 11/17 | Project Presentations |  |  |
