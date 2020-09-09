@@ -4,6 +4,7 @@
 
 * Prework Due: **Sep 6, 2020**
 * Course Duration: **Sep 8, 2020** to **Nov 17, 2020**
+* NO CLASS: **Nov 3 - Electionn Day**
 * **Tuesdays** and **Thursdays**
 * **8:00pm - 10:00pm** (Eastern/New York Time)
 
