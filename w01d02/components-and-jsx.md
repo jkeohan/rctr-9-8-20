@@ -74,25 +74,6 @@ These Components, much like the HTML used to render them, will be structured int
 When using React, building components will be your main front-end task.
 
 
-<hr>
-
-#### <g-emoji class="g-emoji" alias="alarm_clock" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/23f0.png">⏰</g-emoji> Activity - 5min
-
-**Indentify Components**
-
-- The instructor will create breakout rooms of 3 or 4 students
-- Each group will look at one of the following websites: `AirBnB, BBC, Bleacher Report, Flipboard, Imgur, Instagram, Khan Academy, Netflix, Postmates, and Reddit`
-- Identify the visual "components" the website is comprised of. 
-- Take a snapshot of the site and use Google Draw to add colored boxes around the Components
-
-As you're drawing this out, think about the following questions:
-
-* Where do you see `nested components`? Where do you not?
-* Are there any components that share the same structure?
-* Of these similar components, what is different about them?
-
-<hr>
-
 ### Rules To Follow
 
 From this point on we will be creating more and more Components than you ever imagined but before we begin let's discuss the requirments and best practices for creating Components.  Some of the requirements are specific to `JSX` and will be reviewed again in a later section. 
