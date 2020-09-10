@@ -24,3 +24,13 @@ Perform the following to complete the lab:
 * Loop over the weatherData array data and create a `WeatherIcons` Component for each element passed
 * In the loop pass the element the props it needs for img`, `conditions` and `time`. 
 * App will then render those `WeatherIcons` Components
+
+**Bonus**
+* Try creating additional Components, such as one for the `image` or one that contains both the `conditions` and `time`
+
+**Super Bonus**
+* Try working on the [The Knot](https://codesandbox.io/s/theknot-starter-ye150) exercise
+
+**Submitting Homework**
+* You will only submit the required HW
+* Add a link to your CodeSandbo [here](https://docs.google.com/spreadsheets/d/1eSarapMxitSh8sQtaKJ3sVB8BtsPjVVyrd155zANSyo/edit#gid=566709901)
