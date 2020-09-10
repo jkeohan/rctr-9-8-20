@@ -33,4 +33,4 @@ Perform the following to complete the lab:
 
 **Submitting Homework**
 * You will only submit the required HW
-* Add a link to your CodeSandbo [here](https://docs.google.com/spreadsheets/d/1eSarapMxitSh8sQtaKJ3sVB8BtsPjVVyrd155zANSyo/edit#gid=566709901)
+* Add a link to your CodeSandbox [here](https://docs.google.com/spreadsheets/d/1eSarapMxitSh8sQtaKJ3sVB8BtsPjVVyrd155zANSyo/edit#gid=566709901)
