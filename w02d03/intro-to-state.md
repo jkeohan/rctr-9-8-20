@@ -64,11 +64,10 @@ Refresh the page and you should see the following:
 
 #### :mag: Check for Understanding - 2min
 
-- Think about the following questions:
+- Take 2 minutes to think about and write your answers to the following questions:
   - What do we use `props` for?
   - What benefits do they provide when passing down multiple properties?
   - What limitations do they have?
-- Take a moment to write out your best answer for each question, 3 answers in total.
 - When asked slack your answer(s) in a thread created by the instructor
 
 <hr>
@@ -114,11 +113,11 @@ Since you already have experience creating Components take a minute to perform t
 
 ```js
 <>
-	<span>Current Count: 0</span>
-	<section>
-		<button onClick={hanndleIncrement}>+</button>
-		<button onClick={handleDecrement}>-</button>
-	</section>
+    <span>Current Count: 0</span>
+    <section>
+        <button onClick={hanndleIncrement}>+</button>
+        <button onClick={handleDecrement}>-</button>
+    </section>
 </>
 ```
 
