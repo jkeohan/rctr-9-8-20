@@ -338,6 +338,7 @@ setCount(count + 1);
 // use a callback function and pass the previous version of state
 setCount((prevState) => prevState + 1);
 ```
+In the second example React will call that updater function with the previous value of the state, and whatever you return will replace the state with a new value. The argument is called `prevState` in the example but you can name it anything.
 
 There are scenarios when the callback function version is required such as when state is being updated within the callbacks of either a `setTimeout()` or `setInterval()`.  
 
