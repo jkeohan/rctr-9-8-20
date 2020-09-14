@@ -1,6 +1,6 @@
 <br>
 Title: Intro to State<br>
-Duration: 1 hour(s)<br>
+Duration: 1hr + <br>
 Creator:  Joe Keohan<br>
 
 ---
@@ -14,7 +14,8 @@ Creator:  Joe Keohan<br>
 After this lesson you will be able to:
 
 - Explain what `state` is and how to implement it in React
-- Update `state` and render state changes in the DOM
+- Use `Array Destructuring` to create variables from an array 
+- Update `state` and re-render the Component
 
 ## Framing
 
@@ -117,8 +118,8 @@ Since you already have experience creating Components take a minute to perform t
 <>
     <span>Current Count: 0</span>
     <section>
-        <button onClick={hanndleIncrement}>+</button>
-        <button onClick={handleDecrement}>-</button>
+        <button>+</button>
+        <button>-</button>
     </section>
 </>
 ```
@@ -172,6 +173,16 @@ And now things should look like:
 
 In order to add state to the `Counter` Component we will first need to import `useState` from `React`. `useState` is one of the 3 Basic Hooks as per the Official React Doc.
 
+#### A Word On Hooks
+
+Before hooks, all state needed to be within a Class component. Class components come with a lot of boilerplate, which can feel bulky, especially when dealing with a simpler state. 
+
+Hooks introduce state management to Function components, using a simpler and more flexible API. Here's an example of a Class component refactored to be a Function component with hooks:
+
+> "Hooks let you split one component into smaller functions based on what pieces are related"
+
+
+
 <hr>
 
 #### <g-emoji class="g-emoji" alias="alarm_clock" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/23f0.png">⏰</g-emoji> Activity - 2min
@@ -181,13 +192,15 @@ Since we will be working with `Hooks` solely in this class let's take a minute t
 - [Hooks API Reference](https://reactjs.org/docs/hooks-reference.html)
 - [useState Hook](https://reactjs.org/docs/hooks-overview.html)  
 
+
+
 <hr>
 
 #### Importing useState
 
 Now it's time to import `useState` into the Counter Component.
 
-The react library has a key called `useState` that we elicit and store in a variable of the same name by using the Object Destructuring syntax: `{useState}`
+The react library has a key called `useState` that we elicit and store in a variable of the same name by using the `Object Destructuring` syntax: `{useState}`
 
 ```js
 import React, { useState } from 'react';
@@ -206,7 +219,31 @@ The output should look like the following:
 
 <img src="https://i.imgur.com/IZFNnbg.png" width=400/>
 
-It appears that `useState` is a function that takes in in `initialState` and returns `dispatcher.useState()`. We won't get into the underlying code here but one thing I want to highlight is the keyword `dispatcher`. We will revisit this concept later when we cover the `useReducer` hook as it makes use of a `dispatch` function. 
+It appears that `useState` is a function that takes in in `initialState` and returns `dispatcher.useState()`. We won't get into the underlying code here but one thing I want to highlight is the keyword `dispatcher`. 
+
+We will revisit this concept later when we cover the `useReducer` hook as it makes use of a `dispatch` function. 
+
+<hr>
+
+#### useState Rules and Best Practices
+
+:oncoming_police_car: - Rules 
+
+Here are some of the rules that govern the useState Hook:
+
+- never update the state value directly
+- always use the `setState` function (or whatever you named it) to update state
+- since state is never directly edited it must always be overwritten with a new value 
+
+:star: - Best Practices
+
+A few best practices when assigning variable names are:
+
+- Name the initial state based on what it contains
+- Use the same name for the function but precede it with `set`
+- Use a the callback function version of useState as it references the previous version of state.
+
+<hr>
 
 #### Creating An Instance Of State
 
@@ -234,30 +271,27 @@ So it appears `countState` is set to an array that contains the following elemen
 
 One way to create 2 new variables based on the array would be to manually elicit their values using bracket notation. 
 
+
+⭐ Best Practice - Naming State Variables
+
+In keeping with best practices we will name the initial state variable `count` as it will use it to increment/decrement a starting value essentially keeping `count`. Of course, the corresponding function that will be used to update state should be called `setCount`.
+
 ```js
 const count = countState[0];
 const setCount = countState[1];
 ```
 
 #### Array Destructuring 
-But a more convenient way of doing this is using ES6 `Array Destructuring`. This elicits the values from the array based on their position  and stores them in variables as well but is written slightly different.
+A more convenient way of doing this is using ES6 [Array Destructuring](https://javascript.info/destructuring-assignment). 
 
-In this case we are keeping track of a value that will increment/decrement and essentially is acting as a counter so we've opted to call it `count`. Of course the corresponding function used to update it should be called `setCount`.
+This elicits the values from the array based on their position  and stores them in variables. 
+
+
+
 
 ```js
 const [count, setCount] = useState(0);
 ```
-
-<hr>
-
-⭐Best Practice
-
-A few best practices when assigning variable names are:
-
-- Name the initial state based on what it contains
-- Use the same name for the function but precede it with `set`
-
-<hr>
 
 #### Using State
 
@@ -293,14 +327,6 @@ setCount(count + 1);
 setCount((prevState) => prevState + 1);
 ```
 
-<hr>
-
-⭐Best Practice
-
-A best practice is to always use a the callback function version of useState if your state update depends on your previous state.
-
-<hr>
-
 We will demonstrate this later when the need arises when we start working with a more complicated version of state such as an object.
 
 #### Adding an onClick Event
@@ -335,7 +361,7 @@ Let's give that a try by creating the following supporting functions:
 - `handleDecrement`
 
 ```js
-const hanndleIncrement = () => {};
+const handleIncrement = () => {};
 
 const handleDecrement = () => {};
 ```
@@ -343,7 +369,7 @@ const handleDecrement = () => {};
 Now let's move the `setState` function calls into their corresponding `handler` as well as replace the anonymous function call with our handlers
 
 ```js
-const hanndleIncrement = () => {
+const handleIncrement = () => {
 	setCount((prevState) => prevState + 1);
 };
 
@@ -352,7 +378,7 @@ const handleDecrement = () => {
 };
 
 <section>
-	<button onClick={hanndleIncrement}>+</button>
+	<button onClick={handleIncrement}>+</button>
 	<button onClick={handleDecrement}>-</button>
 </section>;
 ```
