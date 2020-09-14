@@ -275,7 +275,7 @@ So it appears `countState` is set to an array that contains the following elemen
 One way to create 2 new variables based on the array would be to manually elicit their values using bracket notation. 
 
 
-⭐ Best Practice - Naming State Variables
+⭐ Naming State Variables
 
 In keeping with best practices we will name the initial state variable `count` as it will use it to increment/decrement a starting value essentially keeping `count`. Of course, the corresponding function that will be used to update state should be called `setCount`.
 
@@ -286,7 +286,7 @@ const setCount = countState[1];
 
 #### Array Destructuring 
 
-:star: - Best Practices
+:star: 
 A more convenient way of doing this is using ES6 [Array Destructuring](https://javascript.info/destructuring-assignment). 
 
 This elicits the values from the array based on their position  and stores them in variables. 
