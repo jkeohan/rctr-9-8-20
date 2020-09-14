@@ -7,6 +7,8 @@ Creator:  Joe Keohan<br>
 
 # Intro to State
 
+<img src="https://i.imgur.com/KRmlOo1.png" width=500/>
+
 ## Learning Objectives
 
 After this lesson you will be able to:
@@ -177,7 +179,7 @@ In order to add state to the `Counter` Component we will first need to import `u
 Since we will be working with `Hooks` solely in this class let's take a minute to review the following React Docs:
 
 - [Hooks API Reference](https://reactjs.org/docs/hooks-reference.html)
-- [useState Hook](https://reactjs.org/docs/hooks-overview.html)
+- [useState Hook](https://reactjs.org/docs/hooks-overview.html)  
 
 <hr>
 
@@ -204,11 +206,11 @@ The output should look like the following:
 
 <img src="https://i.imgur.com/IZFNnbg.png" width=400/>
 
-It appears that `useState` is a function that takes in in `initialState` and returns `dispatcher.useState()`. We won't get into the underlying code here but one thing I want to highlight is the keyword `dispatcher` as we will revisit this concept later when we cover the `useReducer` hook.
+It appears that `useState` is a function that takes in in `initialState` and returns `dispatcher.useState()`. We won't get into the underlying code here but one thing I want to highlight is the keyword `dispatcher`. We will revisit this concept later when we cover the `useReducer` hook as it makes use of a `dispatch` function. 
 
 #### Creating An Instance Of State
 
-With `useState` imported it's time to create an instance of state. To do this we will call `useState(0)` and pass it an initial starting value of `0`
+With `useState` imported it's time to create an instance of state. To do this we will call `useState()` and pass it an initial starting value of `0`
 
 ```js
 const countState = useState(0);
@@ -225,30 +227,20 @@ We should see the following:
 
 <img src="https://i.imgur.com/0SIS9qZ.png" width=300/>
 
-So it appears countState is set to an array that contains the following values:
+So it appears `countState` is set to an array that contains the following elements:
 
 - 0 - the initial state value we defined
-- a `function` - which we will use to update state.
+- a `function` - which we will be used to update state.
 
-One way to create 2 new variables based on the array would be:
+One way to create 2 new variables based on the array would be to manually elicit their values using bracket notation. 
 
 ```js
 const count = countState[0];
 const setCount = countState[1];
 ```
 
-But a more convenient way of doing this is using ES6 `Array Destructuring`. This will elicit the values from the array based on their position and store them in the variables names of your choosing.
-
-<hr>
-
-⭐Best Practice
-
-A best practice when assigning variable names is to do the following:
-
-- Name the initial state based on what it contains
-- Use the same name for the function but precede it with `set`
-
-<hr>
+#### Array Destructuring 
+But a more convenient way of doing this is using ES6 `Array Destructuring`. This elicits the values from the array based on their position  and stores them in variables as well but is written slightly different.
 
 In this case we are keeping track of a value that will increment/decrement and essentially is acting as a counter so we've opted to call it `count`. Of course the corresponding function used to update it should be called `setCount`.
 
@@ -256,13 +248,23 @@ In this case we are keeping track of a value that will increment/decrement and e
 const [count, setCount] = useState(0);
 ```
 
+<hr>
+
+⭐Best Practice
+
+A few best practices when assigning variable names are:
+
+- Name the initial state based on what it contains
+- Use the same name for the function but precede it with `set`
+
+<hr>
+
 #### Using State
 
-Now that our initial value is been assigned to the `count` variable let's update the JSX to use that value instead of a current hard coded, static value of 0. If you recall one of the rules of JSX is:
+Now that our initial value is been assigned to the `count` variable let's update the JSX to use that value instead of a current hard coded, static value of 0. 
 
-- any JavaScript within JSX must be enclosed in curly braces
+Of course, as has been stated several times already, JSX requires that all JavaScript be surrounded in curly braces.
 
-With that in mind lets add count:
 
 ```js
 return (
@@ -277,13 +279,17 @@ return (
 
 With our state value in place it's time to provide some functionality to the buttons so that we can provide the user a means to update state.
 
-In the case of our Counter the only way to update state is to call the `setCount` function and pass it a new value. There are 2 ways to perform this action:
+In the case of our Counter the only way to update  `count` is to call the `setCount` function and pass it a new value. 
+
+There are 2 ways to perform this action:
 
 ```js
+// update the current value directly
 setCount(count + 1);
 
 // OR
 
+// use a callback function and pass the previous version of state
 setCount((prevState) => prevState + 1);
 ```
 
@@ -304,8 +310,6 @@ In order to allow the user to interact with the buttons we will need to add an e
 React event listeners is an additional topic we will revisit again in future lessons. For now we will add an `onClick` event listener and call `setCount` to update state.
 
 Also, as with plain JavaScript or jQuery we will use an anonymous callback to pause the execution until the click event has occurred.
-
-Of course, as has been stated several times already, JSX requires that all JavaScript be surrounded in curly braces.
 
 ```js
   return (
@@ -357,6 +361,28 @@ The other added benefits of using these supporting `handler` functions are:
 
 - its a much better way to organize our code
 - we now have a function that can be passed down to a child Component as `props`
+
+#### State Update Delay
+
+Although the updates to state appear immediate there is one thing to note.  After calling `setState` the new value assigned to state isn't available until the Component re-renders. 
+
+So if we were to console.log `count` immediately after it's been updated in handleIncrement we would see it outputs the previous version of state. 
+
+```js
+const hanndleIncrement = () => {
+    setCount((prevState) => prevState + 1);
+    console.log('handleIncrement - count:', count)
+};
+```
+
+Here we can clearly see that `count` is now 2 but the console logs show that count is one value behind. 
+
+<img src="https://i.imgur.com/V0agq9h.png" width=300/>
+
+There will indeed be instances where we will need to run some logic based on the state change but in order to do this we must we must do so after after rendering and using the` useEffect()` hook. 
+
+The `useEffect` hook is a much broader topic and delves into the React Component LifeCycle, something we will learn about in upcoming lectures. 
+
 
 <hr>
 
@@ -417,6 +443,7 @@ export default Counter
 
 ### Resources
 
+- [React Docs - useState](https://reactjs.org/docs/hooks-overview.html)
 - [The useState Hook - robinwieruch](https://www.robinwieruch.de/react-usestate-hook)
 - [React Event Handlers - robinwieruch](https://www.robinwieruch.de/react-event-handler)
 <hr>
