@@ -18,11 +18,14 @@ Here is a [working version](https://codepen.io/jkeohan/live/peZQaz) of the app s
 
 Examine the working version of the app so you can see what element will be rendered as the actual card.  
 
+## Starter CodeSandbox
+Here is our [Starter CodeSandbox]()
+
 ## Instructions
 For this exercise you will do the following:
 
 #### Card Component
-- Examine the data in the `cardData.js` file
+- Examine the working solution and determine what HTML element is being used to render the card
 - Create a `Card` Component that accepts props 
 - Import and setup `state` in the Card Component
 - State should be assigned an initial value of the background image
@@ -32,6 +35,7 @@ For this exercise you will do the following:
 #### App Component
 - Import the data into App.js
 - Import the `Card` Component into `App`
+- Examine the data in the `cardData.js` file
 - Iterate over the array and pass the `Card` Component the data it needs as props
 
 #### Bonus 

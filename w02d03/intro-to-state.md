@@ -492,6 +492,53 @@ export default Counter
 
 <hr>
 
+### Bonus - Using Conditional Logic and Ternary Operators
+
+Since React is all JavaScript we can use all of our previous JS expertise and knowledge when trying to implement or work out additional logic. 
+
+Let's add some basic conditional logic to the handleIncrement/handleDecrement that will reset the count to 0 if it meets a specific threshold.  
+
+**handleIncrement**
+```js
+const handleIncrement = () => {
+  if(count === 3) {
+      handleReset()
+    } else {
+      setCount(count + 1)
+  }
+}
+```
+
+**handleDecrement**
+```js
+const handleDecrement = () => {
+  if(count === -3) {
+      handleReset()
+    } else {
+      setCount(count - 1)
+  }
+}
+```
+
+#### Refactor To Use `Ternary` Operator
+
+Most often React developers prefer to write a single if/else conditional as a `ternary` operator.  So let's refactor our code to do just that.
+
+**handleIncrement**
+```js
+const handleIncrement = () => {
+  count === 3 ? handleReset() : setCount(count + 1)
+}
+```
+
+**handleDecrement**
+```js
+const handleDecrement = () => {
+  count === -3 ? handleReset() : setCount(count - 1)
+}
+```
+
+
 ### Resources
 
 - [React Docs - useState](https://reactjs.org/docs/hooks-overview.html)
