@@ -175,6 +175,8 @@ In order to add state to the `Counter` Component we will first need to import `u
 
 #### A Word On Hooks
 
+Hooks were introduced in React Version 16.8.
+
 Before hooks, all state needed to be within a Class component. Class components come with a lot of boilerplate, which can feel bulky, especially when dealing with a simpler state. 
 
 Hooks introduce state management to Function components, using a simpler and more flexible API. Here's an example of a Class component refactored to be a Function component with hooks:
@@ -239,6 +241,7 @@ Here are some of the rules that govern the useState Hook:
 
 A few best practices when assigning variable names are:
 
+- Use `Array Destructuring` when initializing the state variables
 - Name the initial state based on what it contains
 - Use the same name for the function but precede it with `set`
 - Use a the callback function version of useState as it references the previous version of state.
@@ -282,6 +285,8 @@ const setCount = countState[1];
 ```
 
 #### Array Destructuring 
+
+:star: - Best Practices
 A more convenient way of doing this is using ES6 [Array Destructuring](https://javascript.info/destructuring-assignment). 
 
 This elicits the values from the array based on their position  and stores them in variables. 
