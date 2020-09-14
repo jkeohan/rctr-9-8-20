@@ -244,7 +244,7 @@ A few best practices when assigning variable names are:
 - Use `Array Destructuring` when initializing the state variables
 - Name the initial state based on what it contains
 - Use the same name for the function but precede it with `set`
-- Use a the callback function version of useState as it references the previous version of state.
+- Use a the callback function version of useState if you need to reference the previous version of state.
 
 <hr>
 
@@ -292,8 +292,6 @@ A more convenient way of doing this is using ES6 [Array Destructuring](https://j
 This elicits the values from the array based on their position  and stores them in variables. 
 
 
-
-
 ```js
 const [count, setCount] = useState(0);
 ```
@@ -332,7 +330,8 @@ setCount(count + 1);
 setCount((prevState) => prevState + 1);
 ```
 
-We will demonstrate this later when the need arises when we start working with a more complicated version of state such as an object.
+There are scenarios when the callback function version is required such as when state is being updated within the callbacks of either a `setTimeout()` or `setInterval()`.  
+
 
 #### Adding an onClick Event
 
@@ -347,8 +346,8 @@ Also, as with plain JavaScript or jQuery we will use an anonymous callback to pa
     <div>
       <span>Current Count: {count}</span>
       <section>
-        <button onClick={() => setCount(prevState => prevState + 1)}>+</button>
-        <button onClick={() => setCount(prevState prevState - 1)}>-</button>
+        <button onClick={() => setCount(count + 1)}>+</button>
+        <button onClick={() => setCount(count - 1)}>-</button>
       </section>
     </div>
   )
@@ -375,11 +374,11 @@ Now let's move the `setState` function calls into their corresponding `handler` 
 
 ```js
 const handleIncrement = () => {
-	setCount((prevState) => prevState + 1);
+	setCount(count + 1);
 };
 
 const handleDecrement = () => {
-	setCount((prevState) => prevState - 1);
+	setCount(count - 1);
 };
 
 <section>
@@ -401,7 +400,7 @@ So if we were to console.log `count` immediately after it's been updated in hand
 
 ```js
 const hanndleIncrement = () => {
-    setCount((prevState) => prevState + 1);
+    setCount(count + 1);
     console.log('handleIncrement - count:', count)
 };
 ```
@@ -412,7 +411,7 @@ Here we can clearly see that `count` is now 2 but the console logs show that cou
 
 There will indeed be instances where we will need to run some logic based on the state change but in order to do this we must we must do so after after rendering and using the` useEffect()` hook. 
 
-The `useEffect` hook is a much broader topic and delves into the React Component LifeCycle, something we will learn about in upcoming lectures. 
+The `useEffect` hook is a much broader topic and delves into the React Component Lifecycle methods, something we will learn about in upcoming lectures. 
 
 
 <hr>
@@ -429,7 +428,10 @@ Let's try a quick activity that should help you apply some of these concepts.
 
 #### Final Solution
 
-Here is what the final version of the Counter Component.
+Here is the final version of the Counter Component.
+
+<details>
+<summary>Solution</summary>
 
 ```js
 import React, {useState} from 'react'
@@ -438,26 +440,35 @@ const Counter = () => {
 
   const [count, setCount] = useState(0)
 
-  const hanndleIncrement = () => {
-   setCount(prevState => prevState + 1)
+  const handleIncrement = () => {
+   setCount(count + 1)
   };
 
   const handleDecrement = () => {
-    setCount(prevState => prevState - 1)
+    setCount(count - 1)
    };
+
+  const handleReset= () => {
+    setCount(0)
+  };
 
   return (
     <div>
       <span>Current Count: {count}</span>
       <section>
-        <button onClick={hanndleIncrement}>+</button>
+        <button onClick={handleIncrement}>+</button>
         <button onClick={handleDecrement}>-</button>
+        <button onClick={handleReset}>Reset</button>
       </section>
   )
 }
 
 export default Counter
 ```
+
+</details>
+
+
 
 <hr>
 
@@ -476,5 +487,6 @@ export default Counter
 
 - [React Docs - useState](https://reactjs.org/docs/hooks-overview.html)
 - [The useState Hook - robinwieruch](https://www.robinwieruch.de/react-usestate-hook)
+- [React useState Hook Guide - dmitirpavlutin](https://dmitripavlutin.com/react-usestate-hook-guide/)
 - [React Event Handlers - robinwieruch](https://www.robinwieruch.de/react-event-handler)
 <hr>
