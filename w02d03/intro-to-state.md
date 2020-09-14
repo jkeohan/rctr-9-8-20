@@ -136,9 +136,13 @@ Since you already have experience creating Components take a minute to perform t
 
 Once your done React should render the following:
 
-<img src="https://i.imgur.com/fBEOYU0.png" width=200/>
+<img src="https://i.imgur.com/fBEOYU0.png" width=300/>
 
 That HTML looks like it could use a little styling so add the following css to `styles.css`
+
+<details>
+<summary>CSS</summary>
+
 
 ```css
 .App {
@@ -163,7 +167,12 @@ span {
 }
 ```
 
-And now things should look like:
+</details>
+
+<br>
+
+
+And now the design should look like:
 
 <img src="https://i.imgur.com/jTh9SU2.png" width=200/>
 

@@ -34,6 +34,8 @@ For this exercise you will do the following:
 - Import the `TrafficLight` Component 
 - Render a single `TrafficLight` Component and pass it the data it needs 
 
+**Note:** App will render only a single instance of the TrafficLight Component.  Therefore do not loop over the array of data and create multiple instances. 
+
 #### Bonus 
 
 - Add the logic needed that will allow the user to click the card toggle and between the background and card image
