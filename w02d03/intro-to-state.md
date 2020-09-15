@@ -222,7 +222,7 @@ Just so that we get a better idea of what `useState` actually is let's add a con
 ```js
 const Counter = () => {
   console.log('useState - ', useState)
-  ...rest of code
+  // ...rest of code
 }
 ```
 
@@ -230,7 +230,7 @@ The output should look like the following:
 
 <img src="https://i.imgur.com/IZFNnbg.png" width=400/>
 
-It appears that `useState` is a function that takes in in `initialState` and returns `dispatcher.useState()`. We won't get into the underlying code here but one thing I want to highlight is the keyword `dispatcher`. 
+It appears that `useState` is a function that takes in in `initialState` and returns `dispatcher.useState()`. We won't get into the underlying code here but one thing to to highlight is the keyword `dispatcher`. 
 
 We will revisit this concept later when we cover the `useReducer` hook as it makes use of a `dispatch` function. 
 
@@ -279,7 +279,7 @@ We should see the following:
 So it appears `countState` is set to an array that contains the following elements:
 
 - 0 - the initial state value we defined
-- a `function` - which we will be used to update state.
+- a `function` - this function will be used to update state.
 
 One way to create 2 new variables based on the array would be to manually elicit their values using bracket notation. 
 
@@ -320,6 +320,8 @@ return (
 	</div>
 );
 ```
+
+
 
 #### Updating State
 
@@ -401,6 +403,21 @@ The other added benefits of using these supporting `handler` functions are:
 
 - its a much better way to organize our code
 - we now have a function that can be passed down to a child Component as `props`
+
+
+<hr>
+
+#### <g-emoji class="g-emoji" alias="alarm_clock" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/23f0.png">⏰</g-emoji> Activity - 2min
+
+With our event handlers in place and updating state let's take a look at the `React DevTools Components` tab. If you highlight `Counter` it should look like the following:
+
+<img src="https://i.imgur.com/hncbSl7.png" />
+
+Try incrementing the value a few times and you should see it update.
+
+<img src="https://i.imgur.com/jSHBt5S.png" />
+
+<hr>
 
 #### State Update Delay
 
@@ -495,11 +512,12 @@ export default Counter
 
 ### Bonus - Using Conditional Logic and Ternary Operators
 
-Since React is all JavaScript we can use all of our previous JS expertise and knowledge when trying to implement or work out additional logic. 
+Since React is all JavaScript we can use all of our previous JS expertise when trying to implement any additional, non React specific, logic. 
 
 Let's add some basic conditional logic to the handleIncrement/handleDecrement that will reset the count to 0 if it meets a specific threshold.  
 
-**handleIncrement**
+#### IF/ELSE
+
 ```js
 const handleIncrement = () => {
   if(count === 3) {
@@ -509,33 +527,31 @@ const handleIncrement = () => {
   }
 }
 ```
+#### Switch Statements
 
-**handleDecrement**
+Another form of conditional logic is to use a switch statement. They are the conditional logic of choice for `reducers` and will be seen again when we we get to the `useReducer` hook.
+
+For now let's refactor the code to use a switch statement. 
 ```js
-const handleDecrement = () => {
-  if(count === -3) {
-      handleReset()
-    } else {
-      setCount(count - 1)
-  }
+const handleIncrement = () => {
+   switch(true){
+      case count === 3: 
+        handleReset();
+        break;
+      default:
+        setCount(count + 1)
+    }
 }
 ```
 
-#### Refactor To Use `Ternary` Operator
+#### Ternary Operators
 
-Most often React developers prefer to write a single if/else conditional as a `ternary` operator.  So let's refactor our code to do just that.
+Most often React developers prefer to write a single if/else conditional as a `ternary` operator.  So let's perform our last refactor. 
 
 **handleIncrement**
 ```js
 const handleIncrement = () => {
   count === 3 ? handleReset() : setCount(count + 1)
-}
-```
-
-**handleDecrement**
-```js
-const handleDecrement = () => {
-  count === -3 ? handleReset() : setCount(count - 1)
 }
 ```
 
