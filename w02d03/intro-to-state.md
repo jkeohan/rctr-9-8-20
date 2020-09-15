@@ -47,7 +47,7 @@ Props are a great way to pass data but have the following limitations:
 
 #### :alarm_clock: Activity - 2min
 
-Let's take a moment to edit our previous [Cards CodeSandbox]() and confirm these limitations of props. 
+Let's take a moment to edit our previous [Cards CodeSandbox](https://codesandbox.io/s/rctrr-8-8-20-bootstrap-solution-uyvmg?file=/src/App.js) and confirm these limitations of props. 
 
 **Note:** Feel free to fork this CodeSandbox if you missed last class or want a fresh codebase to start with.
 
@@ -303,6 +303,7 @@ A few best practices when assigning variable names are:
 - Use the same name for the function but precede it with `set`
 - Use a the callback function version of useState if you need to reference the previous version of state
 - Give thought as to what needs to be in state and how that state should be organized and structured
+- Always use `...spread` operator to copy object and array values to the new state
 
 <hr>
 
