@@ -15,7 +15,10 @@ Now it's time to put it all together. At a high level you will do the following:
 ## Working Version
 Here is a [working version](https://codepen.io/jkeohan/live/bYYpLN) of the app so you have a reference of the base functionality that you are being asked to implement. 
 
-The solution below was implement using jQuery so there is no React code to inspect via DevTools.  It is meant to provide a working example of how the apps functionality. 
+The solution above was implemented using jQuery so there is no React code to inspect via DevTools.  It is meant to provide a working example of how the apps functionality. 
+
+## Starter CodeSandbox
+Here is our [Starter CodeSandbox](https://codesandbox.io/s/rctr-9-8-20-traffic-light-single-app-component-starter-pqrpw?file=/src/App.js)
 
 ## Instructions
 For this exercise you will do the following:

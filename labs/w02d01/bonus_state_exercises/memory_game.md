@@ -23,7 +23,7 @@ Here is a [working version](https://codepen.io/jkeohan/live/peZQaz) of the app s
 Examine the working version of the app so you can see what element will be rendered as the actual card.  
 
 ## Starter CodeSandbox
-Here is our [Starter CodeSandbox](https://codesandbox.io/s/rctr-9-8-20-memory-game-starter-hgp2t?file=/src/App.js)
+Here is the [Starter CodeSandbox](https://codesandbox.io/s/rctr-9-8-20-memory-game-starter-hgp2t?file=/src/App.js)
 
 ## Instructions
 For this exercise you will do the following:
