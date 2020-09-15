@@ -308,7 +308,7 @@ A few best practices when assigning variable names are:
 
 #### Creating An Instance Of State
 
-With `useState` imported it's time to create an instance of state. To do this we will call `useState()` and pass it an initial starting value of `0`
+With `useState` imported it's time to create an instance of state. To do this we will call `useState()` and pass it an initial starting value of `0`.
 
 :star: Name the initial state based on what it contains. 
 
@@ -330,14 +330,14 @@ We should see the following:
 So it appears `countState` is set to an array that contains the following elements:
 
 - 0 - the initial state value we defined
-- a `function` - this function will be used to update state.
+- a `function` - which will be used to update state.
 
 One way to create 2 new variables based on the array would be to manually elicit their values using bracket notation. 
 
 
-⭐ Naming State Variables
-
 In keeping with best practices we will name the initial state variable `count` as it will use it to increment/decrement a starting value essentially keeping `count`. Of course, the corresponding function that will be used to update state should be called `setCount`.
+
+:star: Use the same name for the function but precede it with `set`
 
 ```js
 const count = countState[0];
