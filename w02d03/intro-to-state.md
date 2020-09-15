@@ -19,23 +19,23 @@ After this lesson you will be able to:
 
 ## Framing
 
-The best analogy to understand React `state` is to start by answering the following question: How are you feeling this very moment?
+The best analogy to understand React `state` is to start by answering the following question: **How are you feeling this very moment?**
 
 - Are you happy to be in class learning a new topic?
-- Are you frustrated to sit for the next 2hrs learning a new topic?
-- Did some random person wish you a good evening and make you smile?
+- Are you frustrated having to sit in class for the next 2hrs after a long day?
+- Did some random person say `hello` out of the blue make you smile?
 
-The answer to any one of those questions has a direct impact on the `state` of mind your in. A `happy` state will be reflected in your smile, your tone of voice, your being nice to others in return. An `unhappy` state will have the opposite reaction.
+The answer to any one of those questions has a direct impact on the `state` of mind your in. A `happy` state will be reflected in your smile, tone of voice, being nice to others in return. An `unhappy` state will have the opposite effect.
 
-As with all human beings our `state` of mind changes on the fly which is reflected is all the ways you can imagine. React keeps track of the applications `state` and updates the UI to reflect any changes made to state.
+As with all human beings our `state` of mind can change on the fly which is almost always reflected in our facial expressions or actions. Applications also have a `state` which is reflected in the UI.
 
-Therefore updating `state` is our control mechanism for how we update the DOM.
+Therefore updating an applications `state` is our control mechanism for how we update the DOM.
 
 ## Props Recap
 
-So far we've worked with `props` and used them to pass values from a `parent` to a `child` Component. Data in React is `unidirectional` and always flows down.
+So far we've worked with `props` and used them to pass values from a `parent` to a `child` Component. This pattern of passing data down will be consistent in React as the flow of data is `unidirectional` and always flows down.
 
-We also know that the props passed down to a child are organized, by React, into an object where every prop becomes a key:value pair.
+We also know that the props passed down to a child are organized, by React, into an object where every prop becomes a `key:value` pair.
 
 Props are a great way to pass data but have the following limitations:
 
@@ -47,14 +47,15 @@ Props are a great way to pass data but have the following limitations:
 
 #### :alarm_clock: Activity - 2min
 
-Let's take a moment to edit our previous [Cards CodeSandbox]() and try to reassign a value to a prop.
+Let's take a moment to edit our previous [Cards CodeSandbox]() and confirm these limitations of props. 
 
-**Note:** Feel free to fork this CodeSandbox if you missed last class or are havivngg issues with your version the last code along.
+**Note:** Feel free to fork this CodeSandbox if you missed last class or want a fresh codebase to start with.
 
 - Open the `Card` Component and add the following:
 
 ```js
 console.log('current props.title', props.title);
+// ATTEMPT TO REASSIGN PROPS A NEW VALUE
 props.title = 'Mykonos';
 console.log('props.title', props.title);
 ```
@@ -63,38 +64,44 @@ Refresh the page and you should see the following:
 
 <img src="https://i.imgur.com/Nmio71o.png" width=300/>
 
+So it looks like props was not changed and so we have confirmed that once a Component has been passed props that any attempt to change those props directly will have no effect. 
+
 <hr>
 
 #### :mag: Check for Understanding - 2min
 
+The instructor will set a timer for 2min.
+
 - Take 2 minutes to think about and write your answers to the following questions:
   - What do we use `props` for?
-  - What benefits do they provide when passing down multiple properties?
-  - What limitations do they have?
+  - How does the receiving Component organize `props`?
+  - What limitations do `props` have?
+  - Is there any best practice you can think of when creating a `prop`?
 - When asked slack your answer(s) in a thread created by the instructor
 
 <hr>
 
 ## Intro To State
 
-In our attempt to provide a coherent framing of React `state` the point was made that what you see on the page is current `state` of the application. Any changes to `state` , aka `data`, will then be reflected in the UI.
+In our attempt to provide a coherent framing of React `state` the point was made that what you see on the page is the current version of the `state` of the application. Any changes to `state` , aka `data`, will then be reflected in the UI.
 
-One important thing to note here is that any changes to state will cause the Component to `re-render`. This is essentially how the UI is updated. This is a very important concept to keep in mind as a `re-render` can also initiate additional function calls, something we will discuss as part of React `lifecycle methods`.
+One important thing to note here is that any changes to state will cause the Component to `re-render`.This is essentially how the UI is updated. 
+
+This is a very important concept to keep in mind as a `re-render` can also initiate additional function calls, something we will discuss as part of Reacts `lifecycle methods`.
 
 ### Working With State
 
-So updating state will, most often, require the user to interact with the application. Hence the user performs some action, like clicking a button, and the component responds by `doing a thing` and updating `state`.
+So updating state will, most often, require the user to interact with the application. Hence, the user performs some action, like clicking a button, and the component responds by `doing a thing` and updating `state`.
 
-We've done a fair amount of framing so far, so let's dive in to building our
-application!
+We've done a fair amount of framing and explanations so far, so let's dive in to building our application!
 
 ### A Simple Counter Component
 
-We'll walk through a very simple `Counter` Component which provides the user 2 buttons to increment or decrement a counter.
+We'll walk through building a very simple `Counter` Component which will provide the user 2 buttons to increment or decrement a value displayed on the screen. 
 
 #### Spin Up A New CodeSandbox
 
-For this demo you will spin up a new CodeSandbox. To do this just click on the blue `Create Sandbox` button.
+For this demo you will spin up a new CodeSandbox. To do this just click on the blue `Create Sandbox` button on the right of the page. 
 
 <img src="https://i.imgur.com/N0qsmdh.png" width=200/>
 
@@ -112,6 +119,7 @@ Since you already have experience creating Components take a minute to perform t
 
 - Create a new file in `src` called `Counter.js`
 - Import `React`
+- Create the Component
 - Return the following html:
 
 ```js
@@ -126,7 +134,7 @@ Since you already have experience creating Components take a minute to perform t
 
 - Export the Component
 - Import the Component into `App.js`
-- Replace all the html inside of `className="App"` with:
+- Replace all the html inside of `className="App"` with the `Counter` Component.
 
 ```js
 <div className='App'>
@@ -138,7 +146,7 @@ Once your done React should render the following:
 
 <img src="https://i.imgur.com/fBEOYU0.png" width=300/>
 
-That HTML looks like it could use a little styling so add the following css to `styles.css`
+That HTML looks like it could use a little styling.  So lets copy/paste the following css to `styles.css`
 
 <details>
 <summary>CSS</summary>
@@ -172,7 +180,7 @@ span {
 <br>
 
 
-And now the design should look like:
+And now the design should update to look like:
 
 <img src="https://i.imgur.com/jTh9SU2.png" width=200/>
 
@@ -180,19 +188,46 @@ And now the design should look like:
 
 ### Working With useState
 
-In order to add state to the `Counter` Component we will first need to import `useState` from `React`. `useState` is one of the 3 Basic Hooks as per the Official React Doc.
+In order to add state to the `Counter` Component we will first need to import the `useState` Hook from `React`. `useState` is one of the 3 Basic Hooks as per the Official React Doc.
 
 #### A Word On Hooks
 
-Hooks were introduced in React Version 16.8.
+Hooks were introduced in React Version 16.8. Before hooks, all state needed to be within a `Class` component. 
 
-Before hooks, all state needed to be within a Class component. Class components come with a lot of boilerplate, which can feel bulky, especially when dealing with a simpler state. 
+Hooks introduce state management to Functional components, using a simpler and more flexible API and let you split one component into smaller functions based on what pieces are related"
 
-Hooks introduce state management to Function components, using a simpler and more flexible API. Here's an example of a Class component refactored to be a Function component with hooks:
+**Class Compoonent State Example**
 
-> "Hooks let you split one component into smaller functions based on what pieces are related"
+Class components come with a lot of boilerplate, which can feel bulky, especially when dealing with a simpler state. 
 
+Here is how state would have been configured using a class Component. 
 
+```js
+class Counter extends React.Component {
+  constructor(props){
+    super(props)
+    this.state = {count: 0}
+  }
+  render() {}
+}
+```
+
+Although with the the next ES class properties proposal and the help of` Babel` to transpile the code the above could be written as:
+
+```js
+class Counter extends React.Component {
+
+  state = {count: 0}
+
+  render() {}
+}
+```
+
+**State of Transition**
+
+We are currently in a state of transition in world of React. Hooks were a game changer and I"m sure there is more to come down the line. 
+
+There is certainly more code out there written in the previous syntax but Hooks are now what developes turn to first when building new applications or Components within an existing codebase. 
 
 <hr>
 
@@ -200,8 +235,8 @@ Hooks introduce state management to Function components, using a simpler and mor
 
 Since we will be working with `Hooks` solely in this class let's take a minute to review the following React Docs:
 
-- [Hooks API Reference](https://reactjs.org/docs/hooks-reference.html)
-- [useState Hook](https://reactjs.org/docs/hooks-overview.html)  
+- [Hooks API Reference](https://reactjs.org/docs/hooks-reference.html) - all the available Hooks
+- [useState Hook](https://reactjs.org/docs/hooks-state.html) - useState specifically
 
 
 
@@ -211,13 +246,21 @@ Since we will be working with `Hooks` solely in this class let's take a minute t
 
 Now it's time to import `useState` into the Counter Component.
 
-The react library has a key called `useState` that we elicit and store in a variable of the same name by using the `Object Destructuring` syntax: `{useState}`
+The react library has a key called `useState` that we elicit from `react` and store in a variable of the same name.  We will do so by using `Object Destructuring`.
+
+The `react` object has a key called `useState` and by using `{useState}` we can store the value returned in the key into a variable of the same name. 
 
 ```js
 import React, { useState } from 'react';
 ```
 
-Just so that we get a better idea of what `useState` actually is let's add a console.log.
+Essentially we are doing something similar to the following but this would need to be on a separate line as `React` would first need to be imported. 
+
+```js
+import useState from React.useState
+```
+
+Just so that we get a better idea of what `useState` actually is let's add a console log.
 
 ```js
 const Counter = () => {
@@ -229,21 +272,26 @@ const Counter = () => {
 The output should look like the following:
 
 <img src="https://i.imgur.com/IZFNnbg.png" width=400/>
+<br><br>
 
-It appears that `useState` is a function that takes in in `initialState` and returns `dispatcher.useState()`. We won't get into the underlying code here but one thing to to highlight is the keyword `dispatcher`. 
+It appears that `useState` is a function that takes in in `initialState`, calls a supporting function and returns `dispatcher.useState()`. 
 
-We will revisit this concept later when we cover the `useReducer` hook as it makes use of a `dispatch` function. 
+We won't get into the underlying code here but one thing to to highlight is the keyword `dispatcher`. 
+
+We will revisit this concept later when we cover the `useReducer` hook as it uses a similar convention of naming it's corresponding function `dispatch`.
 
 <hr>
 
 #### useState Rules and Best Practices
+
+Let's take a moment to cover some of the `rules` and `best practices` of using `useState`.
 
 :oncoming_police_car: - Rules 
 
 Here are some of the rules that govern the useState Hook:
 
 - never update the state value directly
-- always use the `setState` function (or whatever you named it) to update state
+- always use the `setState` function to update state
 - since state is never directly edited it must always be overwritten with a new value 
 
 :star: - Best Practices
@@ -253,13 +301,16 @@ A few best practices when assigning variable names are:
 - Use `Array Destructuring` when initializing the state variables
 - Name the initial state based on what it contains
 - Use the same name for the function but precede it with `set`
-- Use a the callback function version of useState if you need to reference the previous version of state.
+- Use a the callback function version of useState if you need to reference the previous version of state
+- Give thought as to what needs to be in state and how that state should be organized and structured
 
 <hr>
 
 #### Creating An Instance Of State
 
 With `useState` imported it's time to create an instance of state. To do this we will call `useState()` and pass it an initial starting value of `0`
+
+:star: Name the initial state based on what it contains. 
 
 ```js
 const countState = useState(0);
