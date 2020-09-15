@@ -1,5 +1,9 @@
 # Intro To State Exercise
 
+**Title:** Intro to State<br>
+**Duration:** 15-30min <br>
+**Creator:**  Joe Keohan<br>
+
 So far you've learned the following about React:
 
 - Creating and nesting Components
@@ -11,7 +15,7 @@ So far you've learned the following about React:
 
 Now it's time to put it all together. At a high level you will do the following:
 
-> Create a separate Card Component for each element in the array of data provided. Each card will be assigned the same background image.  When the user clicks on a card it will update and re-render the image assigned to that card specifically. 
+> Iterate over an array and create a Card Component for each element in the array. Each card will be assigned the same background image.  When the user clicks on a card it will update and re-render the image assigned to the cardImage key for that card specifically. 
 
 ## Working Version
 Here is a [working version](https://codepen.io/jkeohan/live/peZQaz) of the app so you have a reference of the base functionality that you are being asked to implement. 
@@ -19,18 +23,18 @@ Here is a [working version](https://codepen.io/jkeohan/live/peZQaz) of the app s
 Examine the working version of the app so you can see what element will be rendered as the actual card.  
 
 ## Starter CodeSandbox
-Here is our [Starter CodeSandbox]()
+Here is our [Starter CodeSandbox](https://codesandbox.io/s/rctr-9-8-20-memory-game-starter-hgp2t?file=/src/App.js)
 
 ## Instructions
 For this exercise you will do the following:
 
 #### Card Component
-- Examine the working solution and determine what HTML element is being used to render the card
+- Examine the working solution and determine what HTML element is being used to render as the card
 - Create a `Card` Component that accepts props 
 - Import and setup `state` in the Card Component
-- State should be assigned an initial value of the background image
-- Update the Card Components JSX to work with the props passed and the initial state value
-- Add an `onClick event` to the card image that will set state to the card image
+- State should be assigned an initial value of the value assigned to the `backgroundImage` key
+- Update the Card Components JSX to use the value stored in state
+- Add an `onClick` event to the card that will set state to the value assigned in the `cardImage` key
 
 #### App Component
 - Import the data into App.js
@@ -40,4 +44,4 @@ For this exercise you will do the following:
 
 #### Bonus 
 
-- Add the logic needed that will allow the user to click the card toggle and between the background and card image
+- Add the logic needed that will allow the user to click the card and toggle between the background and card image
