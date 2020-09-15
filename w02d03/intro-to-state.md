@@ -358,32 +358,32 @@ const [count, setCount] = useState(0);
 
 #### Using State
 
-Now that our initial value is been assigned to the `count` variable let's update the JSX to use that value instead of a current hard coded, static value of 0. 
+Now that our initial value is been assigned to the `count` variable let's update the JSX to use that value instead of a current hard coded value of 0. 
 
 Of course, as has been stated several times already, JSX requires that all JavaScript be surrounded in curly braces.
 
 
 ```js
 return (
-	<div>
-		<span>Current Count: {count}</span>
-		... rest of code
-	</div>
+  <div>
+    <span>Current Count: {count}</span>
+    ... rest of code
+  </div>
 );
 ```
 
-
-
 #### Updating State
 
-With our state value in place it's time to provide some functionality to the buttons so that we can provide the user a means to update state.
+With our state value in place it's time to provide some functionality to the buttons and allow the user a means to interact with the app and update state.
 
 In the case of our Counter the only way to update  `count` is to call the `setCount` function and pass it a new value. 
+
+:oncoming_police_car: Always use the `setState` function to update state
 
 There are 2 ways to perform this action:
 
 ```js
-// update the current value directly
+// grab the current version of state
 setCount(count + 1);
 
 // OR
@@ -391,7 +391,9 @@ setCount(count + 1);
 // use a callback function and pass the previous version of state
 setCount((prevState) => prevState + 1);
 ```
-In the second example React will call that updater function with the previous value of the state, and whatever you return will replace the state with a new value. The argument is called `prevState` in the example but you can name it anything.
+In the second example the setter function takes in an callback function that is passed  the previous value of state and returns a new value altogether. 
+
+The argument in this example is called `prevState` by convention but you can name it anything you want. 
 
 There are scenarios when the callback function version is required such as when state is being updated within the callbacks of either a `setTimeout()` or `setInterval()`.  
 
@@ -400,7 +402,15 @@ There are scenarios when the callback function version is required such as when 
 
 In order to allow the user to interact with the buttons we will need to add an event listener.
 
-React event listeners is an additional topic we will revisit again in future lessons. For now we will add an `onClick` event listener and call `setCount` to update state.
+React event listeners are an additional topic we will revisit again in future lessons. They are essentially `synthetic events` based on the real underlying JS events and perform the same operations as before.  Events you might have worked with before are: 
+
+- click => onClick
+- submit => onSubmit
+- change => onChange
+- mouseover => onMouseOver
+
+
+For now we will add an `onClick` event listener that calls `setCount` to update state.
 
 Also, as with plain JavaScript or jQuery we will use an anonymous callback to pause the execution until the click event has occurred.
 
@@ -416,11 +426,13 @@ Also, as with plain JavaScript or jQuery we will use an anonymous callback to pa
   )
 ```
 
+If we test out the app we should see that the count value will change based on user input. 
+
 #### Event Handlers
 
-Working with React certainly requires that we write code in very specific and opionated ways. That is a good thing in that we can quickly examine code and expect to find a consistent and reliable way as to how it is written.
+Working with React certainly requires that we write code in very specific and opinionated ways. That is a good thing in that we can quickly examine code and expect some consistency in how it is written.
 
-But some React code is written soley based on the adoption of the community. One such pattern is creating `event handler` functions and preceding their name with `handle`.
+But some React code is written solely based on the adoption of the community at large.  One such pattern is creating `event handler` functions and preceding their name with `handle`.
 
 Let's give that a try by creating the following supporting functions:
 
@@ -433,7 +445,7 @@ const handleIncrement = () => {};
 const handleDecrement = () => {};
 ```
 
-Now let's move the `setState` function calls into their corresponding `handler` as well as replace the anonymous function call with our handlers
+Now let's move the `setState` function calls into their corresponding `handler` functions and update the `onClick` to reflect this refactor. 
 
 ```js
 const handleIncrement = () => {
@@ -455,6 +467,7 @@ The other added benefits of using these supporting `handler` functions are:
 - its a much better way to organize our code
 - we now have a function that can be passed down to a child Component as `props`
 
+This concept of passing a function down to a child Component where the function is being executed in the parent scope.  This is how we pass values from a child to oa parent and a concept knows as `lifting state`. 
 
 <hr>
 
@@ -472,9 +485,9 @@ Try incrementing the value a few times and you should see it update.
 
 #### State Update Delay
 
-Although the updates to state appear immediate there is one thing to note.  After calling `setState` the new value assigned to state isn't available until the Component re-renders. 
+Although the updates to state appear immediate there is one thing to note.  After calling `setCount` the new value assigned to state isn't available until the Component `re-renders`. 
 
-So if we were to console.log `count` immediately after it's been updated in handleIncrement we would see it outputs the previous version of state. 
+So if we were to console log `count` immediately after it's been updated we would see it outputs the previous version of state. 
 
 ```js
 const hanndleIncrement = () => {
@@ -487,9 +500,9 @@ Here we can clearly see that `count` is now 2 but the console logs show that cou
 
 <img src="https://i.imgur.com/V0agq9h.png" width=300/>
 
-There will indeed be instances where we will need to run some logic based on the state change but in order to do this we must we must do so after after rendering and using the` useEffect()` hook. 
+There will be instances where some logic needs to be run based on the change in state but we can only do this after re-render and only using the` useEffect()` hook. 
 
-The `useEffect` hook is a much broader topic and delves into the React Component Lifecycle methods, something we will learn about in upcoming lectures. 
+The `useEffect` hook is a much broader topic and delves into the `React Component Lifecycle` methods, something we will learn about in upcoming lectures. 
 
 
 <hr>
@@ -500,7 +513,10 @@ Let's try a quick activity that should help you apply some of these concepts.
 
 - Add a new `Reset` button to the Component that, when clicked, will reset the counter back to 0. 
 - Use the `handler` model that we used to setup the previous buttons. 
-- Implement `setCount` using the callback function approach. 
+- Call setCount to update state
+
+**Bonus**
+- Try using the callback function with SetCount.
 
 <hr>
 
@@ -528,6 +544,8 @@ const Counter = () => {
 
   const handleReset= () => {
     setCount(0)
+    // BONUS
+    // setCount( prevState => 0)
   };
 
   return (
@@ -552,6 +570,8 @@ export default Counter
 
 #### :mag: Check for Understanding - 2min
 
+The instructor will set a timer for 2min.
+
 - Think about the following questions:
   - What do we use `props` for?
   - What do we use `state` for?
@@ -559,13 +579,15 @@ export default Counter
 - Take a moment to write out your best answer for each question, 3 answers in total.
 - When asked slack your answer(s) in a thread created by the instructor
 
+**Note:** Do not slack your answers until the instructor has given the ok.
+
 <hr>
 
 ### Bonus - Using Conditional Logic and Ternary Operators
 
-Since React is all JavaScript we can use all of our previous JS expertise when trying to implement any additional, non React specific, logic. 
+Since React is all JavaScript we can use all of our previous JS expertise when trying to implement additional, non React specific, logic. 
 
-Let's add some basic conditional logic to the handleIncrement/handleDecrement that will reset the count to 0 if it meets a specific threshold.  
+Let's add some basic conditional logic to the `handleIncrement/handleDecrement` that will reset the count to 0 if it meets a specific threshold.  
 
 #### IF/ELSE
 
