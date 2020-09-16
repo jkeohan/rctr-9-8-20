@@ -78,14 +78,14 @@ When using React, building components will be your main front-end task.
 
 From this point on we will be creating more and more Components than you ever imagined but before we begin let's discuss the requirments and best practices for creating Components.  Some of the requirements are specific to `JSX` and will be reviewed again in a later section. 
 
-#### Requirements
+:oncoming_police_car: - Rules
 - They must import `React`
 - They must begin with an uppercase letter
 - They must render some UI (user interface) as `JSX` (more on JSX later)
 - They can render only one top level element but that element can contain numerous children. 
 - The Component must be exported from the file to be used within another file
 
-#### Best Practices
+:star: Best Practices
 - Each Component should be in it's own file
 - Each Component file should be in a separate folder 
 - Each Component should reference it's own CSS

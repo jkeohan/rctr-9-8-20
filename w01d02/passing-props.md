@@ -6,12 +6,17 @@
 *   Loop over an array of data and pass multiple props
 *   Work with additional JSX rules. 
 
+### Props
+
+Properties!  Every Component has `props` and they are how we pass data from a parent to a child Component. 
+
+Props are a great way to pass data but have the following limitations:
+
+- Props are immutable
+- React will ignore any attempt to reassign a prop value
+- Reassigning a prop value will have no effect on the Component.
 
 ### Passing Props
-
-Properties!  Every Component has `props` 
-
-`props` are how we pass data to a Component. 
 
 Say for instance we wanted to render the name of the place that the image represents in our cards example. We could go directly to Card1 and do the following: 
 
@@ -21,7 +26,17 @@ Say for instance we wanted to render the name of the place that the image repres
 
 That isn't actually passing props but more so just adding the value manually. So let's add a `prop` to Card1 and pass it the value of `Santorini`.
 
-Since the `App` component is actually rendering `Card1` that is where we pass it a prop.  A `prop` is written in a `name=value` format. 
+Since the `App` component is actually rendering `Card1` that is where we pass it a prop.  A `prop` is written in a `name=value` format much like the other props your used to writing such as: 
+
+```html
+<!-- The src property of a image tag -->
+<img src="" />
+<!-- The class property assigned to any element -->
+<div class="blue"></div>
+<!-- The href property assigned to an anchor tag -->
+<a href="someurl"></a>
+```
+
 
 Let's add the following prop.
 
@@ -47,6 +62,27 @@ In DevTools you should see the following in the console.
 <img src="https://i.imgur.com/HlrtO2T.png" width=300/>
 
 We can see here that `props` is an object and that `title` is a key.  This will be the same pattern when we start passing in multiple props.  Each one will be assigned a key:value pair. 
+
+#### :alarm_clock: Activity - 2min
+
+Let's take a moment to edit our previous [Cards CodeSandbox]() and confirm these limitations of props. 
+
+- Open the `Card1` Component and add the following:
+
+```js
+console.log('current props.title', props.title);
+// ATTEMPT TO REASSIGN PROPS A NEW VALUE
+props.title = 'Mykonos';
+console.log('props.title', props.title);
+```
+
+Refresh the page and you should see the following:
+
+<img src="https://i.imgur.com/Nmio71o.png" width=300/>
+
+So it looks like props was not changed and so we have confirmed that once a Component has been passed props that any attempt to change those props directly will have no effect. 
+
+<hr>
 
 
 #### Using Props
@@ -207,4 +243,4 @@ The very last edit to make would be to rename the `Card1` Component to `Card` si
 
 And there you have it.  Multiple Components rendered with each being passed multiple props.  This is how we code in React. 
 
-
+[Final Solution](https://codesandbox.io/s/rctrr-8-8-20-bootstrap-solution-uyvmg?file=/src/App.js)
