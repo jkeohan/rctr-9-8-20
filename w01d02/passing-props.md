@@ -1,3 +1,10 @@
+<br>
+Title: Passing Props<br>
+Duration: 45min+ <br>
+Creator:  Joe Keohan<br>
+
+---
+
 # Passing Props
 
 ## Learning Objectives

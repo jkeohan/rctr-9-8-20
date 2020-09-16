@@ -1,3 +1,10 @@
+<br>
+Title: Intro to State<br>
+Duration: 45min+ <br>
+Creator:  Joe Keohan<br>
+
+---
+
 # Nested Components
 
 ## Learning Objectives
@@ -218,4 +225,3 @@ export default function App() {
 If everything worked we should now see our original design in place.
 
 <img src="https://i.imgur.com/nsN0Cro.jpg" width=400/>
-
