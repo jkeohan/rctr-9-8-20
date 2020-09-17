@@ -118,7 +118,7 @@ Here is the basic syntax of writing an inline style.
 <span style={{ css-property-name: value }}></span>
 ```
 
-- :thumbsup: Click on the thumbs up when you've implemented the solution
+:thumbsup: Click on the thumbs up when you've implemented the solution
 
 <hr>
 
