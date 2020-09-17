@@ -42,4 +42,4 @@ For this exercise you will do the following:
 ### Bonus - Bulb Component
 
 - Create a new `Bulb` Component that will render the a single bulb
-- Pass the Component the color the color it needs based on the application logic
+- Pass the `Bulb` Component the color it needs based the state of the application

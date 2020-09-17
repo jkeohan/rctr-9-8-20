@@ -292,7 +292,7 @@ Here are some of the rules that govern the useState Hook:
 
 - never update the state value directly
 - always use the `setState` function to update state
-- since state is never directly edited it must always be overwritten with a new value 
+- since state is never directly edited and must always be overwritten with a new value 
 
 :star: - Best Practices
 
@@ -629,6 +629,8 @@ const handleIncrement = () => {
 }
 ```
 
+Final Working Solution: [CodeSandbox](https://codesandbox.io/s/rctr-9-8-20-w02d03-counter-solution-ke6qy?file=/src/Counter.js)
+
 
 ### Resources
 
@@ -636,4 +638,5 @@ const handleIncrement = () => {
 - [The useState Hook - robinwieruch](https://www.robinwieruch.de/react-usestate-hook)
 - [React useState Hook Guide - dmitirpavlutin](https://dmitripavlutin.com/react-usestate-hook-guide/)
 - [React Event Handlers - robinwieruch](https://www.robinwieruch.de/react-event-handler)
+- [ES6 Tutorial](https://www.javascripttutorial.net/es6/)
 <hr>
