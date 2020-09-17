@@ -15,25 +15,27 @@
 
 ### The Birth of the Frontend Frameworks
 
-As the world of web development and software engineering grows in complexity so does the need to introduce new tools that facilitate development and increase the efficiency and performance our our codebase. 
+As the world of front end development and software engineering grows in complexity so does the need to create new tools that facilitate the  development process and increase the efficiency and/or performance our our codebase. 
 
-I'm sure everyone here has heard of jQuery, which was first introduced in 2006. It filled a gap for front end developers for some time, and still does but it's considered just a ibrary and falls short of carrying the label of `framework`.
+I'm sure everyone has either heard or worked with jQuery in their Front End Dev career.  It was first introduced in 2006 and now close to [20 million web sites](https://www.similartech.com/compare/jquery-vs-react-js) have been built using the library. 
 
-Some of the front end frameworks you might of heard and even worked with are:
+Several years after the birth of jQuery several front end frameworks were introduced that provided a much more structured and opinionated way of writing code.  Here are a few of the most well known frameworks: 
 
 | Framework | Year Introduced |
 | :---: | :---: | 
 | Angular | 2009 |
-| Backbonne | 2010|
+| Backbone | 2010|
 | Ember | 2011 |
+| React | 2013 |
 
+jQuery was the tool of choice for front end developers, and still is for some, but it's starting to run its course.  It's considered just a library and falls short of being called a `framework`.
 
 
 <hr>
 
 #### <g-emoji class="g-emoji" alias="alarm_clock" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/23f0.png">⏰</g-emoji> Activity - 3min
 
-- Think about what a front end framekwork is and answer the following questions:
+- Think about what a front end framework is and answer the following questions:
   - How it's different than a JavaScript library like jQuery, Lodash, Underscore or Ramda? 
   - Why would we opt to use it?
 - Write our your answer in a slack thread to yourself
@@ -43,13 +45,14 @@ Some of the front end frameworks you might of heard and even worked with are:
 
 ### Front End Frameworks
 
-A framework is a library that provides generic functionality and structure that serves as foundation to build and deploy applications.  The following are just a few of the front end frameworks mentioned in [https://2019.stateofjs.com](https://2019.stateofjs.com/front-end-frameworks/)
+A framework is a library that provides generic functionality and structure that serves as foundation to build and deploy applications.  
+
+The following are just a few of the front end frameworks mentioned in [https://2019.stateofjs.com](https://2019.stateofjs.com/front-end-frameworks/)
 
 - React
 - Vue
 - Angular
 - Ember
-
 
 
 Frameworks can help standardize code, give you additional functionality and performance, and can help get your code off the ground faster.  
@@ -103,6 +106,17 @@ React was born out of Facebook's frustration with the traditional MVC model and:
   * how re-rendering something meant re-rendering **everything** (or just a lot).
   * how it had negative implications on processing power and ultimately user experience, which at times became glitchy and laggy.
 
+### Becoming A React Developer
+
+Learning React requires that one have an understanding and working knowledge of basic front end technologies, such as: 
+
+- HTML
+- CSS
+- JavaScript (ES6, ES7, ES8)
+
+It then opens the door to a whole new world of development tools that are used in the React ecosystem.  The [React Developer Roadmap](https://hackernoon.com/the-2020-reactjs-developer-roadmap-8q143yan) does a good job of documenting the technologies and concepts that one will be exposed to when working in React.
+
+<img src="https://i.imgur.com/hZOSZbb.png" width=900/>
 
 ### React in MVC
 
@@ -112,9 +126,9 @@ Here is what the MVC architecture represents:
 - `V stands for Views` 
 - `C stands for Controller.` 
 
- The View is the presentation layer, it’s what the user sees and interacts with in the browser. The Controller makes the decisions based on requests and then controls what happens in response, like clicking on links and submitting forms. It controls the interaction with the Models and Views (passing data from one to the other). The model refers to the database
+ The `View` is the presentation layer, it’s what the user sees and interacts with in the browser. The `Controller` makes the decisions based on requests and then controls what happens in response, like clicking on links and submitting forms and communicates with the `Model`, which is the database. 
 
- React is now the View in this model. 
+ `React` is the `View` in this model. 
 
 <img src="https://i.imgur.com/t779Jw9.png" width=600/>
 
@@ -123,11 +137,11 @@ React will work with any back-end language such as Node/Express, Rails, Django, 
 
 ## The Virtual DOM For Efficiency
 
-The Virtual DOM is a Javascript representation of the actual DOM, which looks like the following:
+The Document Object Model or DOM for short is an API that is used to interact with the HTML that is displayed on a page.  The following structure represents the DOM and starts with the `document` object. 
 
 <img src="https://i.imgur.com/qB0cznr.png" width=500/>
 
-The virtual DOM is a staging area for changes that will eventually be implemented. Because of that, React can keep track of changes in the actual DOM by
+The Virtual DOM is a Javascript representation of the actual DOM and is a staging area for changes that will eventually be implemented. Because of that, React can keep track of changes in the actual DOM by
   comparing different instances of the Virtual DOM.
 
   <img src="https://i.imgur.com/xTxgF0b.png" width=500/>
