@@ -16,9 +16,7 @@ Creator:  Joe Keohan<br>
 
 ## Components
 
-The basic unit you'll be working with in React is a **Component**. 
-
-Components are pieces of our application that we can define once and reuse throughout.
+The basic unit you'll be working with in React is a **Component**.  Components are pieces of our application that we can define once and reuse throughout.
 
 If you are familiar with Bootstrap then you already understand the concept of a Component.  Bootsrap even has a section in their documentation dedicated to just components.  
 
@@ -287,5 +285,19 @@ In Chrome DevTools we should see the following warning in the `Console`
 
 <img src="https://i.imgur.com/f28eP84.png" width=500/>
 
+### Bonus - Modern Web Components
+
+Components, React or otherwise,  are now becoming the standard for sharing small pieces of functionality.  
+
+Let's take a look at [https://bit.dev/](https://bit.dev/) which is a place developers can share their own custom Components or use those uploaded by other devs. 
+
+There are hundreds of [React Components](https://bit.dev/components?q=react) being shared on the site as well. 
+
+The Components can then be organized to implement a design as follows:
+
+<img src="https://i.imgur.com/CnpxIFM.jpg" width=500/>
+
+
 ### Resource
+- [Modern Web Components](https://bit.dev/)
 - For an intro to components, watch [this video](https://generalassembly.wistia.com/medias/h64z7lp1ir) (Note: right click to open in a new tab).

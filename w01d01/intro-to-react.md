@@ -36,7 +36,7 @@ jQuery was the tool of choice for front end developers, and still is for some, b
 #### <g-emoji class="g-emoji" alias="alarm_clock" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/23f0.png">⏰</g-emoji> Activity - 3min
 
 - Think about what a front end framework is and answer the following questions:
-  - How it's different than a JavaScript library like jQuery, Lodash, Underscore or Ramda? 
+  - How is it different than a JavaScript library like jQuery, Lodash, Underscore or Ramda? 
   - Why would we opt to use it?
 - Write our your answer in a slack thread to yourself
 - When asked slack your answer in the thread created by the instructor
