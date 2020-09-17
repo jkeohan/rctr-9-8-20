@@ -41,7 +41,7 @@
 | 3  | Tues 09/15 |  <li>[State - useState](https://git.generalassemb.ly/jkeohan/rctr-9-8-20/blob/master/w02d03/intro-to-state.md)</li> | <li>Read: [4 Examples of the useState Hook](https://daveceddia.com/usestate-hook-examples/)</li> | [Recording](https://generalassembly.zoom.us/rec/share/PRoIYrZJohbp755S50NQk2kePQGWfb5pjFk3SCLoRPzVUaxzbwyBZofH7rCjpMyv.Fjw4abzlKWRuORmb?startTime=1600213914000) |
 | 4  | Thur 09/17 | <li>[useState Cont](https://git.generalassemb.ly/jkeohan/rctr-9-8-20/blob/master/w02d04/intro-to-state-cont.md)...</li><li>Lab: React Cities</li> | <li>Do: Traffic Light</li><li>Read: [Lifting State In React](https://www.robinwieruch.de/react-lift-state)</li> |  |
 | 5  | Tues 09/22 | Lifting State  |  |  |
-| 6  | Thur 09/24 | Forms |  |  |
+| 6  | Thur 09/24 | Controlled vs Uncontrolled Forms |  |  |
 | 7  | Tues 09/29 | Lifecycle Hooks - useEffect |  |  |
 | 8  | Thur 10/01 | API's |  |  |
 | 9  | Tues 10/06 | useContent |  |  |
