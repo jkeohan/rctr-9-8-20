@@ -451,7 +451,7 @@ That however won't work and we should get the following:
 
 <img src="https://i.imgur.com/hIzbE5L.png" width=500/>
 
-We must keep in mind that there is another rule, JavaScript specific, that React must follow as well. And it is that css property names, when referenced via JS, must be written in camel case.  
+We must keep in mind that there are other rules, JavaScript specific, that React must follow as well. And in the case of css property names they must be written in camel case.  
 
 Let's update the previous rule and add one more to drive the point home. 
 
@@ -462,7 +462,7 @@ const styles = {
 }
 ```
 
-We should end up with the following: 
+We should end up with the following error:
 
 <img src="https://i.imgur.com/ahgAR8a.png" width=200/>
 
