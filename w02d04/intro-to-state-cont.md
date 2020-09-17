@@ -415,6 +415,64 @@ Slack you answer in a thread created by the instructor.
 
 <hr>
 
+### Bonus - Using A Style Object
+
+So we've used inline styles to assign the background color property 
+
+```js
+ <span style={{ background: counterObj.color }}>Current Count: {counterObj.count}</span>
+```
+
+This works best if there is only a single value to assign but if there are more properties then it will start to bloat the JSX and make it harder to read.  Another way to structure the css is to use an object. 
+
+```js
+const styles = {
+  background: counterObj.color
+}
+```
+
+Let's use the styles object.
+
+```js
+<span style={styles}>Current Count: {counterObj.count}</span>
+```
+
+Let's keep in mind that `background` is short for several properties in css so let's be very specific about which rule we are targeting, which is `background-color`.  
+
+Let's update the property name to target that rule specifically. 
+
+```js
+const styles = {
+  background-color: counterObj.color;
+}
+```
+
+That however won't work and we should get the following:
+
+<img src="https://i.imgur.com/hIzbE5L.png" width=500/>
+
+We must keep in mind that there is another rule, JavaScript specific, that React must follow as well. And it is that css property names, when referenced via JS, must be written in camel case.  
+
+Let's update the previous rule and add one more to drive the point home. 
+
+```js
+const styles = {
+  backgroundColor: counterObj.color,
+  fontFamily: 'cursive'
+}
+```
+
+We should end up with the following: 
+
+<img src="https://i.imgur.com/ahgAR8a.png" width=200/>
+
+```js
+const styles = {
+  backgroundColor: counterObj.color,
+  fontFamily: 'cursive'
+}
+```
+
 ## Recap
 
 You've learned quite a bit about React state.  Let's take a minute to review the `rules` and `best practices`
