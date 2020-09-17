@@ -42,6 +42,6 @@ For this exercise you will do the following:
 
 #### Bonus - Additional State
 
-- Add more state and/or update existing state so that will help keep track of which small image was clicked and will place a green border around the image to indicate that it the active image. 
-- Any previously active image will have it's border color removed
-
+- Add more state and/or update existing state in order to keep track of which small image was clicked
+- Place a green border around the image to indicate that it is the image being displayed.
+- Any other previously active image will have it's border color removed

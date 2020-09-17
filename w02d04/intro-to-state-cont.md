@@ -48,6 +48,8 @@ Let's continue to work through the Counter Component and take the first approach
 
 Here is the [Counter CodeSandbox Starter](https://codesandbox.io/s/rctr-9-8-20-w02d04-counter-starter-71oc2?file=/src/Counter.js) code with the changes from the previous lecture. 
 
+**Note:** Feel free to fork this CodeSandbox if you missed last class or want a fresh codebase to start with.
+
 Just as a quick review here is what we need to do: 
 
 - create a new instance of `useState`
