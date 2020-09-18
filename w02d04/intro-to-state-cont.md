@@ -475,6 +475,8 @@ const styles = {
 }
 ```
 
+[Solution Code](https://codesandbox.io/s/rctr-9-8-20-w02d04-counter-starter-forked-gybkx?file=/src/Counter.js:249-259)
+
 ## Recap
 
 You've learned quite a bit about React state.  Let's take a minute to review the `rules` and `best practices`
