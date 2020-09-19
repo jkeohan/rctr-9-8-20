@@ -13,11 +13,18 @@
 
 ## Framing
 
+### The Rise and Fall of jQuery
+
+I'm sure everyone has either heard or worked with jQuery in their Front End Dev career.  It was first introduced in 2006 and now close to [20 million web sites](https://www.similartech.com/compare/jquery-vs-react-js) have been built using the library versue the 1 million+ for React.
+
+<img src="https://i.imgur.com/1QmJMVa.png" /><br>
+
+jQuery was the tool of choice for front end developers for a quite sometime, but it's starting to run its course and is being replaced by libraries that also fall into the category of `framework`. 
+
+
 ### The Birth of the Frontend Frameworks
 
-As the world of front end development and software engineering grows in complexity so does the need to create new tools that facilitate the  development process and increase the efficiency and/or performance our our codebase. 
-
-I'm sure everyone has either heard or worked with jQuery in their Front End Dev career.  It was first introduced in 2006 and now close to [20 million web sites](https://www.similartech.com/compare/jquery-vs-react-js) have been built using the library. 
+As the world of front end development and software engineering grows in complexity so does the need to create new tools that facilitate the  development process, increase the efficiency of writing code and the performance our our application. 
 
 Several years after the birth of jQuery several front end frameworks were introduced that provided a much more structured and opinionated way of writing code.  Here are a few of the most well known frameworks: 
 
@@ -28,10 +35,8 @@ Several years after the birth of jQuery several front end frameworks were introd
 | Ember | 2011 |
 | React | 2013 |
 
-jQuery was the tool of choice for front end developers, and still is for some, but it's starting to run its course.  It's considered just a library and falls short of being called a `framework`.
 
-
-<hr>
+<!-- <hr>
 
 #### <g-emoji class="g-emoji" alias="alarm_clock" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/23f0.png">⏰</g-emoji> Activity - 3min
 
@@ -41,29 +46,46 @@ jQuery was the tool of choice for front end developers, and still is for some, b
 - Write our your answer in a slack thread to yourself
 - When asked slack your answer in the thread created by the instructor
 
+<hr> -->
+
+
+<hr>
+
+#### <g-emoji class="g-emoji" alias="alarm_clock" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/23f0.png">⏰</g-emoji> Activity - 7min
+
+The following questions are based on the article you were asked to read for homeowrk: [javascript-frameworks-vs-libraries](https://skillcrush.com/blog/javascript-frameworks-vs-libraries/) 
+
+Students will be placed in breakout rooms to discuss and come us with a single group generated answer.
+
+Think about what a front end framework is and answer the following questions:
+  - How is React different than a JavaScript library like jQuery? 
+  - What benefit comes from using a framework like React?
+  - When would you consider using a library and framework together? 
+- Write our your answer in a slack thread to yourself
+
+
+When asked slack your answer in the thread created by the instructor
+
 <hr>
 
 ### Front End Frameworks
 
-A framework is a library that provides generic functionality and structure that serves as foundation to build and deploy applications.  
+A framework is a library that provides generic functionality and structure that serves as a foundation to build and deploy applications.  
 
-The following are just a few of the front end frameworks mentioned in [https://2019.stateofjs.com](https://2019.stateofjs.com/front-end-frameworks/)
+The following are just a few of the most popular front end frameworks mentioned in [https://2019.stateofjs.com](https://2019.stateofjs.com/front-end-frameworks/)
 
 - React
 - Vue
 - Angular
 - Ember
 
-
 Frameworks can help standardize code, give you additional functionality and performance, and can help get your code off the ground faster.  
-
-There is a lot of debate over whether frontend frameworks count as frameworks at all -- some people say that they are just libraries and should be referred to as such.
 
 ### Sites Built On React
 
-First, let's think about where you might see a React.js app. Here are two of the most popular web sites built in React and that should give some 
+First, let's review a few of the most popular web sites built in React:
 
-*   Facebook - They actually built React! It needed web pages that could change quickly based on a user's interaction. 
+*   Facebook - They actually built React! 
 *   Instagram - It's public feed and internal system are entirely built on React.
 
 
@@ -76,25 +98,14 @@ As you can imagine they are not the only popular sites built in React.
 
 Let's take a look at this article  [32 Web Sites Built In React](https://medium.com/@coderacademy/32-sites-built-with-reactjs-172e3a4bed81)
 
-- Look over the sites and determine which ones you might use on a daily or weekly basis
+- Look over the sites and determine which ones you have used in the past or perhaps use on a daily/weekly basis
 - When asked slack your answer in the thread created by the instructor
 
 <hr>
 
-### What Is React.js
-
-
-React is a JavaScript framework used to craft modern day UI and views for the front-end in web applications.
-
-> **Selling Point:** By modeling small compatible components that focus on just rendering a view, we can move business logic out of the DOM, and therefore improve our app's performance, maintainability, modularity and readability.
-
-React is "agnostic" to other tools in your front end. This means that React can 
-co-exist with other Javascript frameworks, letting the other frameworks handle 
-the models and controllers while having React handle the views.
-
 ### The History of React
 
-The first thing most people hear about React is "Facebook uses it".  As mentioned before Facebook actually created React to meet the demands of the most popular social media platform of it's day. 
+The first thing most people hear about React is `Facebook uses it`.  As mentioned before Facebook actually created React to meet the demands of the most popular social media platform of it's day. 
 
 *   First used by Facebook in 2011.
 *   Adopted by Instagram in 2012.
@@ -105,6 +116,38 @@ React was born out of Facebook's frustration with the traditional MVC model and:
 
   * how re-rendering something meant re-rendering **everything** (or just a lot).
   * how it had negative implications on processing power and ultimately user experience, which at times became glitchy and laggy.
+
+### What Is React.js
+
+React is a JavaScript `framework` used to craft modern day UI for the front-end in web applications. It essentially takes the UI and breaks it down into reusable `Components`.  
+
+By modeling small reusable `Components` that focus on just rendering a specific portion of the view,  React can improve an app's performance, maintainability, modularity and readability.
+
+**React Alone Can't Build A App**
+
+React can co-exist with other Javascript libraries and frameworks.  If fact there are many helper libraries that developers use quite often like, `Lodash`, `Underscore` or `Ramda` which are great for performing adv JS functionality.  
+
+React is also `front end` only and would require working with other frameworks to handle 
+the `models - (data)` and `controllers - (business logic)` while having React single handedly manage the views.
+
+<hr>
+
+#### <g-emoji class="g-emoji" alias="alarm_clock" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/23f0.png">⏰</g-emoji> Activity - 5min
+
+Of the 32 sites that we examined before a few of them were clearly only built from the ground up in the last few years, such as [Postmates](https://postmates.com/).
+
+From looking at the sites UI we can't really see React.  It's there working under the hook but just not so apparent on the surface.  So let's peel back a layer and see React in action.  
+
+This involves installing [React Chrome Developer Tools](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi?hl=en)
+
+:thumbsup: Take a moment to install the tool and then open `DevTools` and confirm the ollowing tabs have been added:
+
+<img src="https://i.imgur.com/KsccFOw.png">
+
+
+The instructor will provide a quick walk through of the tool.
+
+<hr>
 
 ### Becoming A React Developer
 
@@ -120,7 +163,7 @@ It then opens the door to a whole new world of development tools that are used i
 
 ### React in MVC
 
-Here is what the MVC architecture represents:
+The MVC architecture is a JavaScript design pattern for building an applications. It isn't the only design pattern being used and others exist such as `MV*`, `MVP`, `MVVM` but the `MVC architecture` is used quite often and represents the following:
 
 - `M stands for Model`
 - `V stands for Views` 
@@ -132,72 +175,92 @@ Here is what the MVC architecture represents:
 
 <img src="https://i.imgur.com/t779Jw9.png" width=600/>
 
-React will work with any back-end language such as Node/Express, Rails, Django, ect. 
+The backed reprersented here by `Controller` and `Model` can be implemented using any backend framework such as:
+
+- Node/Express
+- Ruby on Rails
+- Python/Django
+- PHP
 
 
 ## The Virtual DOM For Efficiency
 
-The Document Object Model or DOM for short is an API that is used to interact with the HTML that is displayed on a page.  The following structure represents the DOM and starts with the `document` object. 
+The `Document Object Model` or DOM for short is an API that is used to interact with the HTML that is displayed on a page.  The following structure represents the DOM and starts with the `document` object. 
 
 <img src="https://i.imgur.com/qB0cznr.png" width=500/>
 
-The Virtual DOM is a Javascript representation of the actual DOM and is a staging area for changes that will eventually be implemented. Because of that, React can keep track of changes in the actual DOM by
-  comparing different instances of the Virtual DOM.
+If you have ever used `document.getElementById('someid`) or `$('#someid`) then you have worked with DOM. 
+
+
+The Virtual DOM is a representation of the actual DOM and is a staging area for changes that will eventually be implemented. Because of that, React can keep track of changes in the actual DOM by comparing different instances of the Virtual DOM.
 
   <img src="https://i.imgur.com/xTxgF0b.png" width=500/>
 
 React then isolates the changes between old and new instances of the Virtual
   DOM and then only updates the actual DOM with the necessary changes as opposed to re-rendering an entire
-  view altogether, it's significantly more efficient.
+  view altogether which is significantly more efficient.
 
 
   <img src="https://i.imgur.com/RmHCcDu.png" width=500/>
 
 
-
-
 ### Getting Started With React
 
-So now it's time to get started with React.  Let's open the following starter code and install the required libraries:
+So now it's time to get started with React. For this demo we will be using an online platform called  `CodeSandbox`,  
 
-[CodeSandbox Starter](https://codesandbox.io/s/rctrr-9-8-20-getting-starter-yryf6)
+Here is the starter code we will be working with: [CodeSandbox Starter](https://codesandbox.io/s/rctrr-9-8-20-getting-starter-fxcd2)
 
-**NOTE:** In order to easily share code, submit homeowrk and work through errors we will be using `CodeSandbox` for this remote course.
+**Note:** Be sure to fork button on the top right:
 
-So a few things have been removed from this CodeSandbox and need to be readded on our part to get our React app up and running properly.  For this demo we will focus on:
+<img src="https://i.imgur.com/KQSFfqE.png" width=300/>
 
-- Add the required libraries (react & reactDOM)
-- Import the libraries into index.js
-- Use ReactDOM to render some initial content. 
+<!-- **NOTE:** In order to easily share code, submit homeowrk and work through errors we will be using `CodeSandbox` for this remote course. -->
 
+#### Configuring Our React App
+A few things have been removed from this CodeSandbox in order for use to walk through installing the required libraries and configuring React. 
+
+For this demo we will focus on:
+
+- Installing the required dependencies (libraries): `(react & reactDOM)`
+- Importing the libraries into `index.js`
+- Using `ReactDOM.render()` to render our initial content. 
 
 #### Adding Dependencies
 
-Let's add the following dependencies first.  On the left side click on `Add dependency` 
+Let's add the dependencies first.  On the left side click on `Add dependency` 
 
 <img src="https://i.imgur.com/Q9aLHqN.png" width=300/>
 
-And then add the following:
+And then search for and add the following:
 
 - `react` - used to create Components
 - `react-dom` - used to manage the Virtual DOM
 - `react-scripts` - used to transpile the code
 
-Once they have been added it should look like the following.  Take note of the react version which in this case is `16.13.1`.  As of `16.8` React introduced `Hooks` which has changed that way we write our React Components and will be the focus of this course. 
+Once they have been added it should look like the following.  Take note of the react version which in this case is `16.13.1`.  
 
+As of `16.8` React introduced `Hooks` which has changed that way we write React Components and we will use `Hooks` for the entire curriculum. 
 
 <img src="https://i.imgur.com/ksZIMRm.png" width=300/>
 
 #### Setting Up index.js
 
-In the left pane we should see the following.  This is essentially the default folder structure for React App however, as mentioned earlier, it is missing a few things. 
+In the left pane we should see the following.  This is essentially the default folder structure for the React App.
 
-Both the `public` and `src` folders are important with the `public` folder being sent to the end user and the `src` used to write all our React code. 
+Both the `public` and `src` folders are very important in a React app. The `public` folder is what is sent to the end user and the `src` folder is used to write all our React code. 
 
-<img src="https://i.imgur.com/pHKE3l4.png" width=300/>
+<img src="https://i.imgur.com/pHKE3l4.png" width=300/><br>
+
+The one element inside the `public/index.html` file that we need to be aware of right now is:
+
+```html
+<div id="root"></div>
+```
+
+This will be the element that React mounts to and will use to render the entire app. 
 
 #### Importing The Libraries
-First we need to import the libraries into `index.js`.
+Before you can work with React, or any library for that matter, we must import them into the file in which they will be used.  In our case let's import the libraries into `index.js`.
 
 ```js
 // IMPORT React
@@ -207,12 +270,12 @@ import ReactDOM from "react-dom";
 ```
 
 #### ReactDOM.render()
-With our libraries in place we can use ReactDOM.render() to render data to the screen, in our basic starter app we will render some basic `JSX` for now. 
+With our libraries in place we can use `ReactDOM.render()` to render either, a `Component` or `HTML` to the screen, in our basic starter app we will render some basic `HTML` for now.
 
-`ReactDOM.render()` It takes the following two arguments:
+`ReactDOM.render()` accepts the following two arguments:
 
-1. The HTML or Component name
-2. The DOM element we want to append it to.
+- The HTML or Component name to render
+- The DOM element we want to mount react to which in our case is:  `<div id="root"></div>`
 
 ```js
 // GRAB THE ELEMENT WITH AN ID OF ROOT AND STORE IN A VARIABLE CALLED rootElement
@@ -221,14 +284,12 @@ const rootElement = document.getElementById("root");
 ReactDOM.render(<h1>Hello World</h1>, document.getElementById("root"));
 ```
 
-We should see our app update to show the following:
+We should see our app update to display the following:
 
 <img src="https://i.imgur.com/3xze8jL.png" width=300/>
 
 
-We only have to use `ReactDOM.render()` when `mounting` react to our html and this happens only once.  That's why we do it at the root of the page, so that the rest of our site can be built using react components.
-
-**Question:** We know that `Hello World` is being rendered from `index.js` but where is the element with a className of `App` coming from?
+We only have to use `ReactDOM.render()` once when `mounting` React to our html.  For every React app we build going forward this step will already have been completed for us and so we will never need to do this manually again. 
 
 <hr>
 
@@ -238,23 +299,29 @@ We only have to use `ReactDOM.render()` when `mounting` react to our html and th
 Let's take a moment to examine `public/index.html`
 
 
-- Look for an element with an `id=root`
+- Look for the element with an `id=root`
 - Does it have any HTML directly inside of it? 
-- Investigate the same element in Chrome Developer Tools and we should see the following:
+- Investigate the same element in `Chrome Developer Tools` and we should see the following:
 
-<img src="https://i.imgur.com/ka5Pd4F.png" width=300/>
+<img src="https://i.imgur.com/kxwtvbn.png" width=300/>
 
-Now cut the entire element with `className=App` and paste it over our `<h1>` in `index.js`. 
+Now, in the HTML, cut the entire element with `className=App` and paste it over the `<h1>` in `index.js`. 
 
 <img src="https://i.imgur.com/y2l6la8.png" width=400/>
 
-React will re-render and our page should display the content.   Take note that it also renamed `className` to `class`.
+React will re-render and our page should display the content.   
+
+Take special note that React also renamed `className` to `class`.  This is something we will address once again in future lectures. 
 
 <img src='https://i.imgur.com/LViMzXN.png' width=500/>
 
 <hr>
 
+### Final Solution
+
+Here is the final [CodeSandbox Solution](https://codesandbox.io/s/rctrr-9-8-20-getting-starter-yryf6)
 
 ### Resources
 
 - For an intro to React, watch [this video](https://generalassembly.wistia.com/medias/lr8idjxtx8).
+- [Essential JS Design Patterns](https://addyosmani.com/resources/essentialjsdesignpatterns/book/)
