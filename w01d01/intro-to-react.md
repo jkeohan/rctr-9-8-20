@@ -1,6 +1,12 @@
+
+Title: Intro to React<br>
+Duration: 1hr+ <br>
+Creator:  Joe Keohan<br>
+
+---
+
+
 # Intro to React.js
-
-
 
 <img src="https://i.imgur.com/yt8BVNj.png" width=500/>
 
