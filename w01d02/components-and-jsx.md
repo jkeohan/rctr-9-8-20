@@ -107,12 +107,16 @@ From this point on we will be creating Components, more  than you ever imagined,
 
 Some of the requirements are specific to `JSX`, short for `JavaScript And XML`, and will be reviewed again in a later section. 
 
-:oncoming_police_car: - Rules
+:oncoming_police_car: - Rules (Component Specific)
 - They must import `React`
 - They must be called within the JSX using an uppercase first letter
 - They must return some form of UI (user interface) 
-- They can return only one top level element but that element can contain numerous children. 
 - They must be exported from the file to be imported into another Component 
+
+:oncoming_police_car: - Rules (JSX Specific)
+- They can return only one top level element but that element can contain numerous children. 
+- Any JS within JSX must be enclosed in curly braces `{}`
+- The keyword class is reserved so classes must be renamed `className`
 
 :star: Best Practices
 - Each Component should be in it's own file

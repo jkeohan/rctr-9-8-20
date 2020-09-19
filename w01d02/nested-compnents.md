@@ -63,9 +63,19 @@ Our investigation should have determined the following:
 - `App` Component - renders the H1
 - `public/index.html` - renders the cards
 
+**Note:** You might have noticed that the App Component was written slightly different then before.  It's being both created and exported at the same time and requires less code. 
+
+```js
+export default function App() {
+  //...rest of code
+}
+```
+
+For the time being we are going to write the Component and export it separately as we want to make it more readable. In time you will come to find that several things can be exported from a file and that will require using the `export` keyword more than once. 
+
 #### Creating A Component
 
-So let's take a moment to create a new `Functional Component` to contain all the Bootstrap code which we will allow us to create the Components needed to produce each card individually. 
+So let's take a moment to create a `Functional Components` that contain all the Bootstrap HTML code needed allow us to create the 2 card Components as per our layout.  
 
 In the `src` folder create the following files:
 
@@ -74,7 +84,11 @@ In the `src` folder create the following files:
 
 :thumbsup: Click on the thumbs up when your done.
 
-We will start with Card1.js for now. Inside of Card1.js let's do the following for now:
+**Card1**
+
+Let's begin with the `Card1` Component.  
+
+Inside of `Card1.js` let's do the following for now:
 
 - Import React
 - Create the Component
@@ -95,11 +109,14 @@ const Card1 = () => {
 export default Card1
 ```
 
+:thumbsup: Click on the thumbs up when your done.
+
 #### Nesting A Component
 
-Nesting Components is merely calling one Component within the `return` statement of a parent Component.
+As with any layout design, HTML elements must be nested inside other elements to achieve the desired effect.  
 
-Now let's import `Card1` into App.js and nest it so that it renders. .
+This is no different for React and since our goal is to render an `H1`, as well as the `cards`, we must call the `Card1` Component within the `return` statement of it's parent Component, in this case `App`. 
+
 
 ```js
 // IMPORT CARD1
@@ -117,13 +134,15 @@ export default function App() {
 
 If successful you should see the following:
 
-<img src="https://i.imgur.com/jHnPLLv.png" width=150/>
+<img src="https://i.imgur.com/jHnPLLv.png" width=200/><br>
+
+:thumbsup: Click on the thumbs up when your done.
 
 <hr>
 
 #### <g-emoji class="g-emoji" alias="alarm_clock" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/23f0.png">⏰</g-emoji> Activity - 3min
 
-**NOTE:** Before you perform the steps we ask that you do not copy/paste at this time and write everything from scratch.  In time copy/paste will be the most efficient way to create Components however you are just learning how to create Components so the additional manual work will help solidfy the concepts.
+**NOTE:** Before you perform the steps we ask that you do not copy/paste at this time and write everything from scratch.  In time copy/paste will be the may be the most efficient way to create Components, however you are just learning how to write Components so the additional manual work will help solidify these concepts.
 
 - Perform the same steps as you did for Card1
 - Only change it's HTML output to be `Card2`
@@ -131,11 +150,13 @@ If successful you should see the following:
 
 Your code should produce the following:
 
-<img src="https://i.imgur.com/MOiPdAA.png" width=200/>
+<img src="https://i.imgur.com/MOiPdAA.png" width=200/><br>
+
+:thumbsup: Click on the thumbs up when your done.
 
 <hr>
 
-Now it's time to output the HTML that represents each Component.  This we discovered earlier is found in `public/index.html`
+Now it's time to output the HTML that represents each Component.  This, as we we discovered earlier, is found in `public/index.html`
 
 Cut the entire `<div class='card>...</div>` for the first card and place it inside of `Card1`
 
@@ -162,11 +183,19 @@ const Card1 = () => {
 
 ```
 
+:thumbsup: Click on the thumbs up when your done.
+
 We should be immediately met with the following error:
 
 <img src="https://i.imgur.com/u9Uvwg9.png" />
 
-This has to do with the rules of JSX which states that the `style` prop must be written in the following format:
+This has to do with a rule related to JSX which is:
+
+:oncoming_police_car: Any JS within JSX must be enclosed in curly braces `{}`
+
+Since style accepts an object with the css key:value pairs (first set of curlys) we then need to surround that in an additional set of curlys.  
+
+So the `style` prop must be written in the following format:
 
 ```js
 style={{key: value}}
@@ -178,9 +207,15 @@ Let's update our Component to include the proper syntax
 <div class="card" style={{width:'18rem'}}>
 ```
 
-The other JSX rule we must follow is to rename every instance of `class` to `className` and although it's not a make or break rule as was style we must adhere otherwise we will certainly run into issues later. 
+The other JSX rule we must follow is:
 
-Here is our Component as it stands:
+:oncoming_police_car: - The keyword class is reserved so classes must be renamed `className`
+
+So we need to rename every instance of `class` to `className`.  
+
+:thumbsup: Click on the thumbs up when your done.
+
+Here is our Component with those changes:
 
 ```js
 const Card1 = () => {
@@ -216,9 +251,15 @@ Your code should produce the following:
 
 <img src="https://i.imgur.com/MOiPdAA.png" width=150/>
 
+:thumbsup: Click on the thumbs up when your done.
+
 <hr>
 
-In the original design they were sitting next to eachother.  The reason they are no longer doing that is because we did not include the parent `<section class="cards">` so let's add that to the App Component.
+In the original design the cards were sitting next to each other.  
+
+The reason they are no longer doing so is because we did not include the parent `<section class="cards">` element.  
+
+Let's add that to the App Component.
 
 ```js
 export default function App() {
