@@ -1,5 +1,5 @@
 <br>
-Title: Intro to State<br>
+Title: Nested Components<br>
 Duration: 45min+ <br>
 Creator:  Joe Keohan<br>
 
@@ -13,13 +13,19 @@ Creator:  Joe Keohan<br>
 
 ## Components
 
-As we've learned Components let you split the UI into independent, reusable pieces, and think about each piece in isolation.  This is very similiar to the way we write JavaScript functions in gnneral.  They are meant to take in standardized input and then return standardized output.  
+As we've explained Components are the fundamental building blocks of React and let you split the UI into independent, reusable pieces, and be able to use each one in isolation.  
 
- Components behave under the same premise and, if configured to accept input, will return UI based on the input provided. The input we pass to a Component is called a `prop`. 
+This is very similar to the way we write JavaScript functions in general.  They are meant to be `independent` and `reusable`.  By passing in `standardized` input they will return `standardized output`.  
+
+ Components behave under the same premise and, if configured to accept input, will return UI that is either includes the input or has influenced how the input is displayed. 
+ 
+ The input we will pass to a Component is called a `prop` and we will use them extensively in any React app we build.  
 
 ### Nested Components
 
-Let's revisit the Bootstrap card example.  Here we have the structured HTML that will produce a standard card and, if we also imported Bootstrap's css file, it will nicely styled as well. 
+Let's revisit the Bootstrap card example.  It provides all the HTML needed to produce a standard `card` and, along with Bootstrap css, styles the card quite nicely. 
+
+Here is the HTML provided by Bootstrap:
 
 ```html
 <div class="card" style="width: 18rem;">
@@ -32,19 +38,23 @@ Let's revisit the Bootstrap card example.  Here we have the structured HTML that
 </div>
 ```
 
-Once the following [CodeSandbox Starer](https://codesandbox.io/s/rctrr-8-8-20-bootstrap-starter-o2ry1) and we should see the following:
-
-<img src="https://i.imgur.com/NaGIt48.jpg" width=400/>
+In order to bridge the gap of what defines a Component we will be creating a custom React Card Component that uses the Bootstrap HTML. 
 
 <hr>
 
-#### <g-emoji class="g-emoji" alias="alarm_clock" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/23f0.png">⏰</g-emoji> Activity - 2min
+#### <g-emoji class="g-emoji" alias="alarm_clock" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/23f0.png">⏰</g-emoji> Activity - 3min
 
+Open and fork the following [CodeSandbox Card Starter](https://codesandbox.io/s/rctrr-8-8-20-bootstrap-starter-o2ry1).
+
+You should see the following:
+
+<img src="https://i.imgur.com/NaGIt48.jpg" width=400/>
 
 - Take a moment to examine the code.  
-- See if you can determine where the `H1` is coming from as well as the cards
+- See if you can determine where the `H1` is being rendered as well as the 2 cards
 - The instructor will ask you to post your answer in a thread
 
+:thumbsup: Click on the thumbs up when your done.
 
 <hr>
 
@@ -55,12 +65,14 @@ Our investigation should have determined the following:
 
 #### Creating A Component
 
-So let's take a moment to create a new Component to contain all of our Bootstrap code which we could then easily reuse. 
+So let's take a moment to create a new `Functional Component` to contain all the Bootstrap code which we will allow us to create the Components needed to produce each card individually. 
 
 In the `src` folder create the following files:
 
 - Card1.js
 - Card2.js
+
+:thumbsup: Click on the thumbs up when your done.
 
 We will start with Card1.js for now. Inside of Card1.js let's do the following for now:
 
