@@ -12,10 +12,10 @@ Now it's time to put it all together. At a high level you will do the following:
 
 > Using only a single App Component you will implement the logic that allows a user to click on one of 4 small images and then update the DOM to display that image as the large image.
 
-<img src="https://i.imgur.com/ORYJpoM.png" width=200/>
+<img src="https://i.imgur.com/M3xQbYR.jpg" width=200/>
 
 ## Working Version
-Here is a [working version](https://codepen.io/jkeohan/pen/850f8454693590e9772f8d0f6c2f44c8?editors=1000) of the app so you have a reference of the base functionality that you are being asked to implement. 
+Here is a [working version](https://codepen.io/jkeohan/live/850f8454693590e9772f8d0f6c2f44c8) of the app so you have a reference of the base functionality that you are being asked to implement. 
 
 The solution above was implemented using jQuery so there is no React code to inspect via DevTools.  It is meant to provide a working example of the apps functionality. 
 
