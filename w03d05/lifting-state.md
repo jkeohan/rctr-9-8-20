@@ -29,44 +29,47 @@ Once a decision is made it is then passed back down the chain of command to all 
 ## React State
 React state works in a similar fashion. Props are passed down to child Components and, if needed, data can be lifted back up to the parent Component is a process called `lifting state`.
 
-Lifting state will almost always cause the parent element to update it's own state triggers a re-render, therefore passing that same data back down as props. 
+Lifting state will almost always cause the parent element to update it's own state which triggers a re-render, and then passing some version of the data back down as props. 
 
-It's also important to note that parts of the applications state can, and should, be placed nearest to those Components that specifically need it, while other state must be placed at a much higher level in order to pass it down the right channels.  
+It's also important to note that the applications state can be placed nearest to those Components that specifically need it, while other state must be placed at a much higher level in order to pass it down the right channels.  
 
 ### Rules Of State
 :oncoming_police_car: - Rules (Component Specific)
 
 - Data in React is unidirectional and props are always passed down from parent > child
-- Child Components cannot communicate directly and therefor cannot pass data between them
+- Child Components cannot communicate directly and therefore cannot pass data between them
 - Child Components cannot pass data directly to each other and must lift data to parent which then passes it back down as props
 - Functions passed as props are how state is lifted
 
 
 ### Component Hierarchy 
 
-So far we've learned hot to create nested Components,pass props nad set/update state.  The goal has been to get you comfortable with all of the smaller moving parts before we attempt to create much larger applications. 
+So far we've learned how to create nested Components, pass props and set/update state.  The goal has been to get you comfortable with all of the smaller moving parts before we attempt to create much larger applications. 
 
 Now it's time to take it one step further and start thinking about the entire React hierarchy as a whole. 
 
-Question like the following need to be considered:
+Building out an app involves asking questions like the following:
 
 - What components are needed?
 - How should they be organized? 
+- What props need to be passed down?
 - Where should state reside and what should that state look like? 
 - What state needs to be lifted?
-- What props need to be passed down?
 
 The answer to these questions is key to the success of your application and, as there are many options to think through, there is much planning needed to truly design an effective and efficient architecture. 
 
 ### Lifting State In React Cities
 
-Let's take a look at `Cities Of The World`.  The app is divided into small images, each of which represents a city.  Clicking on any small image will assign the big image the same image url. 
+Let's take a look at `Cities Of The World`.  The app is divided into small images, each of which represents a city.  
 
-<img src="https://i.imgur.com/LI6KqAI.jpg" width=500/>
+Clicking on any small image will assign the big image the same image url. 
 
-You may or may not have worked on this already so there is a [working CodeSandbox](https://codesandbox.io/s/rctr-9-8-20-react-cities-solution-klk6l?file=/src/App.js) of the app.  
+You may or may not have worked on this already so here is a [working CodeSandbox](https://codesandbox.io/s/rctr-9-8-20-react-cities-solution-klk6l?file=/src/App.js) of the app. 
 
-It consists of a single `App` Component and uses one instance of `state` to keep track of which image was clicked.  Since all functionality lives in one Component there is currently no need to `lift state`.  
+<img src="https://i.imgur.com/LI6KqAI.jpg" width=300/><br>
+
+ 
+It consists of a single `App` Component and one instance of `state` which keeps track of the last image clicked.  Since all functionality lives in one Component there is currently no need to `lift state`.  
 
 In order to `lift state` were going to have to add some additional Components. For this design it seems the following Components would be appropriate:
 
@@ -74,28 +77,27 @@ In order to `lift state` were going to have to add some additional Components. F
 - SmallImage
 
 #### Current React Hierarchy
-This is the React Hierarchy of the app.  It consists of a single Component that contains state. It directly renders all the HTML needed for the app.  
+This is the React Hierarchy of the app.  It consists of a single Component that contains state and renders all the HTML needed for the app.  
 
 <img src="https://i.imgur.com/flWudXR.png" width=300/>
 
-Now although the design works just fine for this app we've decided to create additional Components to further segment the app.  
+Although the design works just fine as is, we've decided to create additional Components to further segment the app.  
 
 #### Redesigned Hierarchy
-This is the React Hierarchy we are looking to implement and we also included a legend to indicate which Components contain state and which do not. 
+Based on our design decision this is the React Hierarchy we are looking to implement.  The diagram also includes a legend to indicate which Components contain state and which do not. 
 
 <img src="https://i.imgur.com/WkLBY2i.png" width=400/>
 
 
-
-As we can see App is still responsible for looping over the intial array and creating multiple instances of small images but now they will be `SmallImaage` Components.
+As we can see App is still responsible for looping over the initial array and creating multiple instances of small images but now it will be done so using `SmallImage` Components.
 
 We can improve the drawing a bit to include what props will be passed down to the children. 
 
 <img src="https://i.imgur.com/QyabBqU.png" width=600/>
 
-What might stand out is the props highlighted in green called `hhandleClick`.  This is the same `handleCLick` function being used in the App but now being passed down to the child.  
+What might stand out is the props highlighted in green called `handleClick`.  This is the same `handleCLick` function used in App but now it's being passed down to the child.  
 
-When that function is called in the child Component it will `lift state` back to the parent.  Which then updates the `bigImage` state value, triggering a re-render and the new value for bigImage is passed back down to `BigImage`
+When that function is called in the child Component it will be passed a value which is `lifted` back  to the parent.  That value is then used to update the `bigImage` state value, triggering a re-render and the new value for bigImage is passed back down to the `BigImage` Component. 
 
 <img src="https://i.imgur.com/vwlWb2Z.png" width=600/>
 
@@ -116,7 +118,7 @@ Let's start with creating the BigImage Component.  Here are the steps we need to
 
 Create the file and setup the Component. This involves adding a parameter called props, copy/paste the existing HTML from App and then referencing the `props.image` key which will contain the image url. 
 
-We could also make additional decisions as to passing down specific values for `id` and `alt` as to make this Component more reuseable but we will leave those values alone for now and stay focused on the main value for the image src. 
+We could also make additional decisions such as passing down specific values for `id` and `alt` as to make this Component more reuseable, but we will leave those values alone for now and stay focused on the main value for the image src. 
 
 `BigImage.js`
 ```js
@@ -176,10 +178,11 @@ This will follow the same steps but will require a bit more refactoring as it is
 First let's create the Component.
 
 ```js
-
+const SmallImage = (props) => {
     return (
-
+        
     )
+}
 }
 ```
 
@@ -200,7 +203,7 @@ const SmallImage = (props) => {
 }
 ```
 
-The only prop that needs to be removed when we copy the HTML into this Component is `key={index}`.  This `key:value` pair is only required within the `Array.map()` and not elsewhere. 
+The only prop that needs to be removed when we copy the HTML into this Component is `key={index}`.  This `key:value` pair is only required within the `Array.map()`. 
 
 Since the values for `id, src, alt` will be passed down from the parent we will need to update them to replace `image` with `props`
 
@@ -218,9 +221,11 @@ const SmallImage = (props) => {
 }
 ```
 
+:thumbsup: Click on the thumbs up when your done.
+
 **Lifting State**
 
-The last item to precede with props is `props.handleClick`.  The expectation is that the parent element will pass this function down which we can call in the child thus `lifting state`. 
+The last item to precede with props is `props.handleClick`.  The expectation is that the parent element will pass this function down which we will call in the child thus `lifting state`. 
 
 ```js
 import React from 'react';
@@ -244,7 +249,7 @@ export default SmallImage
 
 `App.js`
 
-Let's import and render the Component
+Let's import and render the SmallImage Component
 
 
 ```js
@@ -256,7 +261,7 @@ import BigImage from './BigImage'
 import SmallImage from './SmallImage'
 ```
 
-And not we updated the .map() to include the Component
+And update the .map() to include the Component
 
 ```js
 const images = imagesArr.map( (image, index) => {
@@ -280,7 +285,7 @@ If we take a look at React Dev Tools we should see the following:
 
 #### Bonus - Using Object Destructuring
 
-As we might recall Object Destructuring allows us to create variables and assign them values by eliciting those same key:value pairs from an object
+As we might recall Object Destructuring allows us to create variables and assign them values by eliciting those same `key:value` pairs from an object
 
 Let's make use of the for `SmallImage`.
 
