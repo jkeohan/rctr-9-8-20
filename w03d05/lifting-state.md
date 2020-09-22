@@ -308,3 +308,7 @@ const SmallImage = ({city, src, handleClick}) => {
 
 export default SmallImage
 ```
+
+### Lab Time
+
+The instructor will provide the lab
