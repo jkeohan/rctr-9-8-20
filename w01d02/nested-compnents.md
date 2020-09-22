@@ -278,3 +278,105 @@ export default function App() {
 If everything worked we should now see our original design in place.
 
 <img src="https://i.imgur.com/nsN0Cro.jpg" width=400/>
+
+### More Nested Components
+
+When we look at both cards displayed on the page I feel the need to ask myself are there any sections of the card that could be used elsewhere.  
+
+Say you if you removed the image and were left with just the `title`, `text` and `button`.  Would another layout design benefit from just that grouping of elements? 
+
+Or perhaps the image could be a reused as is in another design. And how about the button. 
+
+If we took just a moment to actually visualize these Components it might look something like this: 
+
+<img src="https://i.imgur.com/AykESnf.png" width=500/ >
+
+This essentially represents the `React Hierarchy` and show which Components are parents and children. 
+
+Another way to view the `React Hierarch` is:
+
+<img src="https://i.imgur.com/yPPgPQ2.png" width=300/>
+
+
+So it seems there is an opportunity to create reusable components.  
+
+So let's spin off a few more Components and then import them into both Card1 and Card2  Components. 
+
+##### Card Body Component
+
+Let's start with creating a separate CardBody Component. That involves the following: 
+
+- Creating a new CardBody.js file
+- Importing React
+- Creating the Component
+- Copying the HTML for the card body
+- Exporting the Component
+
+```js
+// IMPORT REACT
+import React from 'react'
+
+// CREATE THE COMPONENT
+const CardBody = () => {
+  return (
+     <div className="card-body">
+      <h5 className="card-title">Card title</h5>
+      <p className="card-text">
+        Some quick example text to build on the card title and make up the
+        bulk of the card's content.
+      </p>
+      <a href="#" className="btn btn-primary">Go somewhere</a>
+    </div>
+  )
+}
+
+// EXPORT THE COMPONENT
+export default Card1
+```
+
+#### Render The CardBody Component
+
+We now have a separate Component altogether which we need to import and render into both Card Components. 
+
+In Card1.js do the following:
+
+- Import the CardBody Component
+- Replace the card-body element with `<CardBody />` Component
+
+```js
+const Card1 = () => {
+   return (
+    <div className="card" style={{width:'18rem'}}>
+      <img
+      src="https://images.unsplash.com/photo-1536514072410-5019a3c69182?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&q=60"
+      className="card-img-top"
+      alt="..."
+    />
+      <CardBody />
+  </div>
+  )
+}
+```
+
+<hr>
+
+#### <g-emoji class="g-emoji" alias="alarm_clock" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/23f0.png">⏰</g-emoji> Activity - 10min
+
+If we follow the basic pattern we can create and render new Components relatively easily. 
+
+Now it's your turn to do the following:
+
+- Create a CardImage Component that returns the just image
+- Create a Button Component that returns just the button
+- Import CardImage and Button into Card1
+- Replace the HTML with those Components
+
+:thumbsup: Click on the thumbs up when your done.
+
+<hr>
+
+<details><summary>Solution (posted after activity completed)</summary</details>
+
+### Lab Time
+
+The instructor will assign a lab.

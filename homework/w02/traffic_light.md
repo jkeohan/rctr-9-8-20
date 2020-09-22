@@ -1,4 +1,4 @@
-# Intro To State Exercise
+# Traffic Light
 
 So far you've learned the following about React:
 

@@ -13,7 +13,6 @@ Perform the following to complete the lab:
 * Populate the objects based on the values from those elements in the HTML
 * Export the file and import into `App.js`
 
-
 **Creating The `WeatherIcons` Component**
 * Look over the HTML structure used to create the weather icons
 * Create a `WeatherIcons`  Component based on the HTML structure 
@@ -26,7 +25,10 @@ Perform the following to complete the lab:
 * App will then render those `WeatherIcons` Components
 
 **Bonus**
-* Try creating additional Components, such as one for the `image` or one that contains both the `conditions` and `time`
+* Try creating the following additional Components:
+
+ - WeatherIcon - contains only the img 
+ - WeatherData - contains both the `conditions` and `time`
 
 **Super Bonus**
 * Try working on the [The Knot](https://codesandbox.io/s/theknot-starter-ye150) exercise
