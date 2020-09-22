@@ -11,10 +11,10 @@ So far you've learned the following about React:
 Now it's time to put it all together. 
 
 ## Working Version
-Here is a [working version](https://e2km4.csb.app/) of the app so you have a reference of the base functionality that you are being asked to implement. 
+Here is a [working version](https://1prws.csb.app/) of the app so you have a reference of the base functionality that you are being asked to implement. 
 
 ## Starter CodeSandbox
-Here is our [Starter CodeSandbox](https://codesandbox.io/s/rctr-9-8-20-traffic-light-lifting-state-starter-q6elz)
+Here is our [Starter CodeSandbox](https://codesandbox.io/s/react-shopping-cart-starter-e2km4?file=/src/App.js)
 
 ## Instructions
 For this exercise you will do the following:
