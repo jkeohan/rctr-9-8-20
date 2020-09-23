@@ -1,4 +1,4 @@
-# Shopping Card
+# Shopping Cart
 
 So far you've learned the following about React:
 
