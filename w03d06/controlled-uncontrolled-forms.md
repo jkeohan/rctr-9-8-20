@@ -30,7 +30,7 @@ Each service requires some level of security. At a minimum a username and passwo
 
 We've all seen some version of the below input that will check off criteria as they are met.  
 
-<img src="https://i.imgur.com/6snHbHU.png">
+<img src="https://i.imgur.com/6snHbHU.png" width=600/>
 
 The input above represents a `controlled` input in that it captures each character as it is typed and then run some algorithm to determine if that character meets any one of the stated criteria.  
 
