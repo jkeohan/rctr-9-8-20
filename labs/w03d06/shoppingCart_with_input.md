@@ -12,10 +12,10 @@ So far you've learned the following about React:
 Now it's time to put it all together. 
 
 ## Working Version
-Here is a [working version](https://1prws.csb.app/) of the app so you have a reference of the base functionality that you are being asked to implement. 
+Here is a [working version](https://cmix9.csb.app/) of the app so you have a reference of the base functionality that you are being asked to implement. 
 
 ## Starter CodeSandbox
-Here is our [Starter CodeSandbox](https://codesandbox.io/s/react-shopping-cart-starter-e2km4?file=/src/App.js) - 
+Here is our [Starter CodeSandbox](https://codesandbox.io/s/react-shopping-cart-solution-1prws?file=/src/App.js) 
 
 ## Instructions
 For this exercise you will do the following:
@@ -26,7 +26,7 @@ For this exercise you will do the following:
   - product name
   - price
   - submit button
-- The inputs will be `uncontrolled` and only when the user submits will the values be captured
+- The inputs will be `controlled` and only when the user submits will the values be captured
 - The Component will pass the data captured to it's parent (App)
 
 #### App Component
@@ -38,4 +38,4 @@ For this exercise you will do the following:
 #### Bonuses
 
 - Show the new product at the top of the list
-- Refactor the `uncontrolled` form to be `controlled`
+- Refactor the `controlled` form to be `uncontrolled`
