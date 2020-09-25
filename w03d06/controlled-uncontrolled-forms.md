@@ -62,8 +62,8 @@ import React, { useRef } from "react";
 Once imported we must create a new instance of `useRef`. Let's also include a console log to see what `useRef` returns. 
 
 ``` js
-const inputRef = useRef()
-console.log('inputRef - ', inputRef)
+const inputRefEmail = useRef()
+console.log('inputRefEmail - ', inputRefEmail)
 ```
 
 
@@ -117,7 +117,7 @@ The way we now return the value stored in the input is to use the `value` key.
 
 ```js
 const handleSubmit = () => {
-    const value = inputRef.current.value
+    const value = inputRefEmail.current.value
     console.log('handleSubmit - value', value)
 }
 ```
@@ -348,8 +348,9 @@ The answer is to import all keys that exist in state and then update the key(s) 
 ```js
 const handleChange = (event) => {
     const name = event.target.name
-        ...login,
+
         setLogin({  
+        ...login,
         [name]: event.target.value
     })
 }
