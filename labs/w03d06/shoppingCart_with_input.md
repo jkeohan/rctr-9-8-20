@@ -38,4 +38,4 @@ For this exercise you will do the following:
 #### Bonuses
 
 - Show the new product at the top of the list
-- Refactor the `controlled` form to be `uncontrolled`
+- Refactor the `uncontrolled` form to be `controlled`
