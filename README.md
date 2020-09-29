@@ -43,7 +43,7 @@
 | 5  | Tues 09/22 | <li>[Lifting State](https://git.generalassemb.ly/jkeohan/rctr-9-8-20/blob/master/w03d05/lifting-state.md)</li>  | <li>Read: [Controlled and Uncontrolled Components](https://medium.com/tech-tajawal/controlled-and-uncontrolled-components-in-react-6d5f260b46dd)</li> | [Recording](https://generalassembly.zoom.us/rec/play/GUHvPmYgOG5uV5gKe1BcizwShT9vztvKoL3x7wnqhePX86FTcdyLaOqOf7rQWKtgocnyeeMhoKQstmtU.spvY7DQ9kWwBoDqA?autoplay=true&startTime=1600818885000) |
 | 6  | Thur 09/24 | <li>[Controlled vs Uncontrolled Input](https://git.generalassemb.ly/jkeohan/rctr-9-8-20/blob/master/w03d06/controlled-uncontrolled-forms.md)</li> |  <li>Do: [Complete Shopping Cart With Input](https://git.generalassemb.ly/jkeohan/rctr-9-8-20/blob/master/labs/w03d06/shoppingCart_with_input.md)</li><li>Read: [useEffect Hook](https://www.robinwieruch.de/react-hooks)</li> | [Recording](https://generalassembly.zoom.us/rec/share/LbWlrLT8STpExSbPN-Cpw2hUQZuTe8K1BlXd4peLhksz25LxUc9N_loou7ffaOE.QfSvk3Hb403976bv?startTime=1600991514000)| |
 | 7  | Tues 09/29 | React Lifecycles & The `useEffect` Hook | <li>Read: [Fetching Data Using useEffect](https://www.robinwieruch.de/react-hooks-fetch-data)</li> |  |
-| 8  | Thur 10/01 | API's |  |  |
+| 8  | Thur 10/01 | API's |<li>Do: Render Giphys</li> |  |
 | 9  | Tues 10/06 | useContent |  |  |
 | 10  | Thur 10/08 | useReducer |  |  |
 | 11  | Tues 10/13 | React Router  |  |  |
