@@ -385,3 +385,4 @@ const Counter = () => {
 - [Effects Shouldn't Lie About Their Dependencies](https://medium.com/@5066aman/effects-shouldnt-lie-about-their-dependencies-44becff15582)
 - [3-ways-to-implement-responsive-design-in-your-react-app](https://medium.com/@jkeohan/3-ways-to-implement-responsive-design-in-your-react-app-bcb6ee7eb424)
 - [build-a-react-timer-component-using-hooks](https://upmostly.com/tutorials/build-a-react-timer-component-using-hooks)
+- [setinterval-in-react-components-using-hooks](https://upmostly.com/tutorials/setinterval-in-react-components-using-hooks)
