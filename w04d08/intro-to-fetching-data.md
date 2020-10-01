@@ -178,7 +178,7 @@ Let's capture some of the APIs you've discovered and their category.
 
 ## API
 
-As we've seen so far API's provide access to the data via a url. Let's take a look at the [RandomUser API](https://randomuser.me/) API specifically. 
+As we've seen so far API's provide access to the data via a url. Let's take a look at the [RandomUser API](https://randomuser.me/) specifically. 
 
 ```js
 https://randomuser.me/api
