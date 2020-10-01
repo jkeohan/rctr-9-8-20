@@ -1,6 +1,6 @@
 <br>
 Title: Component LifeCycles<br>
-Duration: 1hr + <br>
+Duration: 1 - 1.5hrs <br>
 Creator:  Joe Keohan<br>
 
 ---
