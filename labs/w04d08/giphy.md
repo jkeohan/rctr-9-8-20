@@ -18,7 +18,14 @@ Here is a [working version of the Giphy App](https://pl515.csb.app/)
 #### 🚀 Completion looks like:
 
 * Minimum of 3 components.
-* A diagram of your component hierarchy.
 * A single gif should rendered when the page initially loads (ComponentDidMount)
 * On Button click make another API call update state with the new Gif
 * Render only a single gif at a time
+
+#### Bonus - Add A Form
+
+- Add a Form that allows the user to type in a search query for specific Giphy's
+
+#### Bonus - Favorite A Giphy
+
+- Allow the user to favorite a Giphy and toggle between the Random Giphy and their Favorite List
