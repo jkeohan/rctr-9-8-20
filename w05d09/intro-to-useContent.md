@@ -134,7 +134,7 @@ Here is the [Solution Code](https://01g5n.csb.app/)
 
 ## Working With React Context
 
-In this demo we will be using the following starter code: [React Context CodeSandbox](https://codesandbox.io/s/usecontext-starter-dont-edit-4v65w?file=/src/components/App.js)
+<!-- In this demo we will be using the following starter code: [React Context CodeSandbox](https://codesandbox.io/s/usecontext-starter-dont-edit-4v65w?file=/src/components/App.js) -->
 
 Working with React Context involves setting up context in the parent Component and then consuming it in the child.  In order to work with context  we will need to do the following:
 
