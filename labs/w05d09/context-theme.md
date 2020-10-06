@@ -6,7 +6,7 @@ Here is a [working version](https://xn0b1.csb.app/) of the app so you have a ref
 <img src="https://i.imgur.com/nKZWv5c.png" width=500/>
 
 ## Starter CodeSandbox
-Here is our [Starter CodeSandbox](https://codesandbox.io/s/random-user-starter-xtpup?file=/src/App.js)
+Here is our [Starter CodeSandbox](https://codesandbox.io/s/usecontext-lab-themes-starter-iuq8m?file=/src/App.js)
 
 ## Instructions
 For this exercise you will do the following:
