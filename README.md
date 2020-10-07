@@ -49,11 +49,11 @@
 | 11  | Tues 10/13 | React Router  |  |  |
 | 12  | Thur 10/15 | React Router Cont... |  |  |
 | 13  | Tues 10/20| Styled Components |  |  |
-| 14  | Thur 10/22 | Testing |  |  |
+| 14  | Thur 10/22 | Final Project 1on1's|  |  |
 | 15  | Tues 10/27 | Intro To Redux  |  |  |
-| 16  | Thur 10/29 | Final Project 1on1's |  |  |
+| 16  | Thur 10/29 | Custom Hooks |  |  |
 | 17  | Tues 11/3 | ELECTION DAY - NO CLASS |  |  |
-| 18  | Thur 11/5 | Custom Hooks |  |  |
+| 18  | Thur 11/5 | Testing   |  |  |
 | 19  | Tues 11/10 | React & D3 |  |  |
 | 20  | Thur 11/12 | Final Project 1on1's |  |  |
 | 21  | Tues 11/17 | Project Presentations |  |  |
