@@ -28,3 +28,7 @@ For this exercise you will do the following:
 #### Click Event
 
 - Add a click event to the `Toggle Themes` button that will allow the user to toggle between the themes
+
+#### Solution
+
+Here is the [Solution](https://codesandbox.io/s/usecontext-lab-themes-solution-xn0b1?file=/src/App.js:515-665)

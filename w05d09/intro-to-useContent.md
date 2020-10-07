@@ -221,7 +221,7 @@ function ComponentD() {
 }
 ```
 
-Here is the [final solution code]() - Provided after lecture
+Here is the [final solution code](https://codesandbox.io/s/usecontext-demo-solution-tujgu?file=/src/components/App.js) 
 
 
 # Resources
