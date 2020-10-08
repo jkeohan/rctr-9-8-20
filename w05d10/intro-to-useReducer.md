@@ -71,7 +71,7 @@ When applied to building an application it becomes a tool which we use to manage
 
 So the `reducer` is essentially a function that does the followng:
 
- **takes in the following param:**
+ **takes in the following params**
 - current state 
 - the action to be performed on state
 
