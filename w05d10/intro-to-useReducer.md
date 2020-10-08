@@ -69,11 +69,14 @@ So the concept of a `reducer` has been around for sometime in JavaScript long be
 
 When applied to building an application it becomes a tool which we use to manage both the `state` of an application and the` business logic` as well.  
 
-So the `reducer` is essentially a function that takes in the following params:
+So the `reducer` is essentially a function that does the followng:
 
+ **takes in the following param:**
 - current state 
 - the action to be performed on state
-- it returns a new/updated version of state (old state is never mutated)
+
+**returns**
+- a new/updated version of state (old state is never mutated)
 
 
 ```js
