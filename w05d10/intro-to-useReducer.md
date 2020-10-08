@@ -65,7 +65,7 @@ For this small demo we will be using the following starter code:
 <!-- original starter: https://codesandbox.io/s/counter-class-to-functional-usestate-starter-jdj6f?file=/src/components/Counter.js -->
 [CodeSandbox - Counter Reducer - Starter](https://codesandbox.io/s/counter-usereducer-starter-luru8?file=/src/components/Counter.js)
 
-So the concept of a `reducer` has been around for sometime in JavaScript above and beyond the application of using it with `Array.reduce`. 
+So the concept of a `reducer` has been around for sometime in JavaScript long before the introduction of `Array.reduce`. 
 
 When applied to building an application it becomes a tool which we use to manage both the state of an application and the business logic used to update state.   
 
