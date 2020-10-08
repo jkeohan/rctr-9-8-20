@@ -83,6 +83,7 @@ So the `reducer` is essentially a function that does the followng:
 (state, action) => returns a new version of state
 ```
 
+This follows one of the rules we learned regarding state which is: 
 :oncoming_police_car: Never update the state value directly
 
 As mentioned it returns a new version of state as it takes the approach that state is immutable, just as it is in React.  
