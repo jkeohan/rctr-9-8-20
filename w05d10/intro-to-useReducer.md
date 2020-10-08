@@ -172,7 +172,7 @@ From the looks of it the switch statement does indeed make it easier to read.
 
 ## useReducer Hook
 
-The two basic hooks that are used for state management in React are: `useState` and `useReducer` with the addition of `useContext` for managing a more global form of state. 
+The two basic hooks that are used for state management in React are: `useState` and `useReducer`, with the addition of `useContext` for managing a more global form of state. 
 
 In order to work with the `useReducer` hook we need to first import it and, since it essentially replaces `useState` we can remove that.
 
@@ -182,7 +182,7 @@ import React, { useReducer } from 'react';
 
 `useReducer` works very similar to `useState` but with some differences. Like useState it returns a tuple `[state, dispatch]` with the first element in the array being `state` and the second a `set function`
 
-It almost seems like the two are the same at this point.  But there is the difference. 
+It almost seems like the two are the same at this point.  But there is a difference. 
 
 `useReducer` takes in a `callback` as the first argument and the initial `state value` as the second. 
 
