@@ -87,8 +87,6 @@ This follows one of the rules we learned regarding state which is:
 
 **:oncoming_police_car: Never update the state value directly**
 
-As mentioned it returns a new version of state as it takes the approach that state is immutable, just as it is in React.  
-
 Although we already have a working example of a `Counter` component, lets give the code a once over so were all on the same page. 
 
 Here is the state of the Counter.
