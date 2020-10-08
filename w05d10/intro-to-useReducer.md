@@ -51,7 +51,8 @@ OUTPUT: { banana: 2, cherry: 3, orange: 3, apple: 2, fig: 1 }
 
 In both cases we reduced the input of many things to a single thing, be it a number or agit pun object. 
 
-[reduce-examples-solution repl](https://repl.it/@jkeohan/reducer-examples-solution)
+<!-- [reduce-examples-solution repl](https://repl.it/@jkeohan/reducer-examples-solution)  -->
+[reduce-examples-solution repl]() - provided after the codealong
 
 :question: What is a `reducer`?
 
