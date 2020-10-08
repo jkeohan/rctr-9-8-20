@@ -138,7 +138,7 @@ function counterReducer(state, action){
 
 One thing to note about the above code is that the `action` being passed is expected, by convention, to be uppercase.  This convention is meant to highlight the action being performed and a convention that is expected when using `Redux`.  
 
-If the `action type` doesn't match any condition, we default to return the unchanged state. It's very clear in the function that the `action` determines how state is to be updated.  
+If the `action` doesn't match any condition, we default to return the unchanged state. It's very clear in the function that the `action` determines how state is to be updated.  
 
 #### Refactor Buttons
 And of course the buttons need a bit of refactoring as well.  Once again we are passing in the current state and the action to be performed. 
@@ -151,7 +151,7 @@ And of course the buttons need a bit of refactoring as well.  Once again we are 
 
 ### Switch Statements
 
-For the sake of readability `switch statements` have become the defacto conditional logic for reducers. 
+For the sake of readability `switch` statements have become the defacto conditional logic for reducers. 
 
 So let's rewrite the above code as follows:
 
