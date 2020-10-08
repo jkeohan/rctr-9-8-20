@@ -21,11 +21,12 @@ For this exercise you will do the following:
 #### Controls Component
 - update the `handleClick` to call the` dispatch` function
 
-#### Ligth Component
+#### Light Component
 - pass down a new prop called color that contains the current background color
 
-#### Click Event
+#### Bonus
 
-- Add a click event to the `Toggle Themes` button that will allow the user to toggle between the themes
+- keep track of the number of clicks 
+- add reset button that resets clicks back to 0
 
 <!-- [Solution Code](https://codesandbox.io/s/light-levels-usereducer-solution-8w6m8?file=/src/Components/App.js) -->
