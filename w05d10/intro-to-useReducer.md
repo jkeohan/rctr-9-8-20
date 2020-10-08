@@ -28,7 +28,7 @@ The `accumulator` will determine if it has been assigned a starting value otherw
 Let's work through a few examples of `Array.reduce()` so we are all up to speed on what the method is meant to do. 
 
 <!-- original starter code: https://repl.it/@jkeohan/reducer-examples-starter#main.js -->
-We will be using this [reduce-examples-starter repl](https://repl.it/@jkeohan/reducer-examples-starter#main.js) and working through the problems below.
+We will be using this [reduce-examples-starter repl](https://repl.it/@jkeohan/reducer-examples-starter-rctr-9-8-20) and working through the problems below.
 
 #### Sum An Array
 How would you use `.reduce()` to return a single value that is the sum of all numbers in the following array?
