@@ -54,7 +54,7 @@ In both cases we reduced the input of many things to a single thing, be it a num
 <!-- [reduce-examples-solution repl](https://repl.it/@jkeohan/reducer-examples-solution)  -->
 [reduce-examples-solution repl]() - provided after the codealong
 
-:question: What is a `reducer`?
+### :question: In your own words explain why you would use `[].reduce()` vs `[].forEach` or even a `for()` loop`?
 
 ## Creating A Reducer
 
