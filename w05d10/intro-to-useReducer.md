@@ -166,7 +166,7 @@ function counterReducer(state, action) {
 }
 ```
 
-From the looks of it the switch statement does make it easier to read. 
+From the looks of it the switch statement does indeed make it easier to read. 
 
 :question: What are the benefits of managing the applications state using a `reducer` function?
 
