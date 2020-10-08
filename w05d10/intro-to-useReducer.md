@@ -248,9 +248,11 @@ function counterReducer(state, action) {
 
 Here is the final solution code:
 
-[CodeSandbox - Counter Reducer - Solution](https://codesandbox.io/s/counter-class-to-functional-usestate-solution-rlhj9?file=/src/components/Counter.js)
+<!-- [CodeSandbox - Counter Reducer - Solution](https://codesandbox.io/s/counter-class-to-functional-usestate-solution-rlhj9?file=/src/components/Counter.js) -->
 
-:question: How does working with `useReducer` improve our readability and organization of our code?
+[CodeSandbox - Counter Reducer - Solution]() - Provided after the lecture
+
+#### :question: How does working with `useReducer` improve the readability and organization of our code?
 
 ### What About Redux?
 
