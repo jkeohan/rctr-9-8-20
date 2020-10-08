@@ -45,11 +45,11 @@
 | 7  | Tues 09/29 | <li>[React Lifecycles & The `useEffect` Hook](https://git.generalassemb.ly/jkeohan/rctr-9-8-20/blob/master/w04d07/intro-to-the-component.lfiecycle.md)</li> | <li>Read: [Fetching Data Using useEffect](https://www.robinwieruch.de/react-hooks-fetch-data)</li><li>Do: [Request An API Key](http://www.omdbapi.com/apikey.aspx)</li> | [Recording](https://generalassembly.zoom.us/rec/share/QBj8NYAzoHrMiDhSSd6ClH2doXq3RQssPSJBhXfSjw-lOwbGQnhUKvlnWv8IMzug.CAJhp51t6Qb4HhHC?startTime=1601423626000) |
 | 8  | Thur 10/01 | <li>[API's](https://git.generalassemb.ly/jkeohan/rctr-9-8-20/blob/master/w04d08/intro-to-fetching-data.md)</li> |<li>Do: [Render Giphys](https://git.generalassemb.ly/jkeohan/rctr-9-8-20/blob/master/homework/w04/giphy.md)</li><li>Read: [How To use useContext](https://www.robinwieruch.de/react-usecontext-hook) | [Recording](https://generalassembly.zoom.us/rec/share/wl9ZmUS0do4AQMWxOK9BoUx9yirBbn-DRo0PxQp1yeu9McZBBuZjbuKFy1VDfQPw.mdA1p6XRMxcus-4M?startTime=1601596213000) |
 | 9  | Tues 10/06 | <li>[useContent](https://git.generalassemb.ly/jkeohan/rctr-9-8-20/blob/master/w05d09/intro-to-useContent.md)</li> | <li>Read: [The useReducer Hook](https://www.robinwieruch.de/react-usereducer-hook)</li>  | [Recording](https://generalassembly.zoom.us/rec/share/ZjDAagWyQrdHnmYC0OwpTFDxGD1e7Wo3eq6PbGTBJvsdDZNEyx1QvOTftrncnxR_.HeoCENWbXtVB2z3u?startTime=1602028435000) |
-| 10  | Thur 10/08 | useReducer |  |  |
-| 11  | Tues 10/13 | React Router  |  |  |
+| 10  | Thur 10/08 | <li>[useReducer](https://git.generalassemb.ly/jkeohan/rctr-9-8-20/blob/master/w05d10/intro-to-useReducer.md)</li> | <li>Do: [Shopping Cart Refactor](https://git.generalassemb.ly/jkeohan/rctr-9-8-20/blob/master/homework/w05/shopping-cart-refactor.md)</li><li>Read: [React Router in 5 Minutes](https://www.freecodecamp.org/news/react-router-in-5-minutes/)  |  |
+| 11  | Tues 10/13 | React Router  | <li>Read: [React Router - Complete Guide](https://www.sitepoint.com/react-router-complete-guide/)</li> |  |
 | 12  | Thur 10/15 | React Router Cont... |  |  |
-| 13  | Tues 10/20| Styled Components |  |  |
-| 14  | Thur 10/22 | Final Project 1on1's|  |  |
+| 13  | Tues 10/20|  Final Project 1on1's |  |  |
+| 14  | Thur 10/22 |Styled Components |  |  |
 | 15  | Tues 10/27 | Intro To Redux  |  |  |
 | 16  | Thur 10/29 | Custom Hooks |  |  |
 | 17  | Tues 11/3 | ELECTION DAY - NO CLASS |  |  |
