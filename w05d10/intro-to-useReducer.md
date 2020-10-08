@@ -58,12 +58,12 @@ In both cases we reduced the input of many things to a single thing, be it a num
 
 ## Creating A Reducer
 
-So now that we have worked through a few examples of `.reduce()` let's apply this knowledge and create a `reducer`. 
+So now that we have worked through a few examples of `[].reduce()` let's apply this knowledge and create a `reducer`. 
 
 For this small demo we will be using the following starter code:
 
 <!-- original starter: https://codesandbox.io/s/counter-class-to-functional-usestate-starter-jdj6f?file=/src/components/Counter.js -->
-[CodeSandbox - Counter Reducer - Starter](https://codesandbox.io/s/counter-class-to-functional-usestate-starter-jdj6f?file=/src/components/Counter.js)
+[CodeSandbox - Counter Reducer - Starter](https://codesandbox.io/s/counter-usereducer-starter-luru8?file=/src/components/Counter.js)
 
 So the concept of a `reducer` has been around for sometime in JavaScript above and beyond the application of using it with `Array.reduce`. 
 
