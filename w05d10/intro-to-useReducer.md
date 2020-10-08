@@ -254,6 +254,8 @@ Here is the final solution code:
 
 #### :question: How does working with `useReducer` improve the readability and organization of our code?
 
+## Bonus Material
+
 ### What About Redux?
 
 As we all know React is all about state management and so Redux has became the state management tool of choice, which employs...you guessed it... `reducers`.
