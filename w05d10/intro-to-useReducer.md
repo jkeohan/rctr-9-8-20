@@ -106,17 +106,19 @@ const handleReset = () => setCounter(0)
 And of course the buttons that call the supporting functions.
 
 ```js
-<>
+<section>
  <h2>Count:{count}</h2>
  <button onClick={handleIncrement }>+</button>
  <button onClick={handleDecrement}>-</button>
  <button  onClick={handleReset}>Reset</button>
-</
+</section>
 ```
 
 ### Our First Reducer
 
-Let's refactor this a bit to use a `reducer` function.  The idea here is to aggregate all the logic to update state into one single function which takes in the following:
+Let's refactor this a bit to use a `reducer` function.  The idea here is to aggregate state and all the logic update state into one single function.
+
+It will take in the following:
 
 - current state
 - an action to perform that will update state
