@@ -250,7 +250,7 @@ Here is the final solution code:
 
 <!-- [CodeSandbox - Counter Reducer - Solution](https://codesandbox.io/s/counter-class-to-functional-usestate-solution-rlhj9?file=/src/components/Counter.js) -->
 
-[CodeSandbox - Counter Reducer - Solution](https://repl.it/@jkeohan/reducer-examples-starter-rctr-9-8-20#main.js) - Provided after the lecture
+[CodeSandbox - Counter Reducer - Solution](https://codesandbox.io/s/counter-usereducer-starter-luru8?file=/src/components/Counter.js:487-488) - Provided after the lecture
 
 #### :question: How does working with `useReducer` improve the readability and organization of our code?
 
