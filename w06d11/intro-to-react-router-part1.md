@@ -39,7 +39,7 @@ Let's take a minute once again to open the solution code and view that model aga
 
 ## React Router Setup 
 
-Here is our [Starter Code](https://codesandbox.io/s/bitcoin-starter-b887r?file=/src/components/App/App.js)
+Here is our [Starter Code](https://codesandbox.io/s/bitcoin-starter-swwzg)
 
 Let's bring in React Router and set it up to allow us to display
 multiple components.
