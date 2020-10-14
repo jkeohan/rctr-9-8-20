@@ -76,6 +76,7 @@ As with a components `render()` method the `Router` component also expects to re
 
 The React Router `Route` component allows us to define a URL endpoint and describe what should load on the page at that point. 
 
+### Import and Setup Router
 
 We need to import the `Router` into `index.js` and place it as the root component of our application. `Router` will,
 in turn, render `App` through which all the rest of our components will be rendered:
@@ -103,6 +104,8 @@ router-specific objects to any components that rendered via `Router`.
 
 Things like current location and url can be accessed or changed. Additionally, in order to use the other
 routing components provided by React Router, a `Router` parent component is necessary.
+
+### Working With Route
 
 **App.js**
 
