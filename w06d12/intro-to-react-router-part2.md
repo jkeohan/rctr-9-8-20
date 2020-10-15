@@ -182,11 +182,20 @@ Let's see if that works.
 
 Hmmmm...it looks like we broke it. 
 
-<img src="https://i.imgur.com/A2TZ8Lb.png" width=400/>
 
-Let's comment out that link in `Currency` and then take a look at the `Currency` Component in DevTool. 
+
+<img src="https://i.imgur.com/YWH8A81.png" width=400/>
+
+Let's comment out that reference in `Currency` and then take a look at the `Currency` Component in DevTool. 
 
 ```js
+useffect(() => {
+  // code...
+
+  // makeApiCall()
+})
+
+// AND IN THE JSX
   {/* <h1>Bitcoin price in {props.match.params.currency}</h1> */}
 ```
 
