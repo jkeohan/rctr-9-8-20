@@ -82,7 +82,7 @@ Let's create a new route that includes a `url parameter`. This is done by append
 
 Clicking on a currency should take us to the following:
 
-<img src="https://i.imgur.com/orCqpXN.png" width=500/>
+<img src="https://i.imgur.com/orCqpXN.png" width=400/>
 
 And if we examine the `Currency` Component in React DevTools we should see the following: 
 
