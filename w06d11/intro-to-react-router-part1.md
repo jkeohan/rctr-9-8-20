@@ -254,6 +254,21 @@ Now we will resolve the second issue by including the exact keyword in the defau
     <Route exact path="/" component={Home} />
     <Route path="/currencies" component={Currencies}/>
 </main>
+```
+
+## Redirects
+
+Redirects using react router are incredibly easy. Redirect is just another
+component we can import and use by passing it a few props.
+
+Let's create a route to handle if/when a user manually types in a route that doesn't exist. 
+
+```html
+<main>
+    <Route exact path="/" component={Home} />
+    <Route path="/currencies" component={Currencies}/>
+    <Redirect to='/' />
+</main>
 
 ```
 
