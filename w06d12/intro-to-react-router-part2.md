@@ -240,6 +240,12 @@ Let's also pass down the `setCurrency` function so that we can lift state.
 />
 ```
 
+In the `Currency` Component we need to call `props.setCurrency(currency)` in the `makeApiCall` function. 
+
+```js
+props.setCurrency(currency)
+```
+
 Confirm in DevTools that those props are back and uncomment out the code. 
 
 ### Update Navigation
