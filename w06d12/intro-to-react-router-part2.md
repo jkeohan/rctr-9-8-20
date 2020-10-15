@@ -345,13 +345,6 @@ import { Route, Link, Switch } from 'react-router-dom'
   )
 ```
 
-### You Do: The Coindesk API 
-
-We will be using `fetch` to query the Coindesk API in this exercise. Take 5 minutes to read the [Coindesk API](https://www.coindesk.com/api/) documentation and test viewing the current currency rate for a `AED` and using just the browswer.  Do not try and make a fetch call yet. 
-
-
-
-
 ## Redirects
 
 Redirects using react router are incredibly easy. Redirect is just another
