@@ -127,7 +127,7 @@ The last edits required are to update the JSX to include the required info.
 
 ```html
 <h1>Bitcoin price in {props.match.params.currency}</h1>
-<div className="price">Price: {price}</div>
+<div className="price">Price: {currency}</div>
 ```
 
 ## New Feature Request
