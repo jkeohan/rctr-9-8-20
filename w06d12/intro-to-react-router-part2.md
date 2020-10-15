@@ -8,7 +8,7 @@
 
 Here is what we are looking to build:  [Bitcoin Solution Code](https://9esbr.csb.app/)
 
-Here is our [Starter Code](https://codesandbox.io/s/bitcoin-starter-b887r?file=/src/components/App/App.js)
+Here is our [Starter Code](https://codesandbox.io/s/rctr-router-p2-bitcoin-starter-8e2vp?file=/src/components/App/App.js)
 
 ## Currencies component 
 
