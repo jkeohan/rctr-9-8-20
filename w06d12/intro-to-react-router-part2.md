@@ -225,6 +225,15 @@ Or a much better way would be to pass them all down using the `...spread` operat
 ```js
 <Route path="/currencies/:currency" render={(routerProps) => 
   <Currency 
+    {...routerProps}
+  />} 
+/>
+```
+
+Let's also pass down the `setCurrency` function so that we can lift state. 
+```js
+<Route path="/currencies/:currency" render={(routerProps) => 
+  <Currency 
     setCurrency={setCurrency}
     {...routerProps}
   />} 
