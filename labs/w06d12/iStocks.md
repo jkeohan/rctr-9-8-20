@@ -4,6 +4,8 @@ Spin a new react up using create-react-app
 
 Look over the working [Solution](https://vhixt.csb.app/) and examine the app in React Dev Tools to see if you can elicit the structure so that you have a starting point for you app. 
 
+Here is the [Starter Code](https://codesandbox.io/s/istocks-starter-yp7pd)
+
 This version of the application should use hard-coded stocks data, which you can find in [`stock-data.js`](./stock-data.js). however if you want to leverage pulling data from an API you can sign up for an API key and use [https://financialmodelingprep.com/](https://financialmodelingprep.com/)
 
 Here is your routing table.
