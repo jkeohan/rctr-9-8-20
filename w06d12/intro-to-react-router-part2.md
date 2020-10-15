@@ -244,7 +244,15 @@ Add the following in `App`
   }</Link>
 ```
 
-We still have some weird issue where both the `currencies` and `currencies/:currency` routes display today. Let's work on those now.
+Now uncomment out the code in `Currency` Component and we should be good to go.  
+
+We still have some weird issue where both the `currencies` and `currencies/:currency` routes display at the same time. 
+
+<img src="https://i.imgur.com/3EQxfuL.png" />
+
+
+
+ Let's make use of a new React Router Component called `Switch` that will help fix this.  
 
 ## Using Switch 
 
