@@ -201,7 +201,7 @@ useffect(() => {
 
 It seems as though we have lost all of the previous router props that we had access to just moments before. 
 
-<img src="https://i.imgur.com/XielcdH.png" width=500/>
+<img src="https://i.imgur.com/FGMRfVo.png" width=500/>
 
 We need to get them back and can do so by manually passing them down using the spread operator.
 
