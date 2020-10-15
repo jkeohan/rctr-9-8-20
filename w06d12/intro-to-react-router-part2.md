@@ -82,11 +82,11 @@ Let's create a new route that includes a `url parameter`. This is done by append
 
 Clicking on a currency should take us to the following:
 
-<img src="https://i.imgur.com/orCqpXN.png" />
+<img src="https://i.imgur.com/orCqpXN.png" width=500/>
 
 And if we examine the `Currency` Component in React DevTools we should see the following: 
 
-<img src="https://i.imgur.com/dKFS5G8.png" />
+<img src="https://i.imgur.com/dKFS5G8.png" width=500/>
 
 So it looks like `props.match.params.currency` contains the value that we need to make the API call. 
 
@@ -195,6 +195,16 @@ Or a much better way would be to pass them all down using the `...spread` operat
 
 Confirm in DevTools that those props are back and uncomment out the code. 
 
+### Update Navigation
+
+Add the following in `App`
+
+```js
+<Link to="/currencies">{
+      currency ? `Currencies List > ${currency}` : 
+      `Currencies List > `
+  }</Link>
+```
 
 We still have some weird issue where both the `currencies` and `currencies/:currency` routes display today. Let's work on those now.
 
