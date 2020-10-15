@@ -86,7 +86,7 @@ Clicking on a currency should take us to the following:
 
 And if we examine the `Currency` Component in React DevTools we should see the following: 
 
-<img src="https://i.imgur.com/dKFS5G8.png" width=500/>
+<img src="https://i.imgur.com/EVfxNzn.png" width=500/>
 
 So it looks like `props.match.params.currency` contains the value that we need to make the API call. 
 
@@ -117,7 +117,7 @@ We will make the call when the component first mounts, `componentDidMount`,  and
       const res  =  await fetch(url)
       const json = await res.json()
       let currencyPrice = json.bpi[currency].rate;
-      setPrice(currencyPrice)
+      setCurrency(currencyPrice)
     }
     makeApiCall()
   },[])
