@@ -364,16 +364,10 @@ Redirect only requires a `to` prop which tells it what path to redirect to.
 
 We can make use of the the `history.push` method to push routes into the browsers url.
 
-Let's create a `handleClick` button that when called will navigate the user back to the `currencies` route.
-
-```js
-  const handleClick = () => {
-    props.history.push('/currencies')
-   }
-```
+In the `Currency` Component let's create a button that when called will navigate the user back to the `currencies` route.
 
 Let's add a button and assign it the `handleCLick` function. 
 
 ```js
- <button onClick={handleClick}> Home</button>
+ <button onClick={props.history.push('/currencies')}> Home</button>
 ```
