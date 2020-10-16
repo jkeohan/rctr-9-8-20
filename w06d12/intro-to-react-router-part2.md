@@ -260,6 +260,18 @@ Add the following in `App`
   }</Link>
 ```
 
+If we click the links a few times we will see that our new feature doesn't yet clear the previous value when we are on `/currencies` or the `/` home route.  For that we need to add an `onClick` event to both of those `Link`'s
+
+```js
+<Link 
+  onClick={() => setCurrency('')}
+  to="/currencies">{
+      currency ? `Currencies List > ${currency}` : 
+      `Currencies List > `
+  }</Link>
+```
+
+
 Now uncomment out the code in `Currency` Component and we should be good to go.  
 
 We still have some weird issue where both the `currencies` and `currencies/:currency` routes display at the same time. 
