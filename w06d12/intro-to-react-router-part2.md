@@ -260,17 +260,23 @@ Add the following in `App`
   }</Link>
 ```
 
-If we click the links a few times we will see that our new feature doesn't yet clear the previous value when we are on `/currencies` or the `/` home route.  For that we need to add an `onClick` event to both of those `Link`'s
+### Clear Previous Value
+If we click the links a few times we will see that our new feature doesn't yet clear the previous value when we are on `/currencies` or the `/` home route.  
 
-```js
-<Link 
-  onClick={() => setCurrency('')}
-  to="/currencies">{
-      currency ? `Currencies List > ${currency}` : 
-      `Currencies List > `
-  }</Link>
+For that we need to add an `onClick` event to both of those `Link`'s
+
+```html
+<Link onClick={() => setCurrency('')}to="/">
+  <img
+    src="https://en.bitcoin.it/w/images/en/2/29/BC_Logo_.png"
+    alt=""
+  />
+  <h1>Bitcoin prices</h1>
+</Link>
+<Link onClick={() => setCurrency('')} to="/currencies">
+  {currency ? `Currencies List > ${currency}` : `Currencies List`}
+</Link>
 ```
-
 
 Now uncomment out the code in `Currency` Component and we should be good to go.  
 
@@ -357,14 +363,12 @@ import { Route, Link, Switch } from 'react-router-dom'
   )
 ```
 
-## Redirects
+## Redirects Revisited
 
-Redirects using react router are incredibly easy. Redirect is just another
+Redirects using react router are incredibly easy. `Redirect` is just another
 component we can import and use by passing it a few props.
 
-
-- Add another route called `/currency`
-- Instead of rendering one of our components, put the `Redirect` component.
+Let's add another Redirect to account for users who manually type in `currency` instead of `currencies`
 
 ```js
 <Route path="/currency" render={() => <Redirect to="/currencies" />} />
@@ -381,5 +385,5 @@ In the `Currency` Component let's create a button that when called will navigate
 Let's add a button and assign it the `handleCLick` function. 
 
 ```js
- <button onClick={props.history.push('/currencies')}> Home</button>
+ <button onClick={props.history.push('/')}> Home</button>
 ```
