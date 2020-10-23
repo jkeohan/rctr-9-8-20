@@ -49,8 +49,8 @@
 | 11  | Tues 10/13 | <li>[React Router](https://git.generalassemb.ly/jkeohan/rctr-9-8-20/blob/master/w06d11/intro-to-react-router-part1.md)</li>  | <li>Read: [React Router - Complete Guide](https://www.sitepoint.com/react-router-complete-guide/)</li> | [Recording](https://generalassembly.zoom.us/rec/share/1_tq6Ywbiurrqd1DORkjkbuBXoGAmjW6bSSZPCsgxJgPN1RzjfiAxwNCAmAXMiWL.glzdtWs5MKPvwhJ6?startTime=1602632862000) |
 | 12  | Thur 10/15 | <li>[React Router Cont...](https://git.generalassemb.ly/jkeohan/rctr-9-8-20/blob/master/w06d12/intro-to-react-router-part2.md)</li> | <li>Read: [React Router A to Z 2020](https://medium.com/@SakibAdnan/react-router-a-to-z-2020-11310fb2e74a)</li><li>Final Project - Wireframes</li> | [Recording](https://generalassembly.zoom.us/rec/share/Q2_T8KDx5yFop9wualOo6xF3rqIpV3sLBxUPK9QjHUiZbSZTRrN6Tt2_V_1mrhq7.7gwONKRz_fWBGnPw?startTime=1602806152000) |
 | 13  | Tues 10/20|  Final Project 1on1's | <li>Read: [4 Ways to Style CSS in React](https://www.robinwieruch.de/react-css-styling)</li><li>Read: [7 Ways to Style React Components](https://www.sitepoint.com/react-components-styling-options/)</li>  |  |
-| 14  | Thur 10/22 | <li>[Styling Components](https://git.generalassemb.ly/jkeohan/rctr-9-8-20/blob/master/w07d14/intro-to-styled-components.md)</li> |  |  |
-| 15  | Tues 10/27 | Intro To Redux  | <li>Read:[React-Redux Tutorial - Robin Wieruch](https://www.robinwieruch.de/react-redux-tutorial#redux-store)</li><li>Read: [What Does Redux Do? - david ceddia](https://daveceddia.com/what-does-redux-do/)</li>  |  |
+| 14  | Thur 10/22 | <li>[Styling Components](https://git.generalassemb.ly/jkeohan/rctr-9-8-20/blob/master/w07d14/intro-to-styled-components.md)</li> | <li>Read:[React-Redux Tutorial - Robin Wieruch](https://www.robinwieruch.de/react-redux-tutorial#redux-store)</li><li>Read: [What Does Redux Do? - david ceddia](https://daveceddia.com/what-does-redux-do/)</li> |  |
+| 15  | Tues 10/27 | Intro To Redux  |   |  |
 | 16  | Thur 10/29 | Custom Hooks |  |  |
 | 17  | Tues 11/3 | ELECTION DAY - NO CLASS |  |  |
 | 18  | Thur 11/5 | Testing   |  |  |
