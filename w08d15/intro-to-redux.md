@@ -1,23 +1,24 @@
 # Intro to Redux
 
-This lecture is designed to introduce the concepts of Redux and apply them to a basic React Counter app. 
+
 
 ## Learning Objectives
 
 - Introduce Redux and why it's used to manage state
-- Understand Redux Terminology such as Store, Actions, and Reducers
-- Add Redux to a project to use as a `global store` for state management
-- Refactor Components to leverage the global store.
+- Understand Redux Terminology such as `Store`, `Actions`, and `Reducers`
+- Add Redux to a project and use it as a `global store` for state management
+- Refactor a Counter Component to use Redux
 
 ## Preparation
 
-- Managing state with `useState` or `useReducer` Hooks
-- Understand how data is passed between components in React, possibly even have worked with `useContent`
-- Working knowledge of `switch statements` and `Array.reduce()`
+In preparation to learn Redux it's assumed that you have previous working knowledge of the following: 
+- Managing state with both `useState` or `useReducer` 
+- Understanding how data is passed between components in React, possibly even have worked with `useContent`
+- Working knowledge of `switch` statements 
 
 ## Quick Review 
 
-Let's take a minute to answer a few questions regarding our current knowledge so we can build off that as we learn about `Redux`.
+Before we jump into Redux let's take a minute to answer a few questions regarding our current knowledge of React so we can build off that as we learn about `Redux`.
 
 :question: What are some of the differences between `useState` and `useReducer`? 
 
@@ -43,7 +44,7 @@ Let's take a minute to answer a few questions regarding our current knowledge so
 <details><summary>Answer</summary>
 <br>
 
-**Some reasons to use `useReducer`**
+**Reasons to use `useReducer`**
 
 - when you need to manage a complex object (e.g. with arrays and additional primitives) instead of primitives (i.e. a string, integer, or boolean) 
 - when you need to manage more complex state transitions
@@ -57,9 +58,7 @@ Let's take a minute to answer a few questions regarding our current knowledge so
 <details><summary>Answer</summary>
 <br>
 
-**Some reasons to use `useReducer`**
-
-**useContent is used for the following**
+**Reasons to use `useContext`**
 - To create a global form of state
 - To prevent the need to use `prop drilling` as a means to pass props down several layers of the component hierarchy
 - To provide state values to very targeted components 
@@ -74,20 +73,16 @@ Let's take a minute to answer a few questions regarding our current knowledge so
 
 ## Intro To Redux
 
-Redux was created as a `state management` tool for large applications which include the need to manage complex versions of state and ever increasing complexity of the business logic. 
+Redux was created as a `state management` tool for large applications which includes the need to manage complex versions of state and ever increasing complexity of the business logic. 
 
 If your learning about Redux then it's safe to assume that you are already familiar with managing state using `useState`, `useReducer` and possibly even `useContext`.  This familiarity is important as it uses both the `reducer` and `context` concepts. 
-
-If you've worked with `useReducer` then your familiar with how it makes use of a `reducer` and `actions` to manage state. 
-
-If you've worked with `useContext` then you may recall that it used the `Provide/Consumer` model which `Provided` a global form of state which was then directly `Consumed` by any child component in the hierarchy. 
 
 <hr>
 
 #### <g-emoji class="g-emoji" alias="alarm_clock" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/23f0.png">⏰</g-emoji> Activity - 2min
 
 
-Let's take a look at the [Redux](https://redux.js.org/) site 
+Let's take a look at the documentation on the official [Redux](https://react-redux.js.org/introduction/quick-start) site.
 
 <hr>
 
@@ -103,8 +98,6 @@ As we can see below the nightmare of passing props further and further down the 
 <!-- We can pass them accessed directly via a central `store`
 
 <img src="https://i.imgur.com/7RpahGf.png" width=400/> -->
-
-**Note:** Keep in mind that Redux was created to manage state in large applications and is overkill for all of smaller apps that we have built thus far. 
 
 ## Redux Terminology
 
@@ -149,17 +142,19 @@ When an action gets dispatched it is sent to a `Reducer` to perform the actions 
 
 The Reducer always take the previous state and the action that was dispatched and then returns a brand new state. 
 
-The body of the function is always a `switch statement` that evaluates the `type` property in the action and executes the needed business logic.
+The body of the function is always a `switch` statement that evaluates the `type` property in the action and executes the needed business logic.
 
 ```sh
-const exampleReducer = (state, action) => {
-  switch(action.type){
-    case: 'EXAMPLE_ACTION'
-    //Do some stuff and return a new state
-      return newState
-    // Make sure to always have a default that returns state
-    default:
-      return state;
+const counterReducer = (state, action) => {
+  switch (action.type) {
+    case 'INCREMENT':
+      return {
+        count: state.count += 1
+      }
+    case 'DECREMENT':
+      return {
+        count: state.count -= 1
+      }
   }
 }
 ```
@@ -168,9 +163,7 @@ const exampleReducer = (state, action) => {
 
 Now that we have a basic understanding of how `actions` and `reducers` are used let's jump into setting up `Redux`. 
 
-For this demo we will be using the following starter code:
-
-[CodeSandbox - Redux Counter - Starter](https://codesandbox.io/s/counter-redux-counter-starter-b27kd)
+For this demo we will be using the following starter code: [CodeSandbox - Redux Counter - Starter](https://codesandbox.io/s/counter-redux-counter-starter-b27kd)
 
 
 <!-- [CodeSandbox - Redux Counter - Starter](https://codesandbox.io/s/counter-redux-counter-starter-b27kd) -->
@@ -179,11 +172,11 @@ Here are the steps we will follow to configure and use Redux:
 
 - Install redux packages (`react-redux & redux`)
 - Create a `reducer`
-- Add Redux to our App
-- Create a `store`
-- Wrap the app in the redux `Provider`
-- Dispatch `Actions`
-- Subscribe a component to updates with `connect`
+- Add Redux to our App by importing `createStore` from `redux`
+- Create a `store` and pass it a reducer
+- Provide the state using a `Provider`
+- Dispatch `Actions` from the child components 
+- Subscribe a component to the global store using `connect`
 
 Once that is all done our app will look like this: 
 [CodeSandbox - Redux Counter - Solution](https://codesandbox.io/s/counter-redux-counter-solution-2zo38?file=/src/components/Counter.js)
@@ -197,9 +190,9 @@ For the ease of the lecture the following libraries have already been installed 
 
 ### Create A Reducer
 
-Reducers are the bridge between an `action` that has been dispatched and the act of updating state. Large applications often have more than one reducer so it's a good idea to create a folder and place all your reducers there. 
+Reducers receive an `action` and update state based on the action value . Large applications often have more than one reducer so it's a good idea to create a folder and place all your reducers there. 
 
-So let's create a `reducer` folder in `src` and then create a file called `counterReducer.js`
+Let's create a `reducers` folder and then create a file called `counterReducer.js`
 
 <img src="https://i.imgur.com/EhhICUj.png" />
 
@@ -222,7 +215,7 @@ Now let's add the logic needed to update state based on one of the following act
 - RESET
 
 
-Here we also use a `switch` statement to implement the conditional logic. 
+A `switch` statement is used to implement the conditional logic. 
 ```sh
 const counterReducer = (state = 0, action) => {
   switch (action.type) {
@@ -251,7 +244,7 @@ export default counterReducer
 
 ## Adding Redux To The App
 
-Adding `Redux` to the app means creating a new `store`. Since the App is the top level Component we will be adding our `store` there. 
+Adding `Redux` to the app means creating a new `store`. Since the App is the top level Component we will be adding our global `store` there. 
 
 ### The Store
 A `store` is used to hold one global state object.  There is only one single store for the entire application.  The `store` is responsible for managing state which includes performing state updates based on the `actions` it receives. 
@@ -318,11 +311,27 @@ Let's take a look at React Dev Tools and we should see the provider.
 <details>
 <summary>Answer</summary>
 
-- React Router
+**React Router**
+
+```js
+ReactDOM.render(
+  <Router>
+    <App />
+  </Router>,
+  document.getElementById("root")
+);
+```
 
 <img src="https://i.imgur.com/XY5tgQx.png" width=200>
 
-- useContenxt Hook
+**useContenxt Hook**
+
+```js
+<DataContext.Provider value={userData}>
+    <ComponentA />
+    <ComponentE />
+</DataContext.Provider>
+```
 
 <img src="https://i.imgur.com/9QUMmFg.png" width=200>
 
@@ -330,7 +339,7 @@ Let's take a look at React Dev Tools and we should see the provider.
 
 ### Dispatch Action
 
-To update state we need to `dispatch` actions to our store.  For this the `store` object provides a `dispatch()` method. 
+To update state we need to `dispatch` an action to our store.  For this the `store` object provides a `dispatch()` method. 
 
 Let's test calling `dispatch` and increment count by 1. 
 
