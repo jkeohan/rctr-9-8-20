@@ -52,8 +52,7 @@ Fortunately, lots of techniques, frameworks, tooling and other open source proje
 
 - CSS Stylesheets
 - Inline Styles
-- CSS Modules
-- Styled Components
+- CSS-in-JS (CSS Modules & Styled Components)
 
 ## Starter Code
 
@@ -113,8 +112,7 @@ export default function InlineStyle() {
   return (
   <div style={{ color: 'red' }}>
     <h2>Inline Styles</h2>
-    <Button>Default</Button>
-    <Button style={buttonStyles}>Customized</Button>
+    <button>Primary</button>
   </div>
   );
 }
@@ -124,10 +122,12 @@ We can also used conditional logic to determine which values should be assigned 
 
 ```js
 const buttonStyles = {
-  backgroundColor: props.primary ?  '#6772e5' : 'red' ,
+  backgroundColor: props.primary ?  primary : danger ,
   // ...rest of styles
 };
 ```
+
+This works well enough for the most basic logic of a single button.  But when multiple buttons are introduced that require different background colors and `hover` effects then the code can get messy very quickly. 
 
 #### Benefits
 
@@ -142,9 +142,15 @@ const buttonStyles = {
 - Hard to read and difficult to override
 - Hard to document and maintain
 
-## CSS Modules
+## CSS in JS
 
-`CSS Modules` was one of the first tools developed in response to the lack of local scoping in CSS.
+CSS in JS lets you you style your presentation with JavaScript instead of CSS. Then, when your application is run, the JavaScript is parsed and generates CSS, which is attached to your DOM directly.
+
+### CSS Modules
+
+One major issues of standard CSS or Sass is that there is no concept of true encapsulation and requires that the developer to choose unique class names. 
+
+And this is exactly what CSS modules did, it relied on creating a dynamic class names for each locally defined style and making sure there styles didn't conflict. 
 
 It's creators very specifically designed it to be lightweight and not try to be everything to everyone. It really only supports a handful of features.
 
@@ -162,23 +168,16 @@ The basic premise is that the css classes are converted using a preprocessor int
 
 While additional tooling is needed to handle the processing of the files, `create-react-app`, which `CodeSandox` uses, includes this tooling by default.
 
-The actual css file must include `.module.css` it's name and the rules are for the most part identical to normal css.
+The actual css file must include `.module` in it's name.  So if you are using standard css then the name might be `styles.module.css` but your using SCSS then it would be `sytles.module.scss`.  The rule written will then be dependent on which one you are using. 
 
-<img src="https://i.imgur.com/DuEhAxc.png" />
-
-The CSS however will be written like normal CSS.
+<img src="https://i.imgur.com/FWdD5YU.png" />
 
 
-```css
-.container {
-  color: warning;
-}
-```
+#### Importing styles
 
 The file is then imported, but this time we store the import in a variable as it returns an object.  
 
 Let's also add a console log and see what that import looks like.
-
 ```js
 import styles from './styles.module.css';
 console.log('styles', styles);
@@ -191,10 +190,11 @@ From the console log it's clear that the css rules are assigned as keys and the 
 The rules are then applied to the elements using dot notation.
 
 ```html
-<div className="{styles.container}">
+<div className={styles.container}>
   <h2>Modules</h2>
-  <button>Default</button>
-  <button className="{styles.button}">Customized</button>
+  <button className={styles.primary}>Primary</button>
+  <button className={styles.secondary}>Secondary</button>
+  <button className={styles.success}>Success</button>
 </div>
 ```
 
@@ -207,6 +207,7 @@ Since this isn't a standard CSS name there is no way these styles would conflict
 #### Benefits
 
 - Component level styles stay with the component
+- Import/Export styles between files
 - Access to full CSS specification including support of [CSS custom properties](https://developer.mozilla.org/en-US/docs/Web/CSS/--*) for variable support
 
 #### Drawbacks
@@ -217,7 +218,7 @@ Since this isn't a standard CSS name there is no way these styles would conflict
 
 ## Styled Components 
 
-Styled-components is a kind of CSS in JS solution, meaning that you do not have external CSS files to fiddle with. Everything is in one place — logic, styling, and markup.
+One of the most popular and advanced CSS-in-JS libraries is [Styled Components](https://www.styled-components.com/).
 
 <hr>
 
@@ -228,10 +229,9 @@ Now that were jumping into styled components let's take a look at a [Vimeo](http
 <hr>
 
 
- One of the most popular and advanced is [Styled Components](https://www.styled-components.com/).
 
 
-Since `styled components` in an npm package and therefor a dependency it must first be installed.
+Since `styled components` in an npm package, and therefor a dependency, it must first be installed.
 
 <img src="https://i.imgur.com/zCX1cFF.png" />
 
@@ -241,10 +241,11 @@ Then we must import the library.
 import styled from 'styled-components';
 ```
 
-Styled Components do a great job of taking advantage of a feature in JS called a `Tagged Template Literal` that was introduced in ES6 and are created as follows:
+Styled Components do a great job of taking advantage of a feature an ES6 feature called a `Tagged Template Literal`.
 
 
-Let's create both the parent div and button.
+Let's create two styled components for the `container` and the `buttons`. 
+
 ```js
 const Container = styled.div`
 
@@ -392,6 +393,10 @@ const Button = styled.button`
 - dependency required
 - learning curve
 
+### Solution Code
+
+Here is the [Solution Code](https://codesandbox.io/s/styles-4-ways-starter-10-22-20-gpf9t?file=/src/StyledComponents/index.js)
+
 ### Bonus -  Sass/SCSS
 
 Both Sass (Syntactically Awesome Style Sheets) and SCSS (Sassy CSS) are extensions to CSS and provide a robust set of functionality. 
@@ -409,3 +414,4 @@ Let's take a look at the [Sass](https://sass-lang.com/guide) documentation
 - [CSS Modules](https://github.com/css-modules/css-modules#composition).
 - [Styled Components](https://styled-components.com/docs/faqs)
 - [Building a reusable Component System with React.js and styled-components](https://levelup.gitconnected.com/building-a-reusable-component-system-with-react-js-and-styled-components-4e9f1018a31c)
+- [React Styling Options](https://www.sitepoint.com/react-components-styling-options/)

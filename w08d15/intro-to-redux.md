@@ -36,7 +36,7 @@ Let's take a minute to answer a few questions regarding our current knowledge so
 
 
 </details>
-
+<br>
 
 :question: When would you opt to use `useReducer` over `useState`? 
 
@@ -50,33 +50,41 @@ Let's take a minute to answer a few questions regarding our current knowledge so
 - when you want more predictable state transitions than useState.
 
 </details>
+<br>
 
-:question: How is `useContent` different then `useState` and `useReducer`? 
+:question: When would you choose to use `useContent` over `useState` and `useReducer` and provide a use case? 
 
 <details><summary>Answer</summary>
 <br>
 
 **Some reasons to use `useReducer`**
 
-- when you need to manage a complex object (e.g. with arrays and additional primitives) instead of primitives (i.e. a string, integer, or boolean) 
-- when you need to manage more complex state transitions
-- when you want more predictable state transitions than useState.
+**useContent is used for the following**
+- To create a global form of state
+- To prevent the need to use `prop drilling` as a means to pass props down several layers of the component hierarchy
+- To provide state values to very targeted components 
+
+**Use Cases Include**
+- User profile info, such as avatar, located in several components throughout the app
+- To apply specific themes throughout the app
+
 
 </details>
 
 
-## Why Redux?
+## Intro To Redux
 
-If your learning about Redux then it's safe to assume that you are already familiar with managing state using `useState`, `useReducer` and possibly even `useContext`.  
+Redux was created as a `state management` tool for large applications which include the need to manage complex versions of state and ever increasing complexity of the business logic. 
 
-If you've worked with `useContext` then you may recall that it used the `Provide/Consumer` model which allowed data to be consumed in any child component without the need to perform `prop drilling`.  
+If your learning about Redux then it's safe to assume that you are already familiar with managing state using `useState`, `useReducer` and possibly even `useContext`.  This familiarity is important as it uses both the `reducer` and `context` concepts. 
 
-Redux was created as a `state management` tool for large applications. Therefore making the decision to use an advanced library like Redux is based on the need to manage complex state and increasing complexity of the business logic. 
+If you've worked with `useReducer` then your familiar with how it makes use of a `reducer` and `actions` to manage state. 
+
+If you've worked with `useContext` then you may recall that it used the `Provide/Consumer` model which `Provided` a global form of state which was then directly `Consumed` by any child component in the hierarchy. 
 
 <hr>
 
 #### <g-emoji class="g-emoji" alias="alarm_clock" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/23f0.png">⏰</g-emoji> Activity - 2min
-
 
 
 Let's take a look at the [Redux](https://redux.js.org/) site 
@@ -85,6 +93,10 @@ Let's take a look at the [Redux](https://redux.js.org/) site
 
 <!-- So instead of this nightmare of passing props down and through multiple components: -->
 
+### The Need For Global State
+
+As we can see below the nightmare of passing props further and further down the hierarchy may at some point become confusing and/or unmanageable. Redux creates a `central store` that any component can reference and pull the data they need when they need it. 
+
 <img src="https://i.imgur.com/8Iy4ztp.png">
 <!-- <img src="https://i.imgur.com/STJ8f7F.png" width=300/> -->
 
@@ -92,41 +104,44 @@ Let's take a look at the [Redux](https://redux.js.org/) site
 
 <img src="https://i.imgur.com/7RpahGf.png" width=400/> -->
 
-**Note:** Keep in mind that Redux was created to manage state in large applications and is overkill for all of smaller apps that we have built until, including the Counter app that we will be using to demo Redux. 
+**Note:** Keep in mind that Redux was created to manage state in large applications and is overkill for all of smaller apps that we have built thus far. 
 
 ## Redux Terminology
 
 Redux brings with it some new terminology so let's review these new terms first before we implement it. 
 
 <p align='center'>
-    <img src="https://i.imgur.com/6VoGGIX.png" width=500/>
+    <img src="https://i.imgur.com/6VoGGIX.png" width=400/>
 </p>
 
 
 #### Store
 
-The store is the single source of truth our app. The store encapsulates not only the data in the program, but also controls the flow of the program using `actions` and `reducers`
+The store is the single source of truth our app. The store encapsulates not only the data in the program, but also controls the flow of the program using `reducers` and `actions`.
 
 #### Actions
 
 `Actions` are simply JavaScript objects that describes what change is being made and includes any data relative to that change.  The only `requirement` is that the object must contain a key called `type`. 
 
-Any additional key/value pairs that are included are completely optional.
+Any additional key/value pairs that are included are completely optional and dependent on the need of the app.
 
 Here is an action object that intends to increment the counter by 1.
+```sh
+{ type: 'INCREMENT' } 
+```
+
+Although this meets the min requirements of an `action` we can extend it to include additional values.  So perhaps we want to control by how much the value is incremented.  For that we can add a new key called `value`. 
+
 ```sh
 { type: 'INCREMENT', value: 1 } 
 ```
 
-And another that intends to decrement the counter by 1.
+We can continue that logic and create an action to decrement the counter by 1.
 ```sh
 { type: 'DECREMENT', value: 1 }
 ```
 
-And another that resets the counter to 0.
-```sh
-{ type: 'RESET', value: 0 }
-```
+
 
 #### Reducers
 
