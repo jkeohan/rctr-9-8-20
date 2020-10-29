@@ -1,0 +1,35 @@
+# useWindowResize Custom Hook
+
+## Working Version
+Here is a [working version](https://8pkrz.csb.app/) of the app so you have a reference of the base functionality that you are being asked to implement. 
+
+
+<img src="https://i.imgur.com/0BG7mYC.png" width=500/>
+
+## Starter CodeSandbox
+Here is the [Starter CodeSandbox](https://codesandbox.io/s/custom-hooks-usewindowsize-starter-681s0?file=/src/App.js). 
+
+The code already contains all the logic to update the window width/heigh values as the screen is adjusted.  The goal of this exercise is to refactor existing  code into an custom hook.  
+
+## Instructions
+For this exercise you will do the following:
+
+### useWindowSize Hook
+- Create a new file to contain all the custom hook code needed to import into a Component
+- Configure is so that it returns the values needed 
+- Import the Hook into App and make sure it works
+
+**Hint:** This hook doesn't need to pass any values back and only needs to 
+
+### Bonus - Reuse In Another App
+
+Import the custom `useWindowSize` Hook into the App Component in this [Mars - Inline Style](https://codesandbox.io/s/mars-inline-styles-wpixk?file=/src/Components/App.js) version of the site. 
+
+### Bonus - Change Color Based On Changes
+
+Try adding some logic that would change the color of the text based on the following:
+
+- width size increases = green
+- width size decreases = red
+
+Here is a [working version](https://ejg9u.csb.app/) of this solution.  
