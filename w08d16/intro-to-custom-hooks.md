@@ -96,8 +96,10 @@ todos.clear())
 [useArray by Aayush Jaiswal
 ](https://blog.bitsrc.io/writing-your-own-custom-hooks-4fbcf77e112e)
 
-### Our First Custom Hook
+### Our First Custom Hook - useDocumentTile
 Let's take a look a really basic example of a Counter Component that also updates the `document.title` of an open tab with text that display the current `count` value. 
+
+**Stater CodeSandbox:** [useDocumentTitle](https://codesandbox.io/s/rctr-9-8-20-counter--usedocumenttitle-starter-3i3ll?file=/src/Counter.js)
 
 It's not currently using any Custom Hooks but that will change once we evaluate what can be removed and placed into a Custom Hook. 
 
@@ -169,6 +171,11 @@ This might seem like a useless Hook but the functionality it provides is used qu
 
 <img src="https://i.imgur.com/rMh4uiO.png" width=300/>
 
+<br>
+<br>
+
+**Solution CodeSandbox:** [useDocumentTitle](https://codesandbox.io/s/rctr-9-8-20-counter--usedocumenttitle-solution-4dcci)
+
 ### The Local Storage Hook
 
 Let's take a look at the first local storage example and build it together. The functionality we are looking to achieve with this Hook is the following:
@@ -187,14 +194,14 @@ const [count, setCount] = useLocalStorageState('countApp', 0)
 setCount(count + 1)
 ```
 
-[Counter useLocalStorage Hook Starter](https://codesandbox.io/s/rctr-9-8-20-counter-starter-localstorage-egwjy?file=/src/Counter.js)
+**Stater CodeSandbox:** Counter useLocalStorage Hook Starter](https://codesandbox.io/s/rctr-9-8-20-counter-starter-localstorage-egwjy?file=/src/Counter.js)
 
 So let's create the initial Hook and add state along with providing it the two params it's needs for the `localStorage` name and the `defaultValue` to set. 
 
 ```js
 import React, {useState, useEffect} from 'react'
 
-export default function useLocalStorageState(key, defaultValue) {
+export default function useLocalStorage(key, defaultValue) {
   const [state, setState] = useState()
 
   return [state, setState]
@@ -213,7 +220,7 @@ Here we will use a callback function when setting the initial state which will p
 ```js
 import React, {useState, useEffect} from 'react'
 
-export default function useLocalStorageState(key, defaultValue) {
+export default function useLocalStorage(key, defaultValue) {
   const [state, setState] = useState(() => {
     try {
       const value = localStorage.getItem(key)
@@ -235,13 +242,13 @@ Now we need to do the following:
 This sounds like a good use case for adding a `useEffect` with a `[dependency]`.  When the dependency value changes this would then trigger `useEffect` to run at which time we can set the value to `localStorage`
 
 ```js
-export default function useLocalStorageState(key, defaultValue) {
+export default function useLocalStorage(key, defaultValue) {
   const [state, setState] = useState(() => {
     try {
       const value = localStorage.getItem(key)
       return value ? JSON.parse(value) : defaultValue
     } catch(e) {
-      console.log('e`, e)
+      console.log('e', e)
       return defaultValue
     }
   })
@@ -254,14 +261,14 @@ export default function useLocalStorageState(key, defaultValue) {
 }
 ```
 
-[Counter useLocalStorage Hook Solution](https://codesandbox.io/s/rctr-9-8-20-counter-solution-localstorage-nsqe0?file=/src/Counter.js)
+**Solution CodeSandbox:** [Counter useLocalStorage Hook Solution](https://codesandbox.io/s/rctr-9-8-20-counter-solution-localstorage-nsqe0?file=/src/Counter.js)
 
 
 ## Custom Hooks Abound
 
- Since the release of the React Hooks, there has been an explosive growth of custom hooks.  Thousands of React devs all over the world have churned out custom hooks that simplify most of the arduous and boring tasks we do in React projects.
+ Since the release of the React Hooks, there has been an explosive growth of custom hooks.  Thousands of React devs from all over the world have churned out custom hooks that simplify most of the arduous and boring tasks we do in React projects.
 
-
+Here are some resources that provide custom hooks or walk you through the process of creating them yourself. 
 
 - [useLocalStorage Hook](https://usehooks.com/useLocalStorage/)
 - [Writing Your Own Custom Hooks](https://blog.bitsrc.io/writing-your-own-custom-hooks-4fbcf77e112e)
