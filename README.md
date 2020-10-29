@@ -54,6 +54,6 @@
 | 16  | Thur 10/29 | <li>[Custom Hooks](https://git.generalassemb.ly/jkeohan/rctr-9-8-20/blob/master/w08d16/intro-to-custom-hooks.md)</li> | <li>Read: [D3 & React](https://wattenberger.com/blog/react-and-d3#creating-svg-elements) <li>Read: [React/D3 Ecosystem](https://www.smashingmagazine.com/2018/02/react-d3-ecosystem/) |  |
 | 17  | Tues 11/3 | ELECTION DAY - NO CLASS |  |  |
 | 18  | Thur 11/10 | React & D3 |  |  |
-| 19  | Tue 11/5 | Testing   |  |  |
-| 20  | Thur 11/12 | Final Project 1on1's |  |  |
+| 19  | Tue 11/5 |  | Final Project 1on1's |  |
+| 20  | Thur 11/12 |  Testing  |  |  |
 | 21  | Tues 11/17 | Project Presentations |  |  |
