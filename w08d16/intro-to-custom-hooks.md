@@ -38,13 +38,15 @@ const cards = cardsArr.map((ele, index) => {
 
 This `reusability` aspect is something we all strive for when developing code. 
 
+Here is an [additional example](https://codepen.io/jkeohan/pen/ZPJPrB?editors=0010) but specifically for jQuery.
+
 <hr>
 
 #### <g-emoji class="g-emoji" alias="alarm_clock" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/23f0.png">⏰</g-emoji> Activity - 3min
 
-In your dev career what functionality and/or code have you come across that you've refactored into a reusable function and incorporated into other apps? 
+In your dev career what functionality have you come across that you say the saw an use case to refactor into a reusable function and/or Class and then incorporate into other apps? 
 
-Take 2 min :clock1: to think about this and then post your answer in the thread. 
+Take 2 min :clock1: to think about it and then post your answer in the thread. 
 
 <hr>
 
