@@ -19,8 +19,6 @@ For this exercise you will do the following:
 - Configure is so that it returns the values needed 
 - Import the Hook into App and make sure it works
 
-**Hint:** This hook doesn't need to pass any values back and only needs to 
-
 ### Bonus - Reuse In Another App
 
 Import the custom `useWindowSize` Hook into the App Component in this [Mars - Inline Style](https://codesandbox.io/s/mars-inline-styles-wpixk?file=/src/Components/App.js) version of the site. 
