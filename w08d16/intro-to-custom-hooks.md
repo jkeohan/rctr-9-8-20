@@ -133,7 +133,9 @@ useEffect(() => {
 }, [count])
 ```
 
-Let’s remove the `useEffect` section out of the component and place it inside our new function which  we will call `useDocumentTitle`.  
+Let’s remove the `useEffect` section out of the component and place it inside a new file called `useDocumentTitleHook.js`.  
+
+Once the file is created let's create a new function which we will call `useDocumentTitle`.  
 
 The function's only task is to update the `document.title` if the title has changed.  
 
@@ -143,6 +145,8 @@ const useUpdateDocumentTitle = title => {
       document.title = title
   }, [title])
 }
+
+export default useUpdateDocumentTitle
 ```
 
 Now we can use this new custom Hook in the Counter Component. 
