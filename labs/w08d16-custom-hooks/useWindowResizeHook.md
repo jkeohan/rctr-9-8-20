@@ -14,20 +14,27 @@ The code already contains all the logic to update the window width/heigh values 
 ## Instructions
 For this exercise you will do the following:
 
-### useWindowSize Hook
-- Create a new file to contain all the custom hook code needed to import into a Component
+### useWindowResize Hook
+- Create a new file called `useWindowsResize.js`
+- Move all the relevant code from `App` into `useWindowsResize.js` 
 - Configure is so that it returns the values needed 
 - Import the Hook into App and make sure it works
 
+<!-- [Full useWindowResize Solution Code](https://codesandbox.io/s/custom-hooks-usewindowsize-solution-8pkrz?file=/src/useWindowSize.js) -->
+
 ### Bonus - Reuse In Another App
 
-Import the custom `useWindowSize` Hook into the App Component in this [Mars - Inline Style](https://codesandbox.io/s/mars-inline-styles-wpixk?file=/src/Components/App.js) version of the site. 
+- Import the custom `useWindowResize` Hook into the App Component in this [Mars - Inline Style](https://codesandbox.io/s/mars-inline-styles-wpixk?file=/src/Components/App.js) version of the site. 
+- Refactor `App` to use the `useWindowsResize` custom hook
 
-### Bonus - Change Color Based On Changes
+<!-- ### Bonus - Change Color Based On Changes
 
 Try adding some logic that would change the color of the text based on the following:
 
 - width size increases = green
 - width size decreases = red
 
-Here is a [working version](https://ejg9u.csb.app/) of this solution.  
+Here is a [working version](https://ejg9u.csb.app/) of this solution.   -->
+
+<!--  -->
+<!-- [Full Change Color Solution Code](https://codesandbox.io/s/custom-hooks-usewindowsize-color-changes-solution-ejg9u?file=/src/useWindowSize.js) -->

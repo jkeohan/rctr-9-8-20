@@ -1,11 +1,11 @@
 # useHover Custom Hook
 
 ## Working Version
-Here is a [working version](https://8pkrz.csb.app/) of the app so you have a reference of the base functionality that you are being asked to implement. 
+Here is a [working version](https://0nkio.csb.app/inline-with-hooks) of the app so you have a reference of the base functionality that you are being asked to implement. 
 
 
 ## Starter CodeSandbox
-Here is our [Starter CodeSandbox](https://codesandbox.io/s/styles-4-ways-starter-10-22-20-gpf9t?file=/src/InlineStylesWithHooks/index.js)
+Here is our [Starter CodeSandbox](https://codesandbox.io/s/usehover-starter-pp02j?file=/src/InlineStylesWithHooks/index.js)
 
 This CodeSandbox was used to demo adding styles to React Components and includes several examples, one of which is `Inline Styles`.  
 
@@ -30,4 +30,4 @@ Examine this existing solution of the [useHover](https://usehooks.com/page/3) cu
 
 Try adding more buttons and applying `useHover` to them as well. 
 
-[Solution CodeSandbox](https://codesandbox.io/s/styles-4-ways-solution-wumw8?file=/src/StyledComponents/index.js)
+[Solution CodeSandbox](https://codesandbox.io/s/usehover-solution-0nkio?file=/src/InlineStylesWithHooks/index.js)
