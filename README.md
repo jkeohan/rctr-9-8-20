@@ -53,7 +53,7 @@
 | 15  | Tues 10/27 | <li>[Intro To Redux](https://git.generalassemb.ly/jkeohan/rctr-9-8-20/blob/master/w08d15/intro-to-redux.md)</li>  | <li>Read: [useLocalStorage Hook](https://usehooks.com/useLocalStorage/)</li><li>Read: [Writing Your Own Custom Hooks](https://blog.bitsrc.io/writing-your-own-custom-hooks-4fbcf77e112e)</li><li>Read: [11 Custom Hooks](https://blog.bitsrc.io/11-useful-custom-react-hooks-for-your-next-app-c66307cf0f0c)</li>  | [Recording](https://generalassembly.zoom.us/rec/share/CjNDJxVAmdRPhzVf3aoVbPKVzJM5UzHor03A8upxv-sS_SPO7zjSWrbbHdG2s7nv.71yuOgwTcVPZiXlV?startTime=1603842741000) |
 | 16  | Thur 10/29 | <li>[Custom Hooks](https://git.generalassemb.ly/jkeohan/rctr-9-8-20/blob/master/w08d16/intro-to-custom-hooks.md)</li> | <li>Read: [D3 & React](https://wattenberger.com/blog/react-and-d3#creating-svg-elements) <li>Read: [React/D3 Ecosystem](https://www.smashingmagazine.com/2018/02/react-d3-ecosystem/) | [Recording](https://generalassembly.zoom.us/rec/share/Wjq0ldX4-pqwHcPSnUrfPgFAyOmraXzDbLCRVsdf3cY94gpFbCz8ahkWmD-tQ0Mv.UtJJIqglB6Yz4KII?startTime=1604015660000) |
 | 17  | Tues 11/3 | ELECTION DAY - NO CLASS |  |  |
-| 18  | Thur 11/10 | React & D3 | Read: [React Testing - Jest/Enzyme](https://www.robinwieruch.de/react-testing-jest-enzyme)  |  |
-| 19  | Tue 11/5 | Testing | |  |
+| 18  | Thur 11/5 | React & D3 | Read: [React Testing - Jest/Enzyme](https://www.robinwieruch.de/react-testing-jest-enzyme)  |  |
+| 19  | Tue 11/10 | Testing | |  |
 | 20  | Thur 11/12 |  Final Project 1on1's   |  |  |
 | 21  | Tues 11/17 | Project Presentations |  |  |
