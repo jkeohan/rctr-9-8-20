@@ -105,7 +105,7 @@ function flatten(arr, result = []) {
 export default flatten;
 ```
 
-This code does indeed flatten an array and it would return a flattened array
+This code does indeed flatten an array and it would return a flattened array. We can even test this out in this [repl](https://repl.it/@jkeohan/algo-flatten-array-2-solutions). 
 
 
 ```js
