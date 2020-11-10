@@ -859,6 +859,7 @@ describe('ToDos Component', () => {
 
 ## Resources
 - [React Testing Libraries](https://medium.com/javascript-in-plain-english/testing-in-react-part-2-react-testing-library-f32432b93c6c)
+- [Beginner Guide To Testing React Apps](https://thomlom.dev/beginner-guide-testing-react-apps/)
 - [Testing Functional Components Using Hooks](https://medium.com/@acesmndr/testing-react-functional-components-with-hooks-using-enzyme-f732124d320a)
 - ['it' vs 'test'](https://stackoverflow.com/questions/45778192/what-is-the-difference-between-it-and-test-in-jest)
 - [Jest](http://facebook.github.io/jest/)
