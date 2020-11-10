@@ -144,11 +144,11 @@ it("should flatten an array of arrays.", () => {
 
 Since we know the algo does what it's supposed to do we should see that our test has passed. 
 
-<img src="https://i.imgur.com/Xx5nXah.png" />
+<img src="https://i.imgur.com/Xx5nXah.png" width=300 />
 
 Let's force our test to fail so we can see the results of a failed test. 
 
-<img src="https://i.imgur.com/AmEVIcN.png" />
+<img src="https://i.imgur.com/rC5FM4f.png" width=300/>
 
 <hr>
 
@@ -257,7 +257,7 @@ test('renders learn react link', () => {
 ```
 Here is what `linkElement` returns:
 
-<img src="https://i.imgur.com/y5JzQbb.png" />
+<img src="https://i.imgur.com/y5JzQbb.png" width=500/>
 
 **NOTE:** `screen` provides many additional methods to qu
 
