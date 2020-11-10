@@ -318,8 +318,8 @@ Then, let's create a `HelloWorld` subdirectory within the components directory t
 
 We will need 2 files, one for our Component and the other to run our tests. 
 
-- `src/components/HelloWorld.js` 
-- `src/components/HelloWorld.test.js`
+- `src/components/HelloWorld/HelloWorld.js` 
+- `src/components/HelloWorld/HelloWorld.test.js`
 
 As before React will detect that there is a test but since there isn't anything in it nothing will happen. 
 
