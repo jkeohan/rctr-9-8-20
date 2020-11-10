@@ -161,7 +161,9 @@ Now it's your turn to create the following tests:
 
 <hr>
 
-<details><summary>Solution</summary>
+ADD SOLUTION CODE HERE
+
+<!-- <details><summary>Solution</summary>
 
 ```js
 it("Returns empty array when the input is an empty array.", () => {
@@ -178,9 +180,8 @@ it("Goes 4 levels deep.", () => {
   expect(result).toEqual(flatArray);
 });
 ```
-</details>
+</details> -->
 
-<br>
 
 ### Test Suites
 Being that these tests are meant to test the validity of the same code we could have placed them in a `describe()` so they are viewed as a suite of tests. 
@@ -594,13 +595,17 @@ We will have two components: a `ToDos.js` component which will hold individual `
 
 
 - src/components/ToDos/ToDos.js
-- src/components/ToDos/ToDos.test.js
 - src/components/ToDo/ToDo.js
 
+And all of our tests will be performed on the ToDos component so lets create the test file.
+
+- src/components/ToDos/ToDos.test.js
 
 Now let's scaffold the configuration for our testing file.
 
-`ToDos.test.js`
+**ToDos.test.js**
+
+Let's add the following code to the test file. 
 
 ```js
 import React from 'react'
@@ -638,7 +643,7 @@ it('should contain two todo subcomponents', () => {
 
 Let's write the minimum amount of code to make this test pass:
 
-`ToDos.js`
+**ToDos.js**
 ```js
 import React, { Component } from 'react'
 
@@ -657,7 +662,7 @@ function ToDos(props) {
 export default ToDos
 ```
 
-`ToDo.js`
+**ToDo.js**
 ```js
 import React from 'react'
 
@@ -682,8 +687,9 @@ export default ToDo
   })
 ```
 
-The code to pass this one is pretty minimal!
-`ToDo.js`
+The code to pass this one is pretty minimal. 
+
+**ToDo.js**
 ```diff
 import React from 'react'
 
