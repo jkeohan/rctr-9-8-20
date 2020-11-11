@@ -426,7 +426,7 @@ export default function Counter(props) {
 ```
 
 
-Copy the following code into `Counter.test.js`.  
+Copy the following code into `Counter.test.js` to get us started. 
 
 
 ```js
@@ -458,7 +458,7 @@ Here are the functions that are being used in case we want to review the [Jest](
 - [.text()](https://github.com/enzymejs/enzyme/blob/master/docs/api/ShallowWrapper/text.md)
 - [.simulate()](https://github.com/enzymejs/enzyme/blob/master/docs/api/ShallowWrapper/simulate.md)
 
-#### The Tests
+### The Tests
 
 Here are the tests we will create to test the Counter component and it's functionality. 
 
