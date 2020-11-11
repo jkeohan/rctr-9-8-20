@@ -337,14 +337,14 @@ Let's start with Shallow Rendering as it should be used for tests that are limit
 
 #### Initial Setup 
 
-Let's start by importing React, shallow and the HelloWorld component. 
+Let's start by importing `React, shallow` and the `HelloWorld` component. 
 ```js
 import React from 'react'
 import { shallow } from 'enzyme'
 import HelloWorld from './HelloWorld'
 ```
 
-Now we write our tests we would like to perform and include them in a test suite.  
+Now we write the tests we would like to perform and place them in a test suite.  
 
 ```js
 //...previous imports
@@ -356,7 +356,7 @@ describe('Hello world component', () => {
 })
 ```
 
-And of course the actual code that performs the test.   Here we are testing that if the HelloWorld component was passed a prop value of `Your name` that it would contain that value in it's props object. 
+Here we will be testing to confirm that the HelloWorld component was passed a prop value of `Your name`. 
 ```js
 //...previous imports
 
