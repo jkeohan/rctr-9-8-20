@@ -340,6 +340,7 @@ Let's start with Shallow Rendering as it should be used for tests that are limit
 Let's start by importing `React, shallow` and the `HelloWorld` component. 
 ```js
 import React from 'react'
+import Adapter from '../../setUpTests'
 import { shallow } from 'enzyme'
 import HelloWorld from './HelloWorld'
 ```
@@ -431,6 +432,7 @@ Copy the following code into `Counter.test.js` to get us started.
 
 ```js
 import React from 'react'
+import Adapter from '../../setUpTests'
 import { shallow } from 'enzyme'
 
 import Counter from './Counter'
