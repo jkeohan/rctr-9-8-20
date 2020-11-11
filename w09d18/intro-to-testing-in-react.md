@@ -112,16 +112,19 @@ This code would indeed return a flattened array. We can even test this out in th
 flatten([1,[2,3],[[4],5]]) => [1,2,3,4,5]
 ```
 
-If we take a look at `flatten.test.js` we see that it's empty.  Since there are no tests written our testing results should be empty. 
 
-<img src="https://i.imgur.com/lKclmfd.png" />
 
 ### Our First Test
 
-Of course the idea here is that the user would need to figure that code out themselves and then run the tests to validate they got it right. 
+If we take a look at `flatten.test.js` we see that contains no code.  
+
+Since there are no tests written our testing results should be empty. 
+
+<img src="https://i.imgur.com/lKclmfd.png" />
+
+Of course the idea here is that the user would need to figure the code to the algo themselves and then run the tests to validate they got it right. 
 
 Our goal however is to create a series of tests that would validate the results of running that code.  
-
 
 Let's start by creating a single test that includes the input and out results
 
