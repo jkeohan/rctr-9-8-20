@@ -587,7 +587,7 @@ describe('Counter component', () => {
 
 
 
-## Bonus: To Do List App 
+## Bonus (Time Permitting): To Do List App 
 As a bonus let's now create a To Do list app using test driven development. First let's create our files.
 
 We will have two components: a `ToDos.js` component which will hold individual `Todo.js` components.
