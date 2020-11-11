@@ -78,7 +78,7 @@ Let's take a look at the docs on running tests in [CodeSandbox](https://codesand
 
 The starter code we will be using is a full `create-react-app` build and is slightly different then the React app we are able to spin up using the React CodeSandbox template.  
 
-Here is the starter code: [CodeSandbox React Testing](https://codesandbox.io/s/bold-sunset-6kf31?file=/src/App.js)
+Here is the starter code: [CodeSandbox React Testing](https://codesandbox.io/s/rctr-react-testing-7w0uk)
 
 ## Flatten An Array Test
 
