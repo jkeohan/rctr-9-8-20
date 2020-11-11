@@ -484,7 +484,7 @@ describe('Counter component', () => {
   })
 })
 ```
-#### The Number Test
+#### The Counter Test
 
 If we examine the Counter component we can see that it contains a span with a class name of 'counter` and that it should show the current value and that is what we will run our test against. 
 
