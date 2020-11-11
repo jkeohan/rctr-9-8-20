@@ -587,6 +587,7 @@ describe('Counter component', () => {
 
 </details>
 
+[CodeSandbox Solution](https://codesandbox.io/s/rctr-react-testing-forked-v1ccw?file=/src/components/Counter/Counter.test.js)
 
 
 ## Bonus (Time Permitting): To Do List App 
