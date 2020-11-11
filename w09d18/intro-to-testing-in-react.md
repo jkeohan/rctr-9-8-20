@@ -135,7 +135,7 @@ it("should flatten an array of arrays.", () => {
 });
 ```
 
-Now we add the `expect()` function that runs the function and passes in the array to be flattened and then compares the results. 
+Now we use the `expect()` function that then runs the algo passing in the array to be flattened and then compares the results. 
 
 ```js
 it("should flatten an array of arrays.", () => {
@@ -211,7 +211,7 @@ describe("Flatten tests:", () => {
 
 Testing in React uses the same approach for creating individual tests and organizing them into a suite of tests.  
 
-We do however need to leverage the `React Testing Library` and, for more advanced tests, `Enzyme`. 
+We do however need to leverage the `React Testing Library` and, for even more advanced testing we would need the assist of `Enzyme`. 
 
 ### Setup
 Let's first create a filed called `App.test.js` and import both `React` and the `App` component. 
@@ -240,9 +240,9 @@ Let's take a minute to look at the documentation for [screen](https://github.com
 
 ### Writing Our Test
 
-Our basic test will confirm that the text **learn react** is being rendered via the `App` component. 
+Our basic test will confirm that the text **"learn react"** is being rendered via the `App` component. 
 
- For that we will need to `render` the component and then query to the page for text using `screen.getByText()`
+ For that we will need to `render` the component and then query the page for the text using `screen.getByText()`
 
 
 ```js
@@ -263,9 +263,7 @@ Here is what `linkElement` returns:
 
 <img src="https://i.imgur.com/y5JzQbb.png" width=500/>
 
-**NOTE:** `screen` provides many additional methods to qu
-
-In order to confirm that the test meets our expectations we use the `expect()` function. 
+In order to confirm that the test meets our expectations we use the `expect()` function as before.
 
 ```js
 import React from 'react'
@@ -285,7 +283,7 @@ test('renders learn react link', () => {
 
 
 ## What is Enzyme?
-[Enzyme](https://github.com/airbnb/enzyme) mimics JQuery's DOM manipulation library to make testing React easier. However one of it's most important features is that Enzyme can directly test `state` and the manipulation of it, while `React Testing Library` cannot. 
+[Enzyme](https://github.com/airbnb/enzyme) mimics JQuery's DOM manipulation library to make testing React easier. Using Enzyme we can also directly test `state` within a class based component (it doesn't yet support hooks) which the `React Testing Library` cannot do. 
 
 
 ### Setting Up Our Environment For Enzyme 
@@ -315,11 +313,9 @@ export default Adapter
 We just need to keep in mind that we will need to import this file into any of our `*.test.js` files that require Enzyme. 
 
 ## Writing Tests Using Enzyme
-Let's organize our code a little better and create a `Components` folder to place our components and tests. 
+Inside the `components` folder we will find both `Counter` and `HelloWorld`.  We will be using these folder to organize our code for testing. 
 
-Then, let's create a `HelloWorld` subdirectory within the components directory to create our first tests.
-
-We will need 2 files, one for our Component and the other to run our tests. 
+We will start with `HelloWorld` and need 2 files, one for our Component and the other to run our tests. 
 
 - `src/components/HelloWorld/HelloWorld.js` 
 - `src/components/HelloWorld/HelloWorld.test.js`
@@ -329,7 +325,7 @@ As before React will detect that there is a test but since there isn't anything 
 <img src="https://i.imgur.com/vVcVKbE.png" width=400/>
 
 ### Testing Props
-Let's write a test that confirm the `HelloWorld` component renders out a name that's fed to it via props. 
+Let's write a test that confirm the `HelloWorld` component renders out a name that's passed to it via props. 
 
 Enzyme tests begin with rendering a React component, and for this, you have three choices: 
 
