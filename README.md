@@ -55,5 +55,5 @@
 | 17  | Tues 11/3 | ELECTION DAY - NO CLASS |  |  |
 | 18  | Thur 11/5 | <li>[React & D3](https://git.generalassemb.ly/jkeohan/rctr-9-8-20/tree/master/w09d17)</li> | Read: [React Testing - Jest/Enzyme](https://medium.com/javascript-in-plain-english/testing-in-react-part-1-types-tools-244107abf0c6)  | [Recording](https://generalassembly.zoom.us/rec/play/-cLPkFT0ywHGUBcQFyJY_3a7GlIF9_qdTZ6OUudwqjO7Tx7SlKGWtTdYsmCoax72D6weyekzXRP0zl_4.P3Ls4ZP3JL_BHabL?autoplay=true&startTime=1604624106000) |
 | 19  | Tue 11/10 | <li>[Testing](https://git.generalassemb.ly/jkeohan/rctr-9-8-20/blob/master/w09d18/intro-to-testing-in-react.md)</li> | |  |
-| 20  | Thur 11/12 |  Final Project 1on1's   |  |  |
+| 20  | Thur 11/12 |  <li>[Final Project 1on1's](https://docs.google.com/spreadsheets/d/1eSarapMxitSh8sQtaKJ3sVB8BtsPjVVyrd155zANSyo/edit#gid=468567893)</li>   |  |  |
 | 21  | Tues 11/17 | Project Presentations |  |  |
