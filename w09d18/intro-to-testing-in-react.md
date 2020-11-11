@@ -82,7 +82,7 @@ Here is the starter code: [CodeSandbox React Testing](https://codesandbox.io/s/r
 
 ## Flatten An Array Test
 
-Let's write our first test. Inside the `src` folder there is a folder called algos which contains two files: `flatten.js` and `flatten.test.js`
+Let's write our first test. Inside the `src` folder there is a folder called `Algos` which contains two files: `flatten.js` and `flatten.test.js`
 
 <img src="https://i.imgur.com/YyYVKdg.png" />
 
@@ -105,7 +105,7 @@ function flatten(arr, result = []) {
 export default flatten;
 ```
 
-This code does indeed flatten an array and it would return a flattened array. We can even test this out in this [repl](https://repl.it/@jkeohan/algo-flatten-array-2-solutions). 
+This code would indeed return a flattened array. We can even test this out in this [repl](https://repl.it/@jkeohan/algo-flatten-array-2-solutions). 
 
 
 ```js
