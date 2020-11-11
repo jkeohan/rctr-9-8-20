@@ -166,7 +166,7 @@ Now it's your turn to create the following tests:
 
 ADD SOLUTION CODE HERE
 
-<!-- <details><summary>Solution</summary>
+<details><summary>Solution</summary>
 
 ```js
 it("Returns empty array when the input is an empty array.", () => {
@@ -183,7 +183,7 @@ it("Goes 4 levels deep.", () => {
   expect(result).toEqual(flatArray);
 });
 ```
-</details> -->
+</details>
 
 
 ### Test Suites
