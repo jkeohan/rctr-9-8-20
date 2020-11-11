@@ -374,7 +374,7 @@ The testing engine should rerun automatically and this time the App and flatten 
 
 Of course the reason being that we haven't written the actual HelloWorld Component as of yet. 
 
-Let's write the minimum amount of code needed for it to pass. In this example, we just need a component that renders a name in it.
+Let's write the minimum amount of code needed for it to pass. In this example, we just need a component that renders `prop.name`.
 
 ```js
 import React from 'react';
@@ -394,7 +394,7 @@ The test passes without the need to import and run the component in App.
 
 For this exercise, you will be using test driven development to write the React code to pass some pre-written tests. 
 
-We want to build a counter app. When we press a button, we want a number stored in state to increase, and when we press a second button that number will decrease. Given the following tests, write a React component that passes the following tests.
+We want to build a counter app. When we press a button, we want a number stored in state to increase, and when we press a second button that number will decrease. Given these test requirements, write a React component that passes the following tests.
 
 ### Initial Setup
 Let's create a folder and some files for our counter app.
@@ -426,7 +426,7 @@ export default function Counter(props) {
 ```
 
 
-Copy the following code into `Counter.test.js`.  Since all our tests will run against the `Counter` component we can use `beforeEach()` to load the component before running each individual test. 
+Copy the following code into `Counter.test.js`.  
 
 
 ```js
