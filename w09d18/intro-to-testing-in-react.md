@@ -160,7 +160,7 @@ Let's force our test to fail so we can see the results of a failed test.
 Now it's your turn to create the following tests:
 
 - it should return an empty array when the input is an empty array
-- is should return a flattened array if the input contains 4 levels of nested arrays
+- it should return a flattened array if the input contains 4 levels of nested arrays
 
 <hr>
 
