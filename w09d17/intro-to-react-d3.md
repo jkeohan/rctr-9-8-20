@@ -236,6 +236,7 @@ And of course update the Pause button so that it now calls the start function
 And there you have it. 
 
 ### Resources
+- [3 Approaches To Using D3 Within React](https://www.newline.co/@KumailP/wonders-of-react-d3--how-to-get-started--e452f3e1)
 - [D3 Inside React](https://www.pluralsight.com/guides/using-d3.js-inside-a-react-app)
 - [Compare 5 React/D3 Libraries](https://www.capitalone.com/tech/software-engineering/comparison-data-visualization-libraries-for-react/)
 - [react-d3-ecosystem](https://www.smashingmagazine.com/2018/02/react-d3-ecosystem/)
