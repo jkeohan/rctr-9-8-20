@@ -11,30 +11,42 @@
 
 ## Framing
 
-As with all things `coding` there are many ways to accomplish the same thing. Take for instance the need to run a simple conditional logic statement. It could be performed using the following approaches:
+As with all things `coding` there are many ways to accomplish the same thing. Take for instance the need to run simple conditional logic.  Depending on the use case any of the follow might suffice: 
 
 - if/else
 - switch statement
 - ternary operators
 
-What about the need to iterator and filter an array of data. The following approaches could be taken:
+What about looping and/or filtering an array of data. Once again depending on the use case several approaches could be taken: 
 
 - for loop
 - Array.forEach()
 - Array.filter()
 - Array.reduce()
 
-Styling is no different and, although we are free to take the most basic approach such a single CSS file for the entire app there are several more options to consider as per organization and third party tools in the React ecosystem.
+Styling is no different React and depending on your need and/or level of experience several approaches can be taken:
+
+- a single all encompassing CSS file for the entire app
+- individual CSS files for each Component
+- upgrading your CSS to use Sass/SCSS 
+- inline styles and/or JS conditional logic to update values 
+- import a library such as Styled Components
+
+
 
 <hr>
 
-:question: How would you define a Compponent and it's place in React and the React Ecosystem? 
+#### <g-emoji class="g-emoji" alias="alarm_clock" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/23f0.png">⏰</g-emoji> Activity - 2min
+
+Before we go on let's take a moment to answer the following question:
+
+:question: How would you define a Component and it's place in React and the React Ecosystem? 
 
 <hr>
 
 ## Components As Self-Contained
 
-The first concept we need to keep in mind is that `Components` are meant to be **self-contained** and **reusable**.
+Based on the answers provided to the previous question it's clear that the first concept we need to keep in mind is that `Components` are meant to be **self-contained** and **reusable**.
 
 <hr>
 
@@ -42,13 +54,17 @@ The first concept we need to keep in mind is that `Components` are meant to be *
 
 Components, React or otherwise,  are now becoming the standard for sharing small pieces of functionality.  
 
-Let's take a look at [https://bit.dev/](https://bit.dev/) which is an environment developers can share their own custom and reusable [React Components](https://bit.dev/components?q=react). 
+Let's take a look at  [https://bit.dev/](https://bit.dev/) which is an environment developers can share their own custom and reusable [React Components](https://bit.dev/components?q=react). 
+
+There is also another powerful site called [StoryBook](https://storybook.js.org/) that enables developers to create and share Components. 
 
 <hr>
 
-Controlling behaviors internally is what the promise of components offers. When our CSS _behaviors_ are an integrated as part of our code, we can use `props` and `state` to thoroughly control the view, including styling, versus swapping out classes.
+Since Components should be built as self contained and reusable entities it makes sense they would be constructed with the internal logic to control their behavior. 
 
-Fortunately, lots of techniques, frameworks, tooling and other open source projects have been built an popularized to fill the gaps. Four popular ways that you'll likely encounter are:
+When our CSS **behaviors** are an integrated as part of our code, we can use `props` and `state` to thoroughly control the view, including styling, versus swapping out classes.
+
+Fortunately, lots of techniques, frameworks, tooling and other open source projects have been built an popularized to fill the gaps. Three popular ways that you'll likely encounter are:
 
 - CSS Stylesheets
 - Inline Styles
@@ -73,7 +89,7 @@ We can import a single `css` file at the highest level in the app or create sepa
 #### Benefits
 
 - Anyone working in front end design knows how to use them
-- Smaller subset of css files
+- Smaller subset of css files making it easy to find and edit
 - Full access to all CSS specifications (animations, pseudo-classes, pseudo-elements, etc.)
 
 #### Drawbacks
@@ -82,11 +98,11 @@ We can import a single `css` file at the highest level in the app or create sepa
 
 ## Inline Styling
 
-The term `separation of concerns` is a design principle in CS that refers to separating programs into distinct sections to make it modular. Under `SoC`, it's logical that since our CSS, HTML and JS all do different jobs, they should be separate and independent of one another, and for many years the web dev community preached this approach (vociferously :smiley:).
+The term `separation of concerns` is a design principle in CS that refers to separating functionality into distinct sections to make it modular. Under `SoC`, it's logical that we separate our CSS, HTML and JS into independent files which has been the standard in the web dev community since it's birth. 
 
 As a result, [inline styles were considered bad practice](https://stackoverflow.com/questions/2612483/whats-so-bad-about-in-line-css).
 
-Inline styles, particularly in the context of components, does make a lot of sense though and is inline with the idea that `what goes together should stay together`.
+Inline styles, particularly in the context of components, does make a lot of sense though and is aligns with the idea that `what goes together should stay together`.
 
 ### Style Object
 
@@ -127,19 +143,19 @@ const buttonStyles = {
 };
 ```
 
-This works well enough for the most basic logic of a single button.  But when multiple buttons are introduced that require different background colors and `hover` effects then the code can get messy very quickly. 
+This works well enough for the most basic logic of a single button.  But when multiple buttons are introduced that require different background colors and/or  effects such as `hover`, then the code can get messy very quickly. 
 
 #### Benefits
 
-- No special tools and takes advantage of existing toolchain
-- Access to `props` and `state`
+- No special tools needed and takes advantage of existing coding knowledge
+- Leverage  `props` and `state` to make dynamic updates
 - Component level styles stay with the component
-- Locally scoped with access to external values
+
 
 #### Drawbacks
 
 - Limited support of CSS specification (no animations, pseudo-classes, pseudo-elements, etc.)
-- Hard to read and difficult to override
+- Hard to read and difficult to override (must use !important flag)
 - Hard to document and maintain
 
 ## CSS in JS
@@ -148,11 +164,11 @@ CSS in JS lets you you style your presentation with JavaScript instead of CSS. T
 
 ### CSS Modules
 
-One major issues of standard CSS or Sass is that there is no concept of true encapsulation and requires that the developer to choose unique class names. 
+One major issues of standard CSS or Sass/SCSS is that there is no concept of true encapsulation and requires that the developer to choose unique class names. 
 
-And this is exactly what CSS modules did, it relied on creating a dynamic class names for each locally defined style and making sure there styles didn't conflict. 
+And this is exactly what `CSS modules` do, it relies on creating dynamic class names for each locally defined style and making sure styles didn't conflict. 
 
-It's creators very specifically designed it to be lightweight and not try to be everything to everyone. It really only supports a handful of features.
+It's creators designed it to be lightweight and not try to be everything to everyone. It does however only support a handful of features.
 
 <hr>
 
@@ -160,7 +176,9 @@ It's creators very specifically designed it to be lightweight and not try to be 
 
 Let's take a look at a site like [Buffer](https://buffer.com/) which  uses CSS Modules.  
 
-We will focus our attention specifically on the `header` element of their home page. 
+We will focus our attention specifically on the `header` element of their home page and the class names. 
+
+<img src="https://i.imgur.com/W19mc86.png" width=500/>
 
 <hr>
 
@@ -198,22 +216,22 @@ The rules are then applied to the elements using dot notation.
 </div>
 ```
 
-If we take a look at the `button` element in the `Elements` Tab in in DevTool we will see the following:
+If we take a look at the `button` element in the `Elements` Tab in DevTools we will see the following:
 
 <img src="https://i.imgur.com/kDWUghQ.png" />
 
-Since this isn't a standard CSS name there is no way these styles would conflict with another elemnent in the global scope that has been assinged a class of `.button` as well. 
+Since this isn't a standard CSS name there is no way these styles will conflict with another element in the global scope that has been assigned a class of `.button` as well. 
 
 #### Benefits
 
 - Component level styles stay with the component
-- Import/Export styles between files
+- Import/Export common styles between files
 - Access to full CSS specification including support of [CSS custom properties](https://developer.mozilla.org/en-US/docs/Web/CSS/--*) for variable support
 
 #### Drawbacks
 
 - Limited access to `props` and `state`
-- No Sass like features except `composes`
+- No Sass/SCSS like features except `composes`
 
 
 ## Styled Components 
@@ -224,27 +242,36 @@ One of the most popular and advanced CSS-in-JS libraries is [Styled Components](
 
 #### <g-emoji class="g-emoji" alias="alarm_clock" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/23f0.png">⏰</g-emoji> Activity - 2min
 
-Now that were jumping into styled components let's take a look at a [Vimeo](https://vimeo.com/) and see styled components in action
+Now that were jumping into styled components let's take a look at a [Vimeo](https://vimeo.com/) and see styled components in action.
+
+<img src="https://i.imgur.com/OfpsvWR.png" width=500/>
 
 <hr>
 
 
 
+**Install Styled Components**
 
-Since `styled components` in an npm package, and therefor a dependency, it must first be installed.
+Since `styled components` in a third party library it must first be installed as an NPM package.
 
 <img src="https://i.imgur.com/zCX1cFF.png" />
 
-Then we must import the library. 
+<br>
+<br>
+
+**Import The Library**
+
+Which then must be imported.
 
 ```js
 import styled from 'styled-components';
 ```
 
-Styled Components do a great job of taking advantage of a feature an ES6 feature called a `Tagged Template Literal`.
+Styled Components do a great job of taking advantage of an ES6 feature called a `Tagged Template Literal`, or perhaps you know it as `String Template Literal`.
 
+**Using Styled Components**
 
-Let's create two styled components for the `container` and the `buttons`. 
+Let's create two styled components, one for the `container` and the other for the  `button`. 
 
 ```js
 const Container = styled.div`
@@ -256,9 +283,9 @@ const Button = styled.button`
 `;
 ```
 
-And now we add some styles.  
+**Adding Styles**
 
-First to the `Container`.  We can add a color by name or reference a variable. 
+Let's add some styles to the `Container`.  Adding a `color` can be done by either written literally by it's name/hex/rgb or by referencing a variable. 
 
 ```js
 const Container = styled.div`
@@ -284,20 +311,22 @@ const Button = styled.button`
 `
 ```
 
-If we take a look at those elements in the `Elements` Tab in in DevTool we will see that the class names begin with `sc-` and then end with a mix of difference characters.  
+If we take a look at those elements in the `Elements` Tab of DevTools we will see that the class names begin with `sc-` and then end with a mix of difference characters.  
 
 <img src="https://i.imgur.com/BDJ3rOR.png" />
 
 ### Conditional Logic
-Just as we did with inline styles we can use conditional logic to determine which css values be assigned to a component.  Conditional logic can be added in a vew ways:
+Just as we did with inline styles we can use conditional logic to determine which css values are assigned to a style.  
 
-- a sinlge ternary operator
-- a callback function based on a style component specific prop
+Conditional logic can be added in the following ways:
+
+- a single ternary operator
+- a callback function based on `prop` passed to the styled component
 
 #### Ternary Operator
-Being that were using `back ticks` when creating the component we must include `${}` when running the evaluation. 
+Let's try and set the color based on passing in a `primary` prop. This requires that the parent element pass down the props to this component. 
 
-Let's try and set the color based on passing in a `primary` prop. This requires that the parent element pass down the prop as well.
+Being that were using `string template literals` when creating the component we must include `${}` when referencing variables. 
 
 ```js
 const Button = styled.button`
@@ -310,17 +339,27 @@ Here is what the rendered Components look like in React DevTools
 
 <img src="https://i.imgur.com/ZuqZizF.png" width=700/>
 
-### Passing Styled Components Props
+### Passing Styled Components Their Own Props
 
-Once the `styled component` is rendered we can pass it props of it's own just as we would do with any Component. 
+As we render the `styled component` we can pass it unique props of it's own just as we would do with any Component. 
 
-It doesn't actually need a value assigned and will set that property to `true` being that it just exists. 
 
 ```js
 <ButtonTwo primary>Customized</ButtonTwo>
 ```
 
-Now within the `styled component` we can pass that value via an anonymous function and run additional JS conditional logic. 
+<hr>
+
+#### <g-emoji class="g-emoji" alias="alarm_clock" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/23f0.png">⏰</g-emoji> Activity - 2min
+
+
+:question: Since we only passed a prop name but no value use DevTools to explore if it's been assigned a value and what that value might be. 
+
+<hr>
+
+So it appears it doesn't actually need to be assigned a value and will assign a value of `true` just because the prop exists. 
+
+Now within the `styled component` we can't just reference that props like before but need to pass that value via an `anonymous function` and run additional JS conditional logic. 
 
 ```js
 border-radius: ${props => {
@@ -334,11 +373,12 @@ Here is what the console log looks like
 
 <img src="https://i.imgur.com/JvgqV1F.png" />
 
-We can also pass the prop a value as well. 
+We do have the option to also pass the prop a value as well. 
 
 ```js
 <ButtonTwo primary={'blue'}>Customized</ButtonTwo>
 ```
+And then we can either use it directly as assigned or run conditional logic. 
 
 ```js
 border-radius: ${props => {
@@ -350,11 +390,13 @@ border-radius: ${props => {
 
 #### Helpers
 
-Styled components come with several [Helper function](https://styled-components.com/docs/api#helpers) such as:
+Styled components come with several [Helper functions](https://styled-components.com/docs/api#helpers) such as:
 
 - css
 - keyframes
 - many more
+
+**CSS** 
 
 Let's take a look at `css` and use it to create and share css between multiple components. 
 
@@ -382,7 +424,40 @@ const Button = styled.button`
 `
 ```
 
-#### Benefits
+**KeyFrames**
+
+
+The functions need to be imported.  
+
+```js
+import styled, {css, keyframes} from 'styled-components';
+```
+
+Then create a new keyframe and add the desired animation and timing.
+
+```
+const fadeIn = keyframes`
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+`
+```
+
+Incorporate the keyframe into the styled component. 
+
+```js
+const Button = styled.button`
+  ${props =>  sharedStyles}
+  animation: 1s ${fadeIn} ease-out;
+  //...rest of css
+`
+```
+
+
+#### Benefits 
 - Full access to `props` and `state`
 - Component level styles stay with the component
 - Access to full CSS specification including support of [CSS custom properties](https://developer.mozilla.org/en-US/docs/Web/CSS/--*) for variable support
@@ -391,7 +466,7 @@ const Button = styled.button`
 #### Drawbacks
 
 - dependency required
-- learning curve
+- learning curve (much to learn)
 
 ### Solution Code
 
