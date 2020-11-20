@@ -145,14 +145,14 @@ const buttonStyles = {
 
 This works well enough for the most basic logic of a single button.  But when multiple buttons are introduced that require different background colors and/or  effects such as `hover`, then the code can get messy very quickly. 
 
-#### Benefits
+#### Benefits of Styled Objects
 
 - No special tools needed and takes advantage of existing coding knowledge
 - Leverage  `props` and `state` to make dynamic updates
 - Component level styles stay with the component
 
 
-#### Drawbacks
+#### Drawbacks of Styled Objects
 
 - Limited support of CSS specification (no animations, pseudo-classes, pseudo-elements, etc.)
 - Hard to read and difficult to override (must use !important flag)
@@ -222,13 +222,13 @@ If we take a look at the `button` element in the `Elements` Tab in DevTools we w
 
 Since this isn't a standard CSS name there is no way these styles will conflict with another element in the global scope that has been assigned a class of `.button` as well. 
 
-#### Benefits
+#### Benefits of CSS Modules
 
 - Component level styles stay with the component
 - Import/Export common styles between files
 - Access to full CSS specification including support of [CSS custom properties](https://developer.mozilla.org/en-US/docs/Web/CSS/--*) for variable support
 
-#### Drawbacks
+#### Drawbacks of CSS Modules
 
 - Limited access to `props` and `state`
 - No Sass/SCSS like features except `composes`
@@ -456,14 +456,44 @@ const Button = styled.button`
 `
 ```
 
+**Conditional Rendering**
 
-#### Benefits 
+We can also conditionally render the animation on a per component basis based the props passed to it directly.  This involves a combination of `css` and `keyframes`. 
+
+First let's assign a new prop value to the Primary button in order to indicate that this is the only button that should animate.
+
+```html
+<Button primary standard animate>Primary</Button>v
+```
+
+Let's refactor the current animation value into a fat arrow and run the conditional logic there:
+
+```js
+animation: ${(props) =>
+  props.animate ? css`${fadeIn} 1s ease-out;`: ''
+};
+```
+
+This should do the trick but we can also opt to place the css code into it's own external function. 
+
+```js
+ const animate = (props) => props.animate ? css` ${fadeIn} 1s ease-out;`: '';
+```
+
+And then reference that animation.
+
+```js
+animation: ${animate};
+```
+
+
+#### Benefits of Styled Components
 - Full access to `props` and `state`
 - Component level styles stay with the component
 - Access to full CSS specification including support of [CSS custom properties](https://developer.mozilla.org/en-US/docs/Web/CSS/--*) for variable support
 - Sass-like features (such as nesting) and much more if you add [Polished](https://polished.js.org/)
 
-#### Drawbacks
+#### Drawbacks of Styled Components
 
 - dependency required
 - learning curve (much to learn)
