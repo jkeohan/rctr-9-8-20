@@ -72,18 +72,31 @@ export default function App() {
 ```
 
 ### Letter.js
-A `Letter` Component has been created to give us a head start along with the following:
+A `Letter` Component has been created to give us a head start some of the previous code has been ported over such as: 
 
-- `importing d3`
 - `alphabet` array
-- `renderAlphabet` function.
+- `render` function.
 - `start` & `shuffle` functions
-
 
 <img src="https://i.imgur.com/Kh62bFe.png"  width=400/>
 
+**Adding The D3.js Dependency**
+
+Since we in React we need to add d3.js as a dependency and the `import` it into the `Letter` Component.  
+
+<img src="https://i.imgur.com/qSM9vuy.png" width=300/>
+
 <br>
 <br>
+
+**Importing D3**
+
+With the d3.js library installed we must now import it. D3.js comes with many submodules that we could import specifically, much like we do when importing `{useState, useEffect}` but for the sake of simplicity we will import the entire library.
+
+```js
+import * as d3 from 'd3'
+```
+
 We will need to make a few edits to the `render` method as well.  Since the svg and g are already in place there is no need to create them so we only need to select them. 
 
 ```js
