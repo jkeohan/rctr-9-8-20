@@ -66,9 +66,9 @@ So now that we have worked through a few examples of `[].reduce()` let's apply t
 
 For this small demo we will be using the following starter code:
 
-<!-- original starter: https://codesandbox.io/s/counter-class-to-functional-usestate-starter-jdj6f?file=/src/components/Counter.js -->
+original starter: https://codesandbox.io/s/counter-class-to-functional-usestate-starter-jdj6f?file=/src/components/Counter.js
 
-[CodeSandbox - Counter Reducer - Starter](https://codesandbox.io/s/counter-usereducer-starter-luru8?file=/src/components/Counter.js)
+<!-- [CodeSandbox - Counter Reducer - Starter](https://codesandbox.io/s/counter-usereducer-starter-luru8?file=/src/components/Counter.js) -->
 
 So the concept of a `reducer` has been around for sometime in JavaScript long before the introduction of `Array.reduce`.
 
