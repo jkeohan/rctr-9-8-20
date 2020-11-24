@@ -32,7 +32,9 @@ Let's work through a few examples of `Array.reduce()` so we are all up to speed 
 
 <!-- original starter code: https://repl.it/@jkeohan/reducer-examples-starter#main.js -->
 
-We will be using this [reduce-examples-starter repl](https://repl.it/@jkeohan/reducer-examples-starter-rctr-9-8-20) and working through the problems below.
+<!-- additional starter code: https://repl.it/@jkeohan/reducer-examples-starter-rctr-9-8-20#main.js -->
+
+Starter Repl: [reduce-examples-starter repl](https://repl.it/@jkeohan/reducer-examples-starter-rctr-9-8-20) 
 
 #### Sum An Array
 
@@ -56,7 +58,7 @@ In both cases we reduced the input of many things to a single thing, be it a num
 
 <!-- [reduce-examples-solution repl](https://repl.it/@jkeohan/reducer-examples-solution)  -->
 
-[reduce-examples-solution repl]() - provided after the codealong
+[reduce-examples-solution repl]() - **provided after the codealong**
 
 #### :question: In your own words explain why you would use `[].reduce()` vs `[].forEach` or even a `for()` loop?
 
@@ -66,8 +68,9 @@ So now that we have worked through a few examples of `[].reduce()` let's apply t
 
 For this small demo we will be using the following starter code:
 
-original starter: https://codesandbox.io/s/counter-class-to-functional-usestate-starter-jdj6f?file=/src/components/Counter.js
+[Starter CodeSandbox](https://codesandbox.io/s/counter-class-to-functional-usestate-starter-jdj6f?file=/src/components/Counter.js)
 
+<!-- BACKUP -->
 <!-- [CodeSandbox - Counter Reducer - Starter](https://codesandbox.io/s/counter-usereducer-starter-luru8?file=/src/components/Counter.js) -->
 
 So the concept of a `reducer` has been around for sometime in JavaScript long before the introduction of `Array.reduce`.
@@ -264,6 +267,7 @@ function counterReducer(state, action) {
 
 Here is the final solution code:
 
+<!-- BACKUP -->
 <!-- [CodeSandbox - Counter Reducer - Solution](https://codesandbox.io/s/counter-class-to-functional-usestate-solution-rlhj9?file=/src/components/Counter.js) -->
 
 [CodeSandbox - Counter Reducer - Solution](https://codesandbox.io/s/counter-usereducer-starter-luru8?file=/src/components/Counter.js:487-488) - Provided after the lecture
