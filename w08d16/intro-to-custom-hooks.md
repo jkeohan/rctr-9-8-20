@@ -1,5 +1,5 @@
 <br>
-Title: Component LifeCycles<br>
+Title: Custom Hooks<br>
 Duration: 1 - 1.5hrs <br>
 Creator:  Joe Keohan<br>
 
