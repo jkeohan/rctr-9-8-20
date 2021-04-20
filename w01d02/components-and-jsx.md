@@ -10,18 +10,21 @@ Creator:  Joe Keohan<br>
 
 ## Learning Objectives
 
-*   Identify and define React components
-*   Describe why we use components in React
-*   Build a React component
-*   Describe what JSX is transpiled into
+*   Identify and define React Components
+*   Describe why we use Components in React
+*   Build a React Component
+*   Review the rules and best practices of working with Components
+*   Work with JSX (JavaScript and XML) in Components
 
 ## Components
 
 The basic unit you'll be working with in React is a **Component**.  Components are pieces of our application that we define once and can reuse throughout.  They also can be extended to include additional functionality, including the following:
 
-- all or part of the applications state (data)
-- accept data from a parent component as props
-- perform some action on initial render and subsequent re-renders
+- all or part of the applications` state` (data)
+- accept data from a parent component as `props`
+- leverage a Components `lifecycle` methods
+
+`state`, `props` and `lifecycle methods` are fundamental concepts in React and we will work with them quite extensively while learning React. 
 
 #### Components Are Used Every
 
@@ -31,7 +34,7 @@ If you are familiar with Bootstrap then you already understand the concept of a 
 
 #### <g-emoji class="g-emoji" alias="alarm_clock" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/23f0.png">⏰</g-emoji> Activity - 2min
 
-Let's take a look at [Bootstraps section on Components](https://getbootstrap.com/docs/4.5/getting-started/introduction/). 
+Let's take a look at [Bootstraps section for Components](https://getbootstrap.com/docs/4.5/getting-started/introduction/). 
 
 On the left hand side you will see a link to `Components` and clicking on that will open the door to over 2 dozen Components. 
 
@@ -41,11 +44,11 @@ On the left hand side you will see a link to `Components` and clicking on that w
 
 
 
-Let's take this Bootstrap Card component for instance.  It's a common design that we have all seen on the web and perhaps have even used yourself in previous projects. 
+Let's take this `Bootstrap Card` component for instance.  It's a common design that we have all seen on the web and perhaps have even used you'reself in previous projects. 
 
 <img src="https://i.imgur.com/oKyuaBn.png" width=200/>
 
-It's essentially comprised of the following html.  All you would need to do is copy/paste the html and update the relevant content placeholders.  
+It's essentially comprised of the following html.  As a developer all you would need to do is copy/paste the html and update the relevant content placeholders.  
 
 It's essentially a grouping of elements that, as a Component, is reusable. 
 
@@ -69,14 +72,14 @@ Bootstrap essentially allows us to pick and choose from this reusable pool of Co
 
 ### React Components
 
-Although Boostrap comes with predefined Components out of the box, React does no such thing.  
+Although Bootstrap comes with predefined Components out of the box, React does no such thing.
 
-React allows you to decide what constitues a Component and then provides the framework for you to add the required HTML and JS to create them. 
+React allows you to decide what constitutes a Component and then provides the framework for you to add the required HTML and JS to create them. 
 
-So instead of creating a few large files, you will organize your web app into small, reusable Components that encompass their own content, presentation, and business logic.
+So instead of creating a few large files, you will organize you're web app into small, reusable Components that encompass their own content and business logic.
 
 #### Train Station Schedule Example
-Take for instance an example of a train station schedule. There are elements that repeat themselves in the html structure that essentially perform the same function. 
+Take for instance an example of a train station schedule. There are elements that repeat themselves in the html structure and essentially perform the same function. 
 
 <img src="https://i.imgur.com/D6HngOk.png" />
 
@@ -105,7 +108,7 @@ When using React, building Components will be a thing you will do quite often.
 
 From this point on we will be creating Components, more  than you ever imagined, so before we begin let's take a moment to discuss the `requirements` and `best practices` for creating Components.  
 
-Some of the requirements are specific to `JSX`, short for `JavaScript And XML`, and will be reviewed again in a later section. 
+Some of the requirements are specific to `JSX`, short for `JavaScript And XML`. 
 
 :oncoming_police_car: - Rules (Component Specific)
 - They must import `React`
@@ -116,7 +119,7 @@ Some of the requirements are specific to `JSX`, short for `JavaScript And XML`, 
 :oncoming_police_car: - Rules (JSX Specific)
 - They can return only one top level element but that element can contain numerous children. 
 - Any JS within JSX must be enclosed in curly braces `{}`
-- The keyword class is reserved so classes must be renamed `className`
+- The keyword `class` is reserved so classes must be renamed `className`
 
 :star: Best Practices
 - Each Component should be in it's own file
@@ -133,9 +136,9 @@ As of `React 16.8` Components now come in 3 forms, all of which follow the same 
 
 #### Class Based Components
 
-We will introduce `Class Based` Components so that you have some grounding as to what they are, but the remainder of this class and all future lectures will be taught as `Functional Components` 
+We will introduce `Class Based` Components so that you have some grounding as to what they are, but the remainder of this class and all future lectures Components will be built as `Functional Components` 
 
-Let's continue working on the previous [CodeSandbox Starter code](https://codesandbox.io/s/rctrr-9-8-20-getting-started-yryf6). 
+Let's continue working on the previous **CodeSandbox Starter code**. 
 
 In `src` create a new file called `App.js`. 
 
@@ -153,7 +156,7 @@ Inside `App.js` let's do the following:
 ```js
 // IMPORT REACT
 import React from 'react'
-// CREATE THE CLASS BASED COMPOENT
+// CREATE THE CLASS BASED COMPONENT
 class App extends React.Component {
   render(){
     return (
@@ -174,10 +177,10 @@ This imports React methods from the React library.
 
 :oncoming_police_car: `class App extends React.Component`
 
-Since we are creating a `Class Component` we must include the keyword `class`, as well as `extend` which is used to inherit al the functionality provided via the default `React.Component`.  
+Since we are creating a `Class Component` we must include the keyword `class`, as well as `extend` which is used to inherit all the functionality provided via the default `React.Component`.  
 
 
-ES6 classes and class inheritance are a much more extensive topic and something we will not cover in this class but expect to encounter them anytime you research how to do something in React. 
+ES6 classes and class inheritance are a much more extensive topic and something we will not cover but expect to encounter them anytime you research how to do something in React. 
 
 ```js
 render(){
@@ -189,9 +192,9 @@ render(){
 
 All Class Components must use the `render(){}` method to `return()` the UI.  The `render()` method is something that was inherited by extending the React.Component.
 
-`export default App`
+:oncoming_police_car: `export default App`
 
-This allows other files to import the `App` Component. In our case, we'll be importing it into `index.js` using `import` keyword. 
+This allows other files to import the `App` Component. In our case, we'll be importing it into `index.js` using the `import` keyword. 
 
 ##### Importing The Component Into index.js
 
@@ -222,7 +225,7 @@ Just keep in mind that the additional structure for defining state, handling pro
 
 Being that you are familiar with JS functions writing a Functional Component is much easier to understand. 
 
-For now let's just comment out the Class Component and write a new `Presentational Functional` Component.
+For now let's just comment out the **Class Component** and we will write a new `Presentational Functional` Component.
 
 
 ```js
@@ -237,8 +240,9 @@ If we only need to return `JSX` then this way of writing the Component will suff
 
 ```js
 const App = () => {
+  const name = 'Functional Component'
   return (
-    <div>Functional Component</div>
+    <div>{name}</div>
   )
 }
 ```
@@ -258,15 +262,15 @@ One thing to note about Bootstrap is that there is a distinct separation between
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
 ```
 
-React however brings the HTML and JS together into one file using `JSX`.  It can also include the CSS to make the Component self containing. 
+React however brings the HTML and JS together into one file using `JSX`.  It can also include the CSS to make the Component self sufficient. 
 
-JSX is [a language that compiles to Javascipt](http://blog.yld.io/2015/06/10/getting-started-with-react-and-node-js/#.V8eDk5MrJPN) and allows us to write code that strongly resembles HTML. It is eventually compiled to lightweight JavaScript objects. 
+JSX is a language that compiles to JavaScipt and allows us to write code that strongly resembles HTML. 
 
-JSX is not not limited to `React` and can be implemented in other frameworks. 
+JSX is not limited to `React` and can be implemented in other frameworks. 
 
 #### Rules For Writing JSX
 
-Much like writing Components there are some rules we must adhere to when using JSX. 
+Let's review the rules once again for working with JSX.
 
 - They can render only one top level element but that element can contain numerous children. 
 - As per CSS, the word `class` is replaced with `className`
@@ -307,7 +311,7 @@ const App = () => {
 }
 ```
 
-Which can also be writen as:
+Which can also be written as:
 
 ```js
 const App = () => {
@@ -322,9 +326,9 @@ const App = () => {
 
 #### Replacing `class` with `className`
 
-Although this won't cause the same fatal error as with trying to define two top level parents, it will produce a warning. 
+Although this won't cause the same fatal error as adding two top level parents elements, it will produce a warning. 
 
-Let's see that that warning in action by adding a `class`.
+Let's see that warning in action by adding a `class`.
 
 ```js
 const App = () => (
